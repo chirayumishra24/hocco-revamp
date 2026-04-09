@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>🍦Experiential Activity: Advanced Startup Cost Calculator | Hocco Course</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="styles/5exp.css">
+  <link rel="stylesheet" href="styles/app-responsive.css">
+</head>
+<body class="course-page page-5exp">
+<!-- Background Emojis -->
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+<!-- Sidebar -->
+
+<div class="sidebar">
+<div class="progress-bar">
+<div class="progress-fill" id="progress-fill" style="height: 58.2958%;">&nbsp;</div>
+</div>
+</div>
+<!-- GUSTORA THEMED FULLSCREEN BUTTON -->
+
+<div id="gustoraFullscreenBtn"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" viewbox="0 0 24 24"> <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path> </svg></div>
+
+<script>
+// Gustora-themed Fullscreen Toggle (works on all modern browsers + mobile)
+document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen?.() || 
+    document.documentElement.webkitRequestFullscreen?.() || 
+    document.documentElement.msRequestFullscreen?.();
+  } else {
+    document.exitFullscreen?.() || 
+    document.webkitExitFullscreen?.() || 
+    document.msExitFullscreen?.();
+  }
+});
+</script>
+<div class="min-h-screen flex flex-col"><!-- Header -->
+<header style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+<div class="text-center">
+<h1 class="scoop-bounce" style="text-align: center; margin-left: 40px; translate: none; rotate: none; scale: none; transform: translate(0px, -0.68971px); opacity: 1;">🍦Experiential Activity: Advanced Startup Cost Calculator</h1>
+
+<p>Hocco&rsquo;s Virtual Internship &ndash; Assignment Submission</p>
+<span class="premium-badge">Hocco Internship</span></div>
+</header>
+<!-- Main Content -->
+
+<main><!-- Audio Introduction -->
+<section class="assignment-step" id="assignment-audio" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Audio Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-1.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, -0.68971px); opacity: 1;" /> Audio Introduction</h2>
+</div>
+
+<div class="assignment-content">
+<div class="audio-container">
+<audio controls=""><source src="https://hocco-creativity.vercel.app/startupcost.mp3" type="audio/mp3" /> Your browser does not support the audio element.</audio>
+</div>
+</div>
+</section>
+<!-- Assignment Overview -->
+
+<section class="assignment-step" id="assignment-overview" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Assignment Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, -0.68971px); opacity: 1;" /> Assignment Overview</h2>
+</div>
+
+<div class="assignment-content">
+<p>In this mini-project, you&rsquo;ll combine your learning to create a strategic plan for Hocco&rsquo;s ice cream shop launch using the embedded Startup Cost Calculator below. Your task is to generate an Excel report with key financial metrics, propose a branding idea, and develop a community plan to build trust with customers. This assignment showcases how Hocco can plan a successful launch, ensuring financial clarity and customer loyalty.</p>
+
+<p class="text-gray-700 text-sm md:text-base mt-4"><strong>Format:</strong> 1&ndash;2 page document, slideshow, or short video pitch.</p>
+
+<p class="text-gray-700 text-sm md:text-base"><strong>Deadline:</strong> End of Module 5.</p>
+</div>
+</section>
+<!-- Problem Statement -->
+
+<section class="assignment-step" id="assignment-problem" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Problem Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, -0.68971px); opacity: 1;" /> Problem Statement</h2>
+</div>
+
+<div class="assignment-content">
+<ul>
+	<li><span style="font-size:18px;">Hocco is planning to open a premium ice cream shop in a high-footfall area such as a shopping mall. While Hocco has strong brand recognition and heritage, launching a new outlet requires careful <strong>financial planning</strong> and <strong>community-building strategies</strong>. To ensure the venture is sustainable, Hocco needs clarity on <strong>production-level costs</strong> (how much it costs to make and sell each scoop) and <strong>startup-level costs</strong> (the investment needed to launch the shop).</span></li>
+</ul>
+
+<h2><span style="font-size:18px;"><strong>The Challenge</strong></span></h2>
+
+<p><span style="font-size:18px;">Students must use two digital tools to evaluate and plan Hocco&rsquo;s launch:</span></p>
+
+<ol>
+	<li>
+	<p><span style="font-size:18px;"><strong>Production Cost Calculator</strong></span></p>
+
+	<ul class="list-disc pl-6 space-y-2">
+		<li><span style="font-size:18px;">Input ingredient costs (e.g., milk, fruits, nuts), labor, packaging, and overheads.</span></li>
+		<li><span style="font-size:18px;">Determine the <strong>cost per scoop</strong>, suggested pricing, and profit margins for flavors like Rajbhog and Shahi Pistachio.</span></li>
+		<li><span style="font-size:18px;">This helps answer: <em>&ldquo;Can Hocco make each scoop profitably while maintaining premium quality?&rdquo;</em></span></li>
+	</ul>
+	</li>
+	<li>
+	<p><span style="font-size:18px;"><strong>Startup Cost Calculator</strong></span></p>
+
+	<ul class="list-disc pl-6 space-y-2">
+		<li><span style="font-size:18px;">Input key startup metrics such as equipment, refrigeration, permits, branding, and staffing.</span></li>
+		<li><span style="font-size:18px;">Generate a report showing <strong>total startup investment</strong>, category-wise breakdown, and breakeven timeline.</span></li>
+		<li><span style="font-size:18px;">This helps answer: <em>&ldquo;How much does it take to launch Hocco&rsquo;s shop and how soon can it become profitable?&rdquo;</em></span></li>
+	</ul>
+	</li>
+</ol>
+
+<h2><span style="font-size:18px;"><strong>The Problem to Solve</strong></span></h2>
+
+<p><span style="font-size:18px;">Hocco faces two interconnected financial challenges:</span></p>
+
+<ul class="list-disc pl-6 space-y-2">
+	<li><span style="font-size:18px;"><strong>Production Challenge:</strong> Ensuring each scoop is priced to cover costs and deliver profits without losing customer trust in quality.</span></li>
+	<li><span style="font-size:18px;"><strong>Startup Challenge:</strong> Estimating upfront investments to launch the store and building a realistic breakeven plan that appeals to investors and stakeholders.</span></li>
+</ul>
+
+<h2><span style="font-size:18px;"><strong>Expected Outcome</strong></span></h2>
+
+<p><span style="font-size:18px;">By completing this exercise, students will:</span></p>
+
+<ul class="list-disc pl-6 space-y-2">
+	<li><span style="font-size:18px;">Use calculators to <strong>quantify both per-scoop costs and total startup expenses</strong>.</span></li>
+	<li><span style="font-size:18px;">Export and analyze Excel reports to identify cost drivers and profit potential.</span></li>
+	<li><span style="font-size:18px;">Combine financial insights with <strong>branding ideas</strong> and a <strong>community trust plan</strong> to propose a holistic launch strategy for Hocco.</span></li>
+</ul>
+</div>
+</section>
+<!-- Tutorial Video -->
+
+<section class="assignment-step" id="assignment-tutorial-video" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Video Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, -0.68971px); opacity: 1;" /> Tutorial Video</h2>
+</div>
+
+<div class="assignment-content">
+<div class="video-container" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><iframe allow="encrypted-media; fullscreen; microphone;" allowfullscreen="" loading="lazy" src="https://share.synthesia.io/embeds/videos/01ada011-f829-4db3-b376-9968a0b29a0b" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0; overflow:hidden;" title="Synthesia video player - startup cost calclator"></iframe><button class="fullscreen-button" onclick="goFullscreen(this.previousElementSibling)">▶</button></div>
+</div>
+</section>
+<!-- Step-by-Step Instructions -->
+
+<section class="assignment-step" id="assignment-instructions" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Instructions Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, -0.68971px); opacity: 1;" /> Step-by-Step Instructions</h2>
+</div>
+
+<div class="assignment-content">
+<div class="grid">
+<div class="steps"><!-- Step 1 -->
+<article class="step-card" id="step-1" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="step-number scoop-bounce" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -0.68971px, 0px) scale(0.9976, 0.9976); opacity: 0.9879;">1</div>
+
+<div>
+<h3 class="step-title"><img decoding="async" loading="lazy" alt="Step Icon" class="w-6 h-6 mr-2" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" /> Interact with the Embedded Calculator</h3>
+
+<p class="step-desc">Use the embedded Startup Cost Calculator above to input Hocco&rsquo;s startup expenses. Explore the interface to understand expense categories like equipment, inventory, and marketing. Change Currency to INR (Rupees).</p>
+</div>
+</article>
+<!-- Step 2 -->
+
+<article class="step-card" id="step-2" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="step-number scoop-bounce" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -0.68971px, 0px) scale(0.9808, 0.9808); opacity: 0.9039;">2</div>
+
+<div>
+<h3 class="step-title"><img decoding="async" loading="lazy" alt="Step Icon" class="w-6 h-6 mr-2" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" /> Input Hocco-Specific Metrics</h3>
+
+<p class="step-desc">Enter the key metrics listed above into the calculator. For example, input <strong>₹50,000&ndash;₹150,000</strong> for ice cream makers under <strong>equipment costs </strong>and <strong>₹50,000&ndash;₹100,000</strong> for<strong> initial inventory</strong>. Adjust based on Hocco&rsquo;s small-scale shop in a high-footfall area like a shopping mall.</p>
+</div>
+</article>
+<!-- Step 3 -->
+
+<article class="step-card" id="step-3" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="step-number scoop-bounce" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -0.68971px, 0px) scale(0.948, 0.948); opacity: 0.7399;">3</div>
+
+<div>
+<h3 class="step-title"><img decoding="async" loading="lazy" alt="Step Icon" class="w-6 h-6 mr-2" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" /> Export the Excel Report</h3>
+
+<p class="step-desc">After entering all metrics, use the calculator&rsquo;s export feature to generate an Excel report. Ensure the report includes total startup costs, a breakdown by category, and a breakeven analysis. This will be your trend report submission.</p>
+</div>
+</article>
+<!-- Step 4 -->
+
+<article class="step-card" id="step-4" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="step-number scoop-bounce" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -0.68971px, 0px) scale(0.8992, 0.8992); opacity: 0.4959;">4</div>
+
+<div>
+<h3 class="step-title"><img decoding="async" loading="lazy" alt="Step Icon" class="w-6 h-6 mr-2" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" /> Develop a Branding Idea</h3>
+
+<p class="step-desc">Propose a branding concept for Hocco&rsquo;s launch. Examples include:</p>
+
+<ul class="list-disc pl-6 space-y-2">
+	<li><strong>Packaging:</strong> Vibrant, Instagram-worthy cups with Hocco&rsquo;s red and navy colors, featuring the tagline &ldquo;House of Chona &ndash; Taste the Legacy.&rdquo;</li>
+	<li><strong>Storytelling:</strong> A social media campaign sharing the Chona family&rsquo;s Hocco Journey, emphasizing heritage and quality.</li>
+	<li><strong>Marketing Launch:</strong> Host a &ldquo;Flavor Fiesta&rdquo; event with free samples of Rajbhog and Sitaphal to attract local dessert lovers.</li>
+	<li><strong>Loyalty Program:</strong> Introduce a &ldquo;Scoop Rewards&rdquo; program where customers earn points for every purchase, redeemable for free scoops.</li>
+	<li><strong>Local Collaboration:</strong> Partner with local artisans to create limited-edition packaging inspired by regional art, enhancing cultural appeal.</li>
+	<li><strong>Eco-Friendly Initiative:</strong> Use biodegradable cups and spoons with a &ldquo;Green Scoop&rdquo; campaign to attract eco-conscious customers.</li>
+</ul>
+</div>
+</article>
+<!-- Step 5 -->
+
+<article class="step-card" id="step-5" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="step-number scoop-bounce" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -0.68971px, 0px) scale(0.8344, 0.8344); opacity: 0.1719;">5</div>
+
+<div>
+<h3 class="step-title"><img decoding="async" loading="lazy" alt="Step Icon" class="w-6 h-6 mr-2" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" /> Compile Your Submission</h3>
+
+<p class="step-desc">Combine your Excel report, branding idea, and community plan into a 1&ndash;2 page document, slideshow, or short video pitch. Ensure it reflects Hocco&rsquo;s bold and nostalgic brand identity, using visuals like the scoop-bounce animation or Hocco&rsquo;s color scheme. Submit at the beginning of next chapter submit Production Cost Calculator and After that Startup Cost Calculator assignment excel document submission.</p>
+</div>
+</article>
+</div>
+
+<aside>
+<div class="card">
+<h3 style="margin:0 0 8px 0">Quick Metrics</h3>
+
+<div class="metrics">
+<div class="metric">
+<h3>3&ndash;5</h3>
+
+<p>Personas</p>
+</div>
+
+<div class="metric">
+<h3>1&ndash;2</h3>
+
+<p>Page Submission</p>
+</div>
+
+<div class="metric">
+<h3>Module 4</h3>
+
+<p>Deadline</p>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</section>
+<!-- Benefits of Using the Startup Cost Calculator -->
+
+<section class="assignment-step" id="assignment-benefits" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Benefits Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, -0.68971px) scale(0.8, 0.8); opacity: 0;" /> Benefits of the Startup Cost Calculator</h2>
+</div>
+
+<div class="assignment-content">
+<p>Using the Startup Cost Calculator before launching Hocco&rsquo;s ice cream shop provides critical advantages:</p>
+
+<ul class="list-disc pl-6 space-y-2">
+	<li><strong>Financial Clarity:</strong> Estimates startup costs (e.g., equipment, inventory, permits) to create a realistic budget, preventing overspending.</li>
+	<li><strong>Funding Strategy:</strong> Provides a detailed cost breakdown for pitch decks to attract investors or secure loans.</li>
+	<li><strong>Risk Mitigation:</strong> Identifies high-cost areas (e.g., refrigeration units at ₹100,000&ndash;₹300,000) to prioritize cost-saving measures.</li>
+	<li><strong>Profitability Planning:</strong> Helps calculate breakeven points and projected monthly profitability, ensuring Hocco&rsquo;s financial sustainability.</li>
+	<li><strong>Decision Support:</strong> Enables data-driven choices, such as comparing local suppliers for ingredients to balance cost and quality.</li>
+</ul>
+
+<p>By using the calculator, Hocco can launch with confidence, aligning resources with its goal of delivering premium ice cream experiences.</p>
+</div>
+</section>
+<!-- Key Metrics for the Startup Cost Calculator -->
+
+<section class="assignment-step" id="assignment-metrics" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Metrics Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, -0.68971px) scale(0.8, 0.8); opacity: 0;" /> Key Metrics for the Startup Cost Calculator</h2>
+</div>
+
+<div class="assignment-content">
+<p>Focus on the following metrics when using the Startup Cost Calculator for Hocco&rsquo;s ice cream shop launch:</p>
+
+<ul class="list-disc pl-6 space-y-2">
+	<li><strong>Commercial Kitchen Equipment:</strong> Budget ₹50,000&ndash;₹150,000 for ice cream makers and ₹20,000&ndash;₹80,000 for mixers, blenders, and batch freezers.</li>
+	<li><strong>Refrigeration Units:</strong> Allocate ₹100,000&ndash;₹300,000 for reach-in freezers, walk-in freezers, and display cases to maintain ice cream quality.</li>
+	<li><strong>Initial Inventory:</strong> Estimate ₹50,000&ndash;₹100,000 for premium ingredients (milk, fruits, nuts) to support Hocco&rsquo;s artisanal flavors like Rajbhog and Shahi Pistachio.</li>
+	<li><strong>Permits and Licenses:</strong> Budget ₹10,000&ndash;₹30,000 for health permits, business licenses, and food safety certifications.</li>
+	<li><strong>Marketing and Branding:</strong> Allocate ₹20,000&ndash;₹50,000 for signage, vibrant packaging, and social media campaigns targeting local dessert lovers.</li>
+	<li><strong>Store Setup:</strong> Plan ₹100,000&ndash;₹200,000 for furniture, decor, and a unique layout reflecting Hocco&rsquo;s bold and nostalgic brand identity.</li>
+	<li><strong>Staffing Costs:</strong> Estimate ₹50,000&ndash;₹100,000 for initial hiring and training of staff for a small shop.</li>
+</ul>
+
+<p>Export these metrics into an Excel report to visualize Hocco&rsquo;s startup budget and identify areas for cost optimization.</p>
+</div>
+</section>
+<!-- Embedded Startup Cost Calculator -->
+
+<section class="assignment-step" id="assignment-calculator" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Calculator Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, -0.68971px) scale(0.8, 0.8); opacity: 0;" /> Startup Cost Calculator</h2>
+</div>
+
+<div class="assignment-content">
+<p>Use the embedded calculator to estimate Hocco&rsquo;s startup costs and export your Excel report.</p>
+
+<section>
+<div style="position: relative; width: 100%; height: 100vh;"><iframe loading="lazy" allowfullscreen="" class="flavor-forge-iframe" id="hoccoFrame" src="https://launchpad-planner.lovable.app" style="width: 100%; height: 100%; border: none; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.15);" title="Hocco Production Cost"></iframe><!-- Fullscreen Play Button --><button onclick="goFullscreen()" onmouseout="this.style.background='rgba(0,0,0,0.6)'" onmouseover="this.style.background='rgba(0,0,0,0.8)'" style="
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0,0,0,0.6);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s;
+      ">▶</button></div>
+<script>
+    function goFullscreen() {
+      const iframe = document.getElementById("hoccoFrame");
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+      } else if (iframe.webkitRequestFullscreen) { // Safari
+        iframe.webkitRequestFullscreen();
+      } else if (iframe.msRequestFullscreen) { // IE11
+        iframe.msRequestFullscreen();
+      }
+    }
+  </script></section>
+<!-- Progress Tracker -->
+
+<section class="assignment-step progress-tracker" id="assignment-progress" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0.005px, 0px); opacity: 0.9999;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Progress Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h5.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, -0.68971px) scale(0.8, 0.8); opacity: 0;" /> Your Progress</h2>
+</div>
+
+<div class="assignment-content">
+<p id="progressTracker">58% Complete (Keep going!)</p>
+
+<div class="progress-bar" id="progressBar" style="width: 58.2958%;">&nbsp;</div>
+</div>
+</section>
+</div>
+</section>
+</main>
+<!-- Back to Top Button -->
+
+<button aria-label="Scroll to top" id="back-to-top" onclick="scrollToTop()">&uarr;</button>
+<!-- Footer -->
+<!-- Notes Button -->
+
+<button class="fixed bottom-6 left-6 w-14 h-14 rounded-full bg-white
+         flex items-center justify-center
+         shadow-[0_0_20px_rgba(250,204,21,0.65)]
+         hover:shadow-[0_0_30px_rgba(250,204,21,0.9)]" id="notesBtn">📝</button>
+<!-- Notes Panel -->
+
+<div class="hidden fixed bottom-24 left-6 w-80 bg-slate-800 text-black
+         rounded-xl shadow-xl p-4" id="notesPanel"><textarea class="w-full h-32 p-2 bg-slate-700 rounded resize-none" id="notesArea" placeholder="Write your notes here..."></textarea>
+
+<div class="flex gap-2 mt-3"><button class="flex-1 bg-green-600 rounded p-2" id="downloadNotes">Download</button><button class="flex-1 bg-red-600 rounded p-2" id="clearNotes">Clear</button></div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const notesBtn = document.getElementById("notesBtn");
+  const notesPanel = document.getElementById("notesPanel");
+  const notesArea = document.getElementById("notesArea");
+  const clearBtn = document.getElementById("clearNotes");
+  const downloadBtn = document.getElementById("downloadNotes");
+
+  if (!notesBtn || !notesPanel || !notesArea) return;
+
+  // 🚀 Escape all stacking contexts
+  document.body.appendChild(notesBtn);
+  document.body.appendChild(notesPanel);
+
+  notesBtn.style.position = "fixed";
+  notesPanel.style.position = "fixed";
+
+  notesBtn.style.zIndex = "2147483647";
+  notesPanel.style.zIndex = "2147483647";
+
+  const STORAGE_KEY = "page_notes";
+  notesArea.value = localStorage.getItem(STORAGE_KEY) || "";
+
+  // Toggle panel
+  notesBtn.addEventListener("click", () => {
+    notesPanel.classList.toggle("hidden");
+  });
+
+  // Persist notes
+  notesArea.addEventListener("input", () => {
+    localStorage.setItem(STORAGE_KEY, notesArea.value);
+  });
+
+  // Clear notes
+  clearBtn.addEventListener("click", () => {
+    if (confirm("Clear all notes?")) {
+      notesArea.value = "";
+      localStorage.removeItem(STORAGE_KEY);
+    }
+  });
+
+  // Download notes
+  downloadBtn.addEventListener("click", () => {
+    const blob = new Blob([notesArea.value], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "my-notes.txt";
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+});
+</script>
+
+<footer>
+<p>&copy; 2025 Hocco&rsquo;s Virtual Internship &ndash; Building a Distinctive Brand</p>
+</footer>
+<script>
+        // Progress Bar Logic
+        let progress = 20;
+        function updateProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 80 : 0;
+            const totalProgress = Math.min(100, 20 + scrollPercent);
+            const progressFill = document.getElementById("progress-fill");
+            const progressTracker = document.getElementById("progressTracker");
+            const progressBar = document.getElementById("progressBar");
+            if (window.innerWidth <= 600) {
+                progressFill.style.width = totalProgress + "%";
+                progressBar.style.width = totalProgress + "%";
+            } else {
+                progressFill.style.height = totalProgress + "%";
+                progressBar.style.width = totalProgress + "%";
+            }
+            progressTracker.textContent = `${Math.round(totalProgress)}% Complete (Keep going!)`;
+            progress = totalProgress;
+        }
+
+        // GSAP Animations
+        window.onload = () => {
+            gsap.fromTo("header", { y: -100, opacity: 0 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out" });
+            gsap.fromTo(".assignment-step", { opacity: 0, y: 50 }, { duration: 1, opacity: 1, y: 0, stagger: 0.2, delay: 0.5 });
+            gsap.fromTo(".scoop-bounce", { opacity: 0, scale: 0.8 }, { duration: 1, opacity: 1, scale: 1, stagger: 0.2, delay: 1 });
+            gsap.fromTo(".step-card", { opacity: 0, scale: 0.8 }, { duration: 1, opacity: 1, scale: 1, stagger: 0.2, delay: 1.2 });
+            gsap.fromTo(".video-container", { opacity: 0, scale: 0.8 }, { duration: 1, opacity: 1, scale: 1, delay: 1.5 });
+            gsap.fromTo(".calculator-iframe", { opacity: 0, scale: 0.9 }, { duration: 1, opacity: 1, scale: 1, delay: 1.5 });
+            updateProgress();
+        };
+
+        // Scroll-based Progress
+        window.addEventListener("scroll", updateProgress);
+
+        // Scroll-based Visibility
+        const assignments = document.querySelectorAll(".assignment-step");
+        window.addEventListener("scroll", () => {
+            assignments.forEach(assignment => {
+                const rect = assignment.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50) {
+                    assignment.classList.add("visible");
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById("back-to-top");
+        window.addEventListener("scroll", () => {
+            backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+        });
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        // Print Functionality
+        window.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script></div>
+</body>
+</html>

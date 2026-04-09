@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>🍦 Chapter 4: Hocco and the Ice Cream Factory</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="styles/3.4.css">
+  <link rel="stylesheet" href="styles/app-responsive.css">
+</head>
+<body class="course-page page-3-4">
+<!-- Background Emojis -->
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+<!-- Sidebar -->
+
+<div class="sidebar">
+<div class="progress-bar">
+<div class="progress-fill" id="progress-fill" style="height: 61.3785%;">&nbsp;</div>
+</div>
+</div>
+<!-- GUSTORA THEMED FULLSCREEN BUTTON -->
+
+<div id="gustoraFullscreenBtn"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" viewbox="0 0 24 24"> <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path> </svg></div>
+
+<script>
+// Gustora-themed Fullscreen Toggle (works on all modern browsers + mobile)
+document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen?.() || 
+    document.documentElement.webkitRequestFullscreen?.() || 
+    document.documentElement.msRequestFullscreen?.();
+  } else {
+    document.exitFullscreen?.() || 
+    document.webkitExitFullscreen?.() || 
+    document.msExitFullscreen?.();
+  }
+});
+</script>
+<div class="min-h-screen flex flex-col"><!-- Header -->
+<header class="hocco-navy text-white py-4 sm:py-6 text-center" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+<div class="container mx-auto px-4 sm:px-6 flex items-center justify-between">
+<div>
+<h1 class="flex items-center" style="text-align: center;"><strong>🍦 Chapter 4: Hocco and the Ice Cream Factory</strong></h1>
+
+<h1 style="text-align: center;"><span>Crafting Sweet Moments, One Scoop at a Time &ndash; Dive into an Interactive Adventure!</span></h1>
+</div>
+<span class="premium-badge">Virtual Internship</span></div>
+</header>
+<!-- Main Content -->
+
+<main class="flex-grow px-4 sm:px-6 py-8"><!-- Ice Cream Production Process Section with Drag-and-Drop -->
+<section class="assignment-step section-bg" id="production-process" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 2.5313px, 0px); opacity: 0.9494;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Production Icon" class="w-8 h-8 mr-2 scoop-bounce icon-image" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h5.svg" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -4.57191px, 0px) scale(0.8949, 0.8949); opacity: 0.4744;" /> The Art of Ice Cream Production</h2>
+</div>
+
+<div class="assignment-content">
+<p class="mb-4">Hocco&rsquo;s ice cream is crafted with premium ingredients like <strong>fresh dairy</strong> and <strong>ripe fruits</strong>. These are <strong>mixed</strong>, <strong>pasteurized</strong>, <strong>homogenized</strong> for a <strong>smooth texture</strong>, <strong>frozen</strong>, <strong>flavored</strong>, and <strong>packed</strong> in <strong>containers</strong>.</p>
+
+<p class="mb-4">Join the fun! <strong>Drag and drop</strong> the steps below to arrange them in order. Click &quot;<strong>Check Order</strong>&quot; to see if you nailed it!</p>
+
+<div class="flex flex-col" id="drag-container">
+<div class="drag-item"><strong>Step 3: Homogenize the mixture for a silky texture</strong></div>
+
+<div class="drag-item"><strong>Step 4: Rapidly freeze in advanced machines</strong></div>
+
+<div class="drag-item"><strong>Step 5: Add flavors and inclusions with precision</strong></div>
+
+<div class="drag-item"><strong>Step 6: Package in eco-friendly containers</strong></div>
+
+<div class="drag-item"><strong>Step 1: Source premium ingredients like fresh dairy and fruits</strong></div>
+
+<div class="drag-item"><strong>Step 2: Mix and pasteurize for safety and consistency</strong></div>
+</div>
+<button class="quiz-btn mt-4" id="check-order">Check Order</button><button class="reset-btn mt-4" id="reset-order">Reset</button>
+
+<p class="quiz-feedback" id="order-feedback">&nbsp;</p>
+<img decoding="async" loading="lazy" alt="Hocco Ice Cream Production Process" class="production-image mt-6 scoop-bounce" src="/s/articles/68a3f88ab9492d20e671b80e/images/manufactru.png" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -4.57191px, 0px) scale(0.8289, 0.8289); opacity: 0.1444;" /></div>
+</section>
+<!-- Why Packaging Matters Section -->
+
+<section class="assignment-step section-bg" id="packaging" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 9.0313px, 0px); opacity: 0.8194;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Packaging Icon" class="w-8 h-8 mr-2 scoop-bounce icon-image" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, -4.57191px) scale(0.8, 0.8); opacity: 0;" /> Packaging That Tells a Story</h2>
+</div>
+
+<div class="assignment-content">
+<p>Discover the magic of Hocco&rsquo;s packaging &ndash; bold, colorful, and eco-friendly! It&rsquo;s not just a container; it&rsquo;s a canvas that sparks joy and shares our story. Unlike ordinary cartons, our Instagrammable designs turn every tub into a social media star, perfect for sharing sweet moments.</p>
+
+<p class="mt-4"><strong>Hocco&rsquo;s Style:</strong> Playful and story-driven, captivating young hearts and minds.</p>
+<img decoding="async" loading="lazy" alt="Hocco Packaging" class="production-image mt-4 scoop-bounce" src="/s/articles/68d784d894320e3c94019854/images/Special-SKUs-Range_Mobile.png" style="translate: none; rotate: none; scale: none; transform: translate(0px, -4.57191px) scale(0.8, 0.8); opacity: 0;" /></div>
+</section>
+<!-- Factory Tour Section -->
+
+<section class="assignment-step section-bg" id="factory-tour" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 19.5313px, 0px); opacity: 0.6094;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Factory Icon" class="w-8 h-8 mr-2 scoop-bounce icon-image" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-1.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, -4.57191px) scale(0.8, 0.8); opacity: 0;" /> Inside Hocco&rsquo;s Production Wonderland</h2>
+</div>
+
+<div class="assignment-content">
+<p>Step into our enchanting <strong>Bavla plant in Gujarat</strong>, where we whip up <strong>1.3 lakh liters</strong> of joy daily &ndash; aiming for <strong>2.5 lakh</strong> by <strong>February 2026</strong>! <strong>Supplying over 15,000 stores and 100+ parlors in India and the USA</strong>, our cutting-edge tech and spotless hygiene ensure every scoop is fresh, preservative-free, and bursting with flavor.</p>
+
+<p class="mt-4"><strong>Sweet Fun Fact:</strong> Our magical machines craft ice cream so pure, it&rsquo;s like a hug from grandma &ndash; but colder and creamier!</p>
+
+<div class="iframe-container mt-2"><iframe loading="lazy" align="middle" allowfullscreen="" frameborder="0" height="444" id="factory-video" scrolling="no" src="https://www.youtube.com/embed/2rITdfzTNLE?start=58" title="Hocco Factory Tour" width="100%"></iframe></div>
+</div>
+</section>
+<!-- Quiz Section -->
+
+<section class="assignment-step section-bg" id="quiz" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 34.0313px, 0px); opacity: 0.3194;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Quiz Icon" class="w-8 h-8 mr-2 scoop-bounce icon-image" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h3.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, -4.57191px) scale(0.8, 0.8); opacity: 0;" /> Test Your Ice Cream Knowledge!</h2>
+</div>
+
+<div class="assignment-content">
+<p class="mb-4">Ready to prove you&rsquo;re a Hocco expert? Take this fun quiz and see how well you know our wonderland!</p>
+
+<div class="quiz-question">
+<p><strong>Question 1: What is the first step in Hocco&rsquo;s ice cream production?</strong></p>
+
+<div class="quiz-option" data-correct="true">Source premium ingredients</div>
+
+<div class="quiz-option">Freeze the mixture</div>
+
+<div class="quiz-option">Add flavors</div>
+
+<div class="quiz-option">Package the ice cream</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>Question 2: What makes Hocco&rsquo;s packaging unique?</strong></p>
+
+<div class="quiz-option">It&rsquo;s plain and simple</div>
+
+<div class="quiz-option" data-correct="true">Bold, colorful, and Instagrammable</div>
+
+<div class="quiz-option">Made of glass</div>
+
+<div class="quiz-option">Only for export</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>Question 3: How much ice cream does the Bavla plant produce daily?</strong></p>
+
+<div class="quiz-option">500 liters</div>
+
+<div class="quiz-option">10,000 liters</div>
+
+<div class="quiz-option" data-correct="true">1.3 lakh liters</div>
+
+<div class="quiz-option">5 lakh liters</div>
+</div>
+<button class="quiz-btn mt-4" id="submit-quiz">Submit Quiz</button>
+
+<p class="quiz-feedback" id="quiz-feedback">&nbsp;</p>
+</div>
+</section>
+</main>
+<!-- Back to Top Button -->
+
+<button aria-label="Scroll to top" id="back-to-top" onclick="scrollToTop()">&uarr;</button>
+<!-- Footer -->
+<!-- Notes Button -->
+
+<button class="fixed bottom-6 left-6 w-14 h-14 rounded-full bg-white
+         flex items-center justify-center
+         shadow-[0_0_20px_rgba(250,204,21,0.65)]
+         hover:shadow-[0_0_30px_rgba(250,204,21,0.9)]" id="notesBtn">📝</button>
+<!-- Notes Panel -->
+
+<div class="hidden fixed bottom-24 left-6 w-80 bg-slate-800 text-black
+         rounded-xl shadow-xl p-4" id="notesPanel"><textarea class="w-full h-32 p-2 bg-slate-700 rounded resize-none" id="notesArea" placeholder="Write your notes here..."></textarea>
+
+<div class="flex gap-2 mt-3"><button class="flex-1 bg-green-600 rounded p-2" id="downloadNotes">Download</button><button class="flex-1 bg-red-600 rounded p-2" id="clearNotes">Clear</button></div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const notesBtn = document.getElementById("notesBtn");
+  const notesPanel = document.getElementById("notesPanel");
+  const notesArea = document.getElementById("notesArea");
+  const clearBtn = document.getElementById("clearNotes");
+  const downloadBtn = document.getElementById("downloadNotes");
+
+  if (!notesBtn || !notesPanel || !notesArea) return;
+
+  // 🚀 Escape all stacking contexts
+  document.body.appendChild(notesBtn);
+  document.body.appendChild(notesPanel);
+
+  notesBtn.style.position = "fixed";
+  notesPanel.style.position = "fixed";
+
+  notesBtn.style.zIndex = "2147483647";
+  notesPanel.style.zIndex = "2147483647";
+
+  const STORAGE_KEY = "page_notes";
+  notesArea.value = localStorage.getItem(STORAGE_KEY) || "";
+
+  // Toggle panel
+  notesBtn.addEventListener("click", () => {
+    notesPanel.classList.toggle("hidden");
+  });
+
+  // Persist notes
+  notesArea.addEventListener("input", () => {
+    localStorage.setItem(STORAGE_KEY, notesArea.value);
+  });
+
+  // Clear notes
+  clearBtn.addEventListener("click", () => {
+    if (confirm("Clear all notes?")) {
+      notesArea.value = "";
+      localStorage.removeItem(STORAGE_KEY);
+    }
+  });
+
+  // Download notes
+  downloadBtn.addEventListener("click", () => {
+    const blob = new Blob([notesArea.value], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "my-notes.txt";
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+});
+</script>
+
+<footer class="hocco-navy text-white py-4">
+<div class="container mx-auto px-4 text-center">
+<p>&copy; 2025 Hocco&rsquo;s Virtual Internship &ndash; Ice Cream Wonderland</p>
+</div>
+</footer>
+<script>
+        // Progress Bar Logic
+        let progress = 20;
+        function updateProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 80 : 0;
+            const totalProgress = Math.min(100, 20 + scrollPercent);
+            const progressFill = document.getElementById("progress-fill");
+            if (window.innerWidth <= 600) {
+                progressFill.style.width = totalProgress + "%";
+            } else {
+                progressFill.style.height = totalProgress + "%";
+            }
+            progress = totalProgress;
+        }
+
+        // GSAP Animations and Other Logic
+        window.onload = () => {
+            gsap.fromTo("header", { y: -100, opacity: 0 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out" });
+            gsap.fromTo(".assignment-step", { opacity: 0, y: 50 }, { duration: 1, opacity: 1, y: 0, stagger: 0.2, delay: 0.5 });
+            gsap.fromTo(".scoop-bounce", { opacity: 0, scale: 0.8 }, { duration: 1, opacity: 1, scale: 1, stagger: 0.2, delay: 1 });
+
+            // Drag-and-Drop for Production Steps
+            const dragContainer = document.getElementById('drag-container');
+            const correctOrder = [
+                'Step 1: Source premium ingredients like fresh dairy and fruits',
+                'Step 2: Mix and pasteurize for safety and consistency',
+                'Step 3: Homogenize the mixture for a silky texture',
+                'Step 4: Rapidly freeze in advanced machines',
+                'Step 5: Add flavors and inclusions with precision',
+                'Step 6: Package in eco-friendly containers'
+            ];
+            new Sortable(dragContainer, {
+                animation: 150,
+                ghostClass: 'bg-blue-200'
+            });
+
+            document.getElementById('check-order').addEventListener('click', () => {
+                const items = Array.from(dragContainer.children).map(item => item.textContent);
+                let feedback = 'Great job! You got it right!';
+                items.forEach((item, index) => {
+                    if (item !== correctOrder[index]) {
+                        feedback = 'Not quite! Try again.';
+                    }
+                });
+                document.getElementById('order-feedback').textContent = feedback;
+                if (feedback.includes('Great')) {
+                    gsap.to('.drag-item', { backgroundColor: '#90EE90', duration: 0.5, stagger: 0.1 });
+                }
+            });
+
+            document.getElementById('reset-order').addEventListener('click', () => {
+                const shuffled = correctOrder.slice().sort(() => Math.random() - 0.5);
+                dragContainer.innerHTML = shuffled.map(step => `<div class="drag-item">${step}</div>`).join('');
+                document.getElementById('order-feedback').textContent = '';
+                gsap.to('.drag-item', { backgroundColor: '#E6E6FA', duration: 0.5 });
+            });
+
+            // Toggle scroll for video
+            $(".toggle-scroll-btn").click(function() {
+                const iframeId = $(this).data("iframe");
+                const iframe = $("#" + iframeId);
+                const currentScroll = iframe.attr("scrolling");
+                if (currentScroll === "no") {
+                    iframe.attr("scrolling", "yes");
+                    $(this).text("Disable Scroll");
+                } else {
+                    iframe.attr("scrolling", "no");
+                    $(this).text("Enable Scroll");
+                }
+            });
+
+            // Quiz Functionality
+            $('.quiz-option').click(function() {
+                $(this).siblings('.quiz-option').removeClass('selected');
+                $(this).addClass('selected');
+            });
+
+            $('#submit-quiz').click(() => {
+                let score = 0;
+                $('.quiz-question').each(function() {
+                    const selected = $(this).find('.quiz-option.selected');
+                    if (selected.attr('data-correct') === 'true') {
+                        score++;
+                    }
+                });
+                const feedback = `You scored ${score} out of 3! ${score === 3 ? 'Perfect scoop!' : 'Keep exploring!'}`;
+                $('#quiz-feedback').text(feedback);
+                if (score === 3) {
+                    gsap.to('#quiz-feedback', { color: '#90EE90', duration: 0.5 });
+                }
+            });
+
+            updateProgress();
+        };
+
+        // Scroll-based Progress
+        window.addEventListener("scroll", updateProgress);
+
+        // Scroll-based Visibility
+        const assignments = document.querySelectorAll(".assignment-step");
+        window.addEventListener("scroll", () => {
+            assignments.forEach(assignment => {
+                const rect = assignment.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50) {
+                    assignment.classList.add("visible");
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById("back-to-top");
+        window.addEventListener("scroll", () => {
+            backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+        });
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        // Print Functionality
+        window.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script></div>
+</body>
+</html>

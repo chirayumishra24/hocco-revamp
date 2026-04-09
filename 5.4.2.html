@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>🍦 Chapter 5.4: Hocco Funding - Beyond the Scoop</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles/5.4.2.css">
+  <link rel="stylesheet" href="styles/app-responsive.css">
+</head>
+<body class="course-page page-5-4-2">
+<!-- Background Emojis -->
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+<!-- Sidebar -->
+
+<div class="sidebar">
+<div class="progress-bar">
+<div class="progress-fill" id="progress-fill" style="height: 62.8156%;">&nbsp;</div>
+</div>
+</div>
+<!-- GUSTORA THEMED FULLSCREEN BUTTON -->
+
+<div id="gustoraFullscreenBtn"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" viewbox="0 0 24 24"> <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path> </svg></div>
+
+<script>
+// Gustora-themed Fullscreen Toggle (works on all modern browsers + mobile)
+document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen?.() || 
+    document.documentElement.webkitRequestFullscreen?.() || 
+    document.documentElement.msRequestFullscreen?.();
+  } else {
+    document.exitFullscreen?.() || 
+    document.webkitExitFullscreen?.() || 
+    document.msExitFullscreen?.();
+  }
+});
+</script>
+<div class="min-h-screen flex flex-col"><!-- Header -->
+<header style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+<div class="flex items-center justify-between px-4">
+<div>
+<h1 class="scoop-bounce" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.9973, 0.9973); opacity: 0.9865; text-align: center;">🍦 Chapter 5.4: Hocco Funding &ndash; Beyond the Scoop</h1>
+
+<p style="text-align: center;">Strategy, Finance &amp; The Taste Revolution</p>
+</div>
+<span class="premium-badge">Hocco Internship</span></div>
+</header>
+<!-- Main Content -->
+
+<main><!-- Step 1: Startup Funding Explained -->
+<section class="assignment-step" id="assignment-funding-explained" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Funding Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h5.svg" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.98, 0.98); opacity: 0.9001;" /> Startup Funding Explained 💰</h2>
+</div>
+
+<div class="assignment-content">
+<p><span style="color:#000000;">Startup funding involves raising capital to cover initial costs, growth, and milestones, typically from investors in exchange for equity or loans. Key uses include prototype development, market research, scaling operations, and hitting growth milestones.</span></p>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flip-card" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.9973, 0.9973); opacity: 0.9865;">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<p><span style="color:#ffffff;"><span style="font-size:18px;">Prototype Development</span></span></p>
+</div>
+
+<div class="flip-card-back">
+<p><span style="color:#ffffff;"><span style="font-size:18px;">Funding supports creating and testing new products like Hocco&rsquo;s unique flavors.</span></span></p>
+</div>
+</div>
+</div>
+
+<div class="flip-card" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.98, 0.98); opacity: 0.9001;">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<p><span style="color:#ffffff;"><span style="font-size:18px;">Market Research</span></span></p>
+</div>
+
+<div class="flip-card-back">
+<p><span style="color:#ffffff;"><span style="font-size:18px;">Capital is used to understand consumer preferences and market opportunities.</span></span></p>
+</div>
+</div>
+</div>
+
+<div class="flip-card" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.9467, 0.9467); opacity: 0.7337;">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<p><span style="color:#ffffff;"><span style="font-size:18px;">Scaling Operations</span></span></p>
+</div>
+
+<div class="flip-card-back">
+<p><span style="color:#ffffff;"><span style="font-size:18px;">Investments enable expansion of production and distribution networks.</span></span></p>
+</div>
+</div>
+</div>
+
+<div class="flip-card" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.8975, 0.8975); opacity: 0.4873;">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<p><span style="color:#ffffff;"><span style="font-size:18px;">Growth Milestones</span></span></p>
+</div>
+
+<div class="flip-card-back">
+<p>Funding helps achieve key business targets, such as revenue or market share goals.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 2: Hocco’s $10M Funding Story -->
+
+<section class="assignment-step" id="assignment-funding-story" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Funding Story Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.9467, 0.9467); opacity: 0.7337;" /> Hocco&rsquo;s $10M Funding Story 🚀</h2>
+</div>
+
+<div class="assignment-content">
+<p>Ahmedabad-based premium ice cream brand <strong>Hocco</strong> raised <strong>$10M</strong> in the first tranche of a <strong>Series B round worth $20&ndash;25M</strong>, co-led by Chona Family Office and Sauce VC. The funds are split between capacity expansion and geographic expansion.</p>
+</div>
+</section>
+<!-- Step 3: Expansion Plans -->
+
+<section class="assignment-step" id="assignment-expansion-plans" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0.0128px, 0px); opacity: 0.9997;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Expansion Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="/s/org/images/ionj.png" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.8975, 0.8975); opacity: 0.4873;" /> Expansion Plans</h2>
+</div>
+
+<div class="assignment-content"><img decoding="async" loading="lazy" alt="Expansion Image" class="w-full max-w-[900px] scoop-bounce" src="/s/org/images/ionj.png" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.8322, 0.8322); opacity: 0.1609;" />Positioning products as exclusive and high-quality to attract consumers.</div>
+</section>
+<!-- Step 4: Glossary --><!-- Step 5: Conclusion -->
+
+<section class="assignment-step" id="assignment-conclusion" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 2.3328px, 0px); opacity: 0.9533;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Conclusion Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /> Conclusion</h2>
+</div>
+
+<div class="assignment-content">
+<p><strong>Hocco&rsquo;s $10M Series B funding</strong> marks a pivotal step in its journey to redefine the premium ice cream market. By leveraging investments from <strong>Chona Family Office and Sauce VC</strong>, Hocco is scaling production to <strong>2.5 lakh liters/day</strong> and expanding into new regions like Uttar Pradesh and South India. Its strategic shift towards <strong>30% Q-commerce distribution</strong> and innovative products like <strong>Amchi Mango and Huber &amp; Holly</strong> flavors demonstrate a commitment to premiumization and consumer engagement. With accessible audio narration enhancing its content, Hocco ensures inclusivity, aligning with its <strong>Acchai &amp; Sacchai</strong> ethos. This funding fuels Hocco&rsquo;s vision to become a leading player in India&rsquo;s taste revolution, balancing growth with quality and accessibility.</p>
+</div>
+</section>
+<!-- Progress Tracker -->
+
+<section class="assignment-step progress-tracker" id="assignment-progress" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 8.6528px, 0px); opacity: 0.8269;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Progress Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h5.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /> Your Progress</h2>
+</div>
+
+<div class="assignment-content">
+<p id="progressTracker">63% Complete (Keep going!)</p>
+
+<div class="progress-bar" id="progressBar" style="width: 62.8156%;">&nbsp;</div>
+</div>
+</section>
+</main>
+<!-- Back to Top Button -->
+
+<button aria-label="Scroll to top" id="back-to-top" onclick="scrollToTop()">&uarr;</button>
+<!-- Footer -->
+<!-- Notes Button -->
+
+<button class="fixed bottom-6 left-6 w-14 h-14 rounded-full bg-white
+         flex items-center justify-center
+         shadow-[0_0_20px_rgba(250,204,21,0.65)]
+         hover:shadow-[0_0_30px_rgba(250,204,21,0.9)]" id="notesBtn">📝</button>
+<!-- Notes Panel -->
+
+<div class="hidden fixed bottom-24 left-6 w-80 bg-slate-800 text-black
+         rounded-xl shadow-xl p-4" id="notesPanel"><textarea class="w-full h-32 p-2 bg-slate-700 rounded resize-none" id="notesArea" placeholder="Write your notes here..."></textarea>
+
+<div class="flex gap-2 mt-3"><button class="flex-1 bg-green-600 rounded p-2" id="downloadNotes">Download</button><button class="flex-1 bg-red-600 rounded p-2" id="clearNotes">Clear</button></div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const notesBtn = document.getElementById("notesBtn");
+  const notesPanel = document.getElementById("notesPanel");
+  const notesArea = document.getElementById("notesArea");
+  const clearBtn = document.getElementById("clearNotes");
+  const downloadBtn = document.getElementById("downloadNotes");
+
+  if (!notesBtn || !notesPanel || !notesArea) return;
+
+  // 🚀 Escape all stacking contexts
+  document.body.appendChild(notesBtn);
+  document.body.appendChild(notesPanel);
+
+  notesBtn.style.position = "fixed";
+  notesPanel.style.position = "fixed";
+
+  notesBtn.style.zIndex = "2147483647";
+  notesPanel.style.zIndex = "2147483647";
+
+  const STORAGE_KEY = "page_notes";
+  notesArea.value = localStorage.getItem(STORAGE_KEY) || "";
+
+  // Toggle panel
+  notesBtn.addEventListener("click", () => {
+    notesPanel.classList.toggle("hidden");
+  });
+
+  // Persist notes
+  notesArea.addEventListener("input", () => {
+    localStorage.setItem(STORAGE_KEY, notesArea.value);
+  });
+
+  // Clear notes
+  clearBtn.addEventListener("click", () => {
+    if (confirm("Clear all notes?")) {
+      notesArea.value = "";
+      localStorage.removeItem(STORAGE_KEY);
+    }
+  });
+
+  // Download notes
+  downloadBtn.addEventListener("click", () => {
+    const blob = new Blob([notesArea.value], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "my-notes.txt";
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+});
+</script>
+
+<footer>
+<p>&copy; 2025 Hocco&rsquo;s Virtual Internship &ndash; Scoop the Hoccoverse</p>
+</footer>
+<script>
+        // Progress Bar Logic
+        let progress = 20;
+        function updateProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 80 : 0;
+            const totalProgress = Math.min(100, 20 + scrollPercent);
+            const progressFill = document.getElementById("progress-fill");
+            const progressTracker = document.getElementById("progressTracker");
+            const progressBar = document.getElementById("progressBar");
+            if (window.innerWidth <= 600) {
+                progressFill.style.width = totalProgress + "%";
+                progressBar.style.width = totalProgress + "%";
+            } else {
+                progressFill.style.height = totalProgress + "%";
+                progressBar.style.width = totalProgress + "%";
+            }
+            progressTracker.textContent = `${Math.round(totalProgress)}% Complete (Keep going!)`;
+            progress = totalProgress;
+        }
+
+        // GSAP Animations
+        window.onload = () => {
+            gsap.fromTo("header", { y: -100, opacity: 0 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out" });
+            gsap.fromTo(".assignment-step", { opacity: 0, y: 50 }, { duration: 1, opacity: 1, y: 0, stagger: 0.2, delay: 0.5 });
+            gsap.fromTo(".scoop-bounce", { opacity: 0, scale: 0.8 }, { duration: 1, opacity: 1, scale: 1, stagger: 0.2, delay: 1 });
+            gsap.fromTo(".flip-card", { opacity: 0, scale: 0.8 }, { duration: 1, opacity: 1, scale: 1, stagger: 0.2, delay: 1 });
+            gsap.fromTo(".chart-container", { opacity: 0, scale: 0.8 }, { duration: 1, opacity: 1, scale: 1, delay: 1.2 });
+            updateProgress();
+        };
+
+        // Scroll-based Progress
+        window.addEventListener("scroll", updateProgress);
+
+        // Scroll-based Visibility
+        const assignments = document.querySelectorAll(".assignment-step");
+        window.addEventListener("scroll", () => {
+            assignments.forEach(assignment => {
+                const rect = assignment.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50) {
+                    assignment.classList.add("visible");
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById("back-to-top");
+        window.addEventListener("scroll", () => {
+            backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+        });
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        // Flip Card Interaction
+        $(document).ready(function() {
+            $('.flip-card').click(function() {
+                $(this).toggleClass('flipped');
+            });
+        });
+
+        // Print Functionality
+        window.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script></div>
+</body>
+</html>

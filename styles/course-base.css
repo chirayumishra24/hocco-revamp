@@ -1,0 +1,698 @@
+:root {
+  --hocco-navy: #2d2b7e;
+  --hocco-red: #c71545;
+  --hocco-red-dark: #a51138;
+  --hocco-white: #ffffff;
+  --surface: rgba(255, 255, 255, 0.96);
+  --surface-muted: #f8fafc;
+  --surface-soft: #eef2ff;
+  --text-main: #1f2937;
+  --text-muted: #4b5563;
+  --border-soft: rgba(45, 43, 126, 0.14);
+  --shadow-soft: 0 18px 42px rgba(15, 23, 42, 0.12);
+  --shadow-card: 0 14px 30px rgba(45, 43, 126, 0.12);
+  --radius-lg: 20px;
+  --radius-md: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body.course-page {
+  font-family: Inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at top left, rgba(199, 21, 69, 0.12), transparent 26%),
+    radial-gradient(circle at top right, rgba(45, 43, 126, 0.12), transparent 30%),
+    url("/s/articles/68a816ff6d84083c9b394177/images/handels-seamless-bg.jpg") repeat;
+  background-color: #fffafc;
+  line-height: 1.6;
+}
+
+body.course-page.hidden .hidden,
+.hidden {
+  display: none !important;
+}
+
+body.course-page a {
+  color: var(--hocco-red);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+body.course-page a:hover {
+  color: var(--hocco-red-dark);
+  text-decoration: underline;
+}
+
+body.course-page h1,
+body.course-page h2,
+body.course-page h3 {
+  margin: 0;
+  color: var(--text-main);
+}
+
+body.course-page p,
+body.course-page li,
+body.course-page label {
+  color: var(--text-muted);
+}
+
+body.course-page ul,
+body.course-page ol {
+  padding-left: 1.25rem;
+}
+
+body.course-page header,
+body.course-page footer {
+  width: min(95%, 1280px);
+  margin: 0 auto;
+}
+
+body.course-page header {
+  background: linear-gradient(135deg, var(--hocco-navy), #413fb3);
+  color: var(--hocco-white);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+body.course-page header h1,
+body.course-page header p,
+body.course-page footer p,
+body.course-page .text-hocco-white {
+  color: var(--hocco-white) !important;
+}
+
+body.course-page main,
+body.course-page .flex-grow,
+body.course-page .flex-grow.container {
+  width: min(95%, 1280px);
+  margin: 0 auto;
+}
+
+body.course-page footer {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--hocco-navy), #25235d);
+  color: var(--hocco-white);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+body.course-page .premium-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  background: var(--hocco-red);
+  color: var(--hocco-white);
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 12px 24px rgba(199, 21, 69, 0.2);
+}
+
+body.course-page .emoji-bg {
+  position: fixed;
+  font-size: clamp(1.5rem, 2.4vw, 2.5rem);
+  opacity: 0.22;
+  z-index: 0;
+  pointer-events: none;
+  animation: float-rotate 14s ease-in-out infinite;
+}
+
+body.course-page main,
+body.course-page .topic,
+body.course-page .assignment-step,
+body.course-page .section-bg {
+  position: relative;
+  z-index: 1;
+}
+
+body.course-page .topic,
+body.course-page .assignment-step,
+body.course-page .section-bg,
+body.course-page .activity-section,
+body.course-page .quiz-container,
+body.course-page .timeline-content,
+body.course-page .step-card,
+body.course-page .card,
+body.course-page .tool-placeholder,
+body.course-page .video-container,
+body.course-page .video-placeholder,
+body.course-page .interactive-container,
+body.course-page .iframe-container,
+body.course-page .iframe-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+body.course-page .topic,
+body.course-page .assignment-step,
+body.course-page .section-bg {
+  margin: 1.5rem auto;
+  padding: clamp(1rem, 2vw, 1.5rem);
+}
+
+body.course-page .topic.visible,
+body.course-page .assignment-step.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.course-page .topic-heading,
+body.course-page .assignment-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--hocco-navy), var(--hocco-red));
+  color: var(--hocco-white);
+  box-shadow: 0 14px 24px rgba(45, 43, 126, 0.15);
+}
+
+body.course-page .topic-heading h2,
+body.course-page .assignment-heading h2,
+body.course-page .hocco-red {
+  color: inherit;
+}
+
+body.course-page .topic-content,
+body.course-page .assignment-content {
+  padding: 0.25rem;
+}
+
+body.course-page .scoop-bounce {
+  animation: scoopBounce 2s ease-in-out infinite;
+}
+
+body.course-page .audio-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 1rem auto;
+  background:
+    linear-gradient(160deg, rgba(45, 43, 126, 0.8), rgba(199, 21, 69, 0.6)),
+    url("https://hocco-creativity.vercel.app/Subtitle%20(4).png") center/cover no-repeat;
+  border-radius: var(--radius-lg);
+}
+
+body.course-page audio {
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+body.course-page .sidebar {
+  position: fixed;
+  top: 24%;
+  right: 0;
+  width: 34px;
+  height: 48%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px 0 0 999px;
+  border: 2px solid rgba(45, 43, 126, 0.2);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: var(--shadow-card);
+  z-index: 30;
+}
+
+body.course-page .progress-bar {
+  width: 10px;
+  height: 100%;
+  background: #dbe4ff;
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+body.course-page .progress-fill {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  border-radius: inherit;
+  background: linear-gradient(180deg, var(--hocco-red), var(--hocco-navy));
+}
+
+body.course-page .progress-tracker .progress-bar,
+body.course-page #progressBar {
+  width: 100%;
+  height: 12px;
+  min-height: 12px;
+  margin-top: 0.75rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--hocco-red), var(--hocco-navy));
+}
+
+body.course-page .video-container,
+body.course-page .video-placeholder,
+body.course-page .interactive-container,
+body.course-page .iframe-wrap,
+body.course-page .iframe-container {
+  overflow: hidden;
+  margin: 1rem auto;
+}
+
+body.course-page .fullscreen-button,
+body.course-page .play-button,
+body.course-page .toggle-scroll-btn,
+body.course-page .carousel-btn,
+body.course-page #back-to-top,
+body.course-page #theme-toggle,
+body.course-page #notesBtn,
+body.course-page #gustoraFullscreenBtn,
+body.course-page button[type="submit"],
+body.course-page button:not(.quiz-option) {
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--hocco-red), var(--hocco-navy));
+  color: var(--hocco-white);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 12px 20px rgba(45, 43, 126, 0.16);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+body.course-page .fullscreen-button:hover,
+body.course-page .play-button:hover,
+body.course-page .toggle-scroll-btn:hover,
+body.course-page .carousel-btn:hover,
+body.course-page #back-to-top:hover,
+body.course-page #theme-toggle:hover,
+body.course-page #notesBtn:hover,
+body.course-page #gustoraFullscreenBtn:hover,
+body.course-page button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px rgba(45, 43, 126, 0.22);
+  filter: brightness(1.02);
+}
+
+body.course-page .fullscreen-button,
+body.course-page .carousel-btn,
+body.course-page .play-button,
+body.course-page #theme-toggle {
+  width: 48px;
+  height: 48px;
+}
+
+body.course-page .toggle-scroll-btn,
+body.course-page button[type="submit"],
+body.course-page #downloadNotes,
+body.course-page #clearNotes,
+body.course-page #reset-activity,
+body.course-page #submit-quiz,
+body.course-page #check-order,
+body.course-page #reset-order,
+body.course-page #quiz-submit-btn {
+  padding: 0.8rem 1.2rem;
+}
+
+body.course-page #back-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 52px;
+  height: 52px;
+  z-index: 40;
+}
+
+body.course-page #notesBtn {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  width: 56px;
+  height: 56px;
+  z-index: 40;
+}
+
+body.course-page #notesPanel {
+  position: fixed;
+  left: 18px;
+  bottom: 90px;
+  z-index: 40;
+  background: #0f172a;
+  color: var(--hocco-white);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 24px 40px rgba(15, 23, 42, 0.38);
+}
+
+body.course-page #notesPanel textarea {
+  color: var(--hocco-white);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.course-page #gustoraFullscreenBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 45;
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.course-page .flip-card,
+body.course-page .card {
+  perspective: 1100px;
+}
+
+body.course-page .flip-card-inner,
+body.course-page .card-content {
+  position: relative;
+  min-height: 220px;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+body.course-page .flip-card:hover .flip-card-inner,
+body.course-page .flip-card.flipped .flip-card-inner,
+body.course-page .flip-card .flip-card-inner.flipped,
+body.course-page .card:hover .card-content,
+body.course-page .card.flipped .card-content {
+  transform: rotateY(180deg);
+}
+
+body.course-page .flip-card-front,
+body.course-page .flip-card-back,
+body.course-page .card-front,
+body.course-page .card-back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.2rem;
+  backface-visibility: hidden;
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+body.course-page .flip-card-front,
+body.course-page .card-front {
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  border: 2px solid rgba(199, 21, 69, 0.14);
+}
+
+body.course-page .flip-card-back,
+body.course-page .card-back {
+  background: linear-gradient(180deg, var(--hocco-navy), #1e1b4b);
+  color: var(--hocco-white);
+  transform: rotateY(180deg);
+}
+
+body.course-page .timeline {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+}
+
+body.course-page .timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: linear-gradient(180deg, var(--hocco-red), var(--hocco-navy));
+  transform: translateX(-50%);
+}
+
+body.course-page .timeline-item {
+  position: relative;
+  width: calc(50% - 24px);
+}
+
+body.course-page .timeline-item.left {
+  justify-self: start;
+}
+
+body.course-page .timeline-item.right {
+  justify-self: end;
+}
+
+body.course-page .timeline-dot {
+  position: absolute;
+  top: 24px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--hocco-red), var(--hocco-navy));
+  border: 3px solid var(--hocco-white);
+  box-shadow: 0 0 0 6px rgba(199, 21, 69, 0.08);
+}
+
+body.course-page .timeline-item.left .timeline-dot {
+  right: -33px;
+}
+
+body.course-page .timeline-item.right .timeline-dot {
+  left: -33px;
+}
+
+body.course-page .timeline-content {
+  padding: 1rem 1.1rem;
+}
+
+body.course-page .timeline-content p {
+  margin-top: 0.4rem;
+}
+
+body.course-page .quiz-container,
+body.course-page .activity-section {
+  padding: 1.1rem;
+}
+
+body.course-page .quiz-option,
+body.course-page .drag-item,
+body.course-page .drop-zone,
+body.course-page .step-card,
+body.course-page .card,
+body.course-page .flavor-card {
+  border: 1px solid rgba(45, 43, 126, 0.12);
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+
+body.course-page .quiz-option,
+body.course-page .drag-item,
+body.course-page .drop-zone {
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+}
+
+body.course-page .quiz-option.correct,
+body.course-page .text-green-600.correct {
+  background: #dcfce7;
+  border-color: #16a34a;
+  color: #166534 !important;
+}
+
+body.course-page .quiz-option.incorrect,
+body.course-page .text-red-600.incorrect {
+  background: #fee2e2;
+  border-color: #dc2626;
+  color: #991b1b !important;
+}
+
+body.course-page .confirmation-message,
+body.course-page #quizFeedback,
+body.course-page #journal-feedback {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: var(--hocco-navy);
+}
+
+body.course-page .steps,
+body.course-page .grid {
+  gap: 1rem;
+}
+
+body.course-page .step-card {
+  padding: 1rem;
+}
+
+body.course-page .step-number {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--hocco-red), var(--hocco-navy));
+  color: var(--hocco-white);
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+body.course-page .carousel-container {
+  overflow: hidden;
+}
+
+body.course-page .carousel-track {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.4s ease;
+}
+
+body.course-page .carousel-slide {
+  min-width: 100%;
+}
+
+body.course-page .carousel-btn.left {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+
+body.course-page .carousel-btn.right {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+}
+
+body.course-page table {
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+body.course-page th,
+body.course-page td {
+  padding: 1rem 1.1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+body.course-page th {
+  background: linear-gradient(135deg, var(--hocco-navy), #3c38a3);
+  color: var(--hocco-white);
+  font-weight: 700;
+}
+
+body.course-page tr:nth-child(even) {
+  background: rgba(238, 242, 255, 0.55);
+}
+
+body.course-page textarea,
+body.course-page input,
+body.course-page select {
+  padding: 0.85rem 0.95rem;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+body.course-page body.dark,
+body.course-page.dark {
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+body.course-page.dark .topic,
+body.course-page.dark .assignment-step,
+body.course-page.dark .section-bg,
+body.course-page .topic.dark,
+body.course-page .timeline.dark,
+body.course-page .timeline-content.dark,
+body.course-page .quiz-container.dark,
+body.course-page .quiz-option.dark,
+body.course-page footer.dark,
+body.course-page header.dark {
+  background: rgba(15, 23, 42, 0.92);
+  color: #e5e7eb;
+  border-color: rgba(148, 163, 184, 0.22);
+}
+
+body.course-page.dark p,
+body.course-page.dark li,
+body.course-page.dark h1,
+body.course-page.dark h2,
+body.course-page.dark h3,
+body.course-page.dark label,
+body.course-page.dark .timeline-content,
+body.course-page.dark .quiz-option,
+body.course-page.dark .topic,
+body.course-page.dark .assignment-step {
+  color: #e5e7eb !important;
+}
+
+body.course-page.dark .progress-bar,
+body.course-page .progress-bar.dark {
+  background: rgba(148, 163, 184, 0.28);
+}
+
+body.course-page.dark .emoji-bg,
+body.course-page .emoji-bg.dark {
+  opacity: 0.14;
+}
+
+@keyframes scoopBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float-rotate {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(8deg);
+  }
+}
+
+@media (max-width: 900px) {
+  body.course-page .timeline::before {
+    left: 14px;
+    transform: none;
+  }
+
+  body.course-page .timeline-item,
+  body.course-page .timeline-item.left,
+  body.course-page .timeline-item.right {
+    width: 100%;
+    justify-self: stretch;
+    padding-left: 2.2rem;
+  }
+
+  body.course-page .timeline-item.left .timeline-dot,
+  body.course-page .timeline-item.right .timeline-dot {
+    left: 4px;
+    right: auto;
+  }
+}

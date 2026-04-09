@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>🍦 Glossary: Module 5 | Hocco Course</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'hocco-navy': '#2D2B7E',
+            'hocco-red': '#C71545',
+            'hocco-white': '#FFFFFF',
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="styles/5glossary.css">
+  <link rel="stylesheet" href="styles/app-responsive.css">
+</head>
+<body class="course-page page-5glossary">
+<!-- GUSTORA THEMED FULLSCREEN BUTTON -->
+<div id="gustoraFullscreenBtn"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" viewbox="0 0 24 24"> <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path> </svg></div>
+
+<script>
+// Gustora-themed Fullscreen Toggle (works on all modern browsers + mobile)
+document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen?.() || 
+    document.documentElement.webkitRequestFullscreen?.() || 
+    document.documentElement.msRequestFullscreen?.();
+  } else {
+    document.exitFullscreen?.() || 
+    document.webkitExitFullscreen?.() || 
+    document.msExitFullscreen?.();
+  }
+});
+</script>
+<div class="min-h-screen flex flex-col"><!-- Header -->
+<header class="hocco-navy text-white py-4 sm:py-6" style="translate: none; rotate: none; scale: none; opacity: 0.3528; transform: translate3d(0px, -64.7215px, 0px);">
+<div class="container mx-auto px-4 sm:px-6">
+<div class="flex items-center justify-between">
+<div>
+<h1 class="text-2xl sm:text-4xl font-bold text-hocco-white scoop-bounce" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;">🍦 Glossary: Module 5</h1>
+
+<p class="text-base sm:text-lg mt-2">Hocco&rsquo;s Virtual Internship &ndash; Key Terms</p>
+</div>
+</div>
+</div>
+</header>
+
+<main class="flex-grow px-4 sm:px-6 py-8">
+<section class="section-bg rounded-lg p-4 sm:p-6 mb-8 shadow-lg" id="about-glossary" style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+<h2 class="text-xl sm:text-3xl font-semibold hocco-red mb-4 flex items-center">About This Glossary</h2>
+
+<div class="flex flex-col md:flex-row items-center md:items-start gap-6"><!-- Text -->
+<div class="md:w-1/2">
+<p class="text-sm sm:text-base text-gray-600"><strong>This glossary covers key terms for Module 5 of Hocco&rsquo;s Virtual Internship. Explore the meanings and click &quot;Play Video&quot; to watch videos above the table to deepen your understanding of concepts shaping Hocco&rsquo;s startup and business growth strategies.</strong></p>
+</div>
+<!-- Image -->
+
+<div class="md:w-1/2 flex justify-center"><img decoding="async" loading="lazy" alt="Refrigerated truck" class="trust max-w-full h-auto object-contain" src="/s/articles/68c94cc3ba17f03d6a661fb9/images/glossary.png" /></div>
+</div>
+</section>
+<!-- Video Player -->
+
+<div id="video-player" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 10.658px, 0px); opacity: 0.4671;"><button aria-label="Close video player" class="close-video" onclick="closeVideo()">&times;</button><iframe loading="lazy" allowfullscreen="" id="video-iframe" src=""></iframe></div>
+<!-- Glossary Table -->
+
+<section class="section-bg rounded-lg p-4 sm:p-6 mb-8 shadow-lg" style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+<h2 class="text-xl sm:text-3xl font-semibold hocco-red mb-4 flex items-center"><img decoding="async" loading="lazy" alt="Glossary Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /> Module 5 Glossary</h2>
+
+<table style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+	<thead>
+		<tr>
+			<th><strong><span style="font-size:22px;"><span style="color:#ffffff;">Key Word</span></span></strong></th>
+			<th><strong><span style="font-size:22px;"><span style="color:#ffffff;">Meaning</span></span></strong></th>
+			<th><font color="#ffffff"><span style="font-size: 22px;"><b>Play video</b></span></font></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>Distribution Center (DC)</strong></td>
+			<td>A warehouse where products are stored before being sent to retailers or customers</td>
+			<td><a aria-label="Play video for Distribution Center (DC)" onclick="playVideo('https://www.youtube.com/embed/tPzHmakIKjw?start=0&amp;end=13&amp;rel=0')" style="cursor: pointer;">Play Video </a></td>
+		</tr>
+		<tr>
+			<td><strong>Product-Market Fit (PMF)</strong></td>
+			<td>When a company&#39;s offering meets strong market demand and customers seek it out</td>
+			<td><a aria-label="Play video for Product-Market Fit (PMF)" onclick="playVideo('https://www.youtube.com/embed/OxszZRWXqnU?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Bootstrapping</strong></td>
+			<td>Growing a business using only personal savings or revenue instead of external funding</td>
+			<td><a aria-label="Play video for Bootstrapping" onclick="playVideo('https://www.youtube.com/embed/QaBNAyWTlOQ?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Convertible Note/SAFE</strong></td>
+			<td>Startup funding tools that allow investment to convert to company shares later</td>
+			<td><a aria-label="Play video for Convertible Note/SAFE" onclick="playVideo('https://www.youtube.com/embed/80mFQPm2bL0?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>TAM (Total Addressable Market)</strong></td>
+			<td>The entire revenue opportunity available if a product achieves total market success</td>
+			<td><a aria-label="Play video for TAM (Total Addressable Market)" onclick="playVideo('https://www.youtube.com/embed/Kv7LYp8d4EA?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Valuation</strong></td>
+			<td>The company&rsquo;s estimated market value, used for investment and strategic planning</td>
+			<td><a aria-label="Play video for Valuation" onclick="playVideo('https://www.youtube.com/embed/T3Ud5WQCrzQ?rel=0')" style="cursor: pointer;">Play Video </a></td>
+		</tr>
+		<tr>
+			<td><strong>MVP (Minimum Viable Product)</strong></td>
+			<td>The simplest product version that solves a real problem for early adopters</td>
+			<td><a aria-label="Play video for MVP (Minimum Viable Product)" onclick="playVideo('https://www.youtube.com/embed/Ce5ZXNkbCAY?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Burn Rate</strong></td>
+			<td>The rate at which a startup spends its cash</td>
+			<td><a aria-label="Play video for Burn Rate" onclick="playVideo('https://www.youtube.com/embed/HK0ucbuaNbE?start=4&amp;rel=0')" style="cursor: pointer;">Play Video </a></td>
+		</tr>
+		<tr>
+			<td><strong>Angel Investor</strong></td>
+			<td>An individual investing personal money in startups, typically in early stages</td>
+			<td><a aria-label="Play video for Angel Investor" onclick="playVideo('https://www.youtube.com/embed/4bM2weY_B_Q?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>VC (Venture Capitalist)</strong></td>
+			<td>A professional or firm investing large sums in startups for equity/ownership</td>
+			<td><a aria-label="Play video for VC (Venture Capitalist)" onclick="playVideo('https://www.youtube.com/embed/tXwI_vL8UKE?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>IPO (Initial Public Offering)</strong></td>
+			<td>When a company sells shares to the public for the first time on the stock market</td>
+			<td><a aria-label="Play video for IPO (Initial Public Offering)" onclick="playVideo('https://www.youtube.com/embed/tXApUGPGJBs?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>ARR (Annual Recurring Revenue)</strong></td>
+			<td>Yearly subscription revenue from customers, common in SaaS businesses</td>
+			<td><a aria-label="Play video for ARR (Annual Recurring Revenue)" onclick="playVideo('https://www.youtube.com/embed/_6rwqSyYMew?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>MRR (Monthly Recurring Revenue)</strong></td>
+			<td>Monthly subscription revenue</td>
+			<td><a aria-label="Play video for MRR (Monthly Recurring Revenue)" onclick="playVideo('https://www.youtube.com/embed/yFLZMaS7srs?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Breakeven Analysis</strong></td>
+			<td>Determining when revenue covers all costs and a business starts making profit</td>
+			<td><a aria-label="Play video for Breakeven Analysis" onclick="playVideo('https://www.youtube.com/embed/4aWleo47mgQ?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Loyalty Program</strong></td>
+			<td>A marketing strategy to reward repeat customers with benefits or points</td>
+			<td><a aria-label="Play video for Loyalty Program" onclick="playVideo('https://www.youtube.com/embed/dnb4DK1Hyd8?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Pitch Deck</strong></td>
+			<td>A presentation used by startups to explain their business to potential investors</td>
+			<td><a aria-label="Play video for Pitch Deck" onclick="playVideo('https://www.youtube.com/embed/ge8XgUUrYPU?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Indulgent</strong></td>
+			<td>Rich, luxurious, or satisfying in taste or experience</td>
+			<td><a aria-label="Play video for Indulgent" onclick="playVideo('https://www.youtube.com/embed/Fd89LUkQifs?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Sustainability</strong></td>
+			<td>Using resources in a way that does not deplete them, ensuring environmental balance</td>
+			<td><a aria-label="Play video for Sustainability" onclick="playVideo('https://www.youtube.com/embed/vWOOZvoALxs?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<!-- Featured Terms -->
+
+<section class="section-bg rounded-lg p-4 sm:p-6 mb-8 shadow-lg" style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+<h2 class="text-xl sm:text-3xl font-semibold hocco-red mb-4 flex items-center"><img decoding="async" loading="lazy" alt="Featured Terms Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /> Featured Terms</h2>
+
+<div class="flex flex-wrap justify-center gap-4">
+<div class="flip-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3 class="text-lg font-semibold" style="text-align: center;">Distribution Center (DC)</h3>
+</div>
+
+<div class="flip-card-back">
+<p style="text-align: center;">A warehouse where products are stored before being sent to retailers or customers.</p>
+</div>
+</div>
+</div>
+
+<div class="flip-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3 class="text-lg font-semibold" style="text-align: center;">Product-Market Fit (PMF)</h3>
+</div>
+
+<div class="flip-card-back">
+<p style="text-align: center;">When a company&#39;s offering meets strong market demand and customers seek it out.</p>
+</div>
+</div>
+</div>
+
+<div class="flip-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3 class="text-lg font-semibold" style="text-align: center;">Bootstrapping</h3>
+</div>
+
+<div class="flip-card-back">
+<p style="text-align: center;">Growing a business using only personal savings or revenue instead of external funding.</p>
+</div>
+</div>
+</div>
+
+<div class="flip-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3 class="text-lg font-semibold" style="text-align: center;">TAM (Total Addressable Market)</h3>
+</div>
+
+<div class="flip-card-back">
+<p style="text-align: center;">The entire revenue opportunity available if a product achieves total market success.</p>
+</div>
+</div>
+</div>
+
+<div class="flip-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3 class="text-lg font-semibold" style="text-align: center;">MVP (Minimum Viable Product)</h3>
+</div>
+
+<div class="flip-card-back">
+<p style="text-align: center;">The simplest product version that solves a real problem for early adopters.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+
+<footer class="hocco-navy text-white py-4">
+<div class="container mx-auto px-4 text-center">
+<p class="text-sm sm:text-base">&copy; 2025 Hocco&rsquo;s Virtual Internship</p>
+</div>
+</footer>
+</div>
+<script>
+    // GSAP Animations
+    gsap.fromTo("header", { y: -100, opacity: 0 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out" });
+    gsap.fromTo(".section-bg", { opacity: 0, y: 50 }, { duration: 1, opacity: 1, y: 0, stagger: 0.2, delay: 0.5 });
+    gsap.fromTo(".scoop-bounce", { opacity: 0, scale: 0.8 }, { duration: 1, opacity: 1, scale: 1, stagger: 0.2, delay: 1 });
+    gsap.fromTo(".flip-card", { opacity: 0, y: 50 }, { duration: 1, opacity: 1, y: 0, stagger: 0.2, delay: 1 });
+    gsap.fromTo("table", { opacity: 0, y: 50 }, { duration: 1, opacity: 1, y: 0, delay: 1.2 });
+    gsap.fromTo(".audio-container", { opacity: 0, y: 20 }, { duration: 1, opacity: 1, y: 0, delay: 1.3 });
+    gsap.fromTo("#video-player", { opacity: 0, y: 20 }, { duration: 0.5, opacity: 1, y: 0, onStart: () => {} });
+
+    // Flip Card Interaction
+    document.querySelectorAll('.flip-card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.classList.toggle('flipped');
+        }
+      });
+    });
+
+        // Video Player Logic
+        function playVideo(url) {
+            const videoPlayer = document.getElementById('video-player');
+            const videoIframe = document.getElementById('video-iframe');
+            const closeButton = document.querySelector('.close-video');
+            
+            // Scroll to video player
+            const headerHeight = window.innerWidth <= 600 ? 80 : 100; // Adjust for header height
+            const offsetTop = videoPlayer.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+            window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+
+            // Load and display video
+            videoIframe.src = url;
+            videoPlayer.style.display = 'block';
+            closeButton.style.display = 'block';
+            gsap.fromTo("#video-player", { opacity: 0, y: 20 }, { duration: 0.5, opacity: 1, y: 0 });
+        }
+
+    function closeVideo() {
+      const videoPlayer = document.getElementById('video-player');
+      const videoIframe = document.getElementById('video-iframe');
+      const closeButton = document.querySelector('.close-video');
+      
+      gsap.to("#video-player", {
+        duration: 0.5,
+        opacity: 0,
+        y: 20,
+        onComplete: () => {
+          videoPlayer.style.display = 'none';
+          videoIframe.src = '';
+          closeButton.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

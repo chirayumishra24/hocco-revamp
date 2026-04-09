@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>🍦 Glossary: Module 6 | Hocco Course</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'hocco-navy': '#2D2B7E',
+            'hocco-red': '#C71545',
+            'hocco-white': '#FFFFFF',
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="styles/6glossary.css">
+  <link rel="stylesheet" href="styles/app-responsive.css">
+</head>
+<body class="course-page page-6glossary">
+<!-- GUSTORA THEMED FULLSCREEN BUTTON -->
+<div id="gustoraFullscreenBtn"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" viewbox="0 0 24 24"> <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path> </svg></div>
+
+<script>
+// Gustora-themed Fullscreen Toggle (works on all modern browsers + mobile)
+document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen?.() || 
+    document.documentElement.webkitRequestFullscreen?.() || 
+    document.documentElement.msRequestFullscreen?.();
+  } else {
+    document.exitFullscreen?.() || 
+    document.webkitExitFullscreen?.() || 
+    document.msExitFullscreen?.();
+  }
+});
+</script>
+<div class="min-h-screen flex flex-col"><!-- Header -->
+<header class="hocco-navy text-white py-4 sm:py-6" style="translate: none; rotate: none; scale: none; opacity: 0.3045; transform: translate3d(0px, -69.5506px, 0px);">
+<div class="container mx-auto px-4 sm:px-6">
+<div class="flex items-center justify-between">
+<div>
+<h1 class="text-2xl sm:text-4xl font-bold text-hocco-white scoop-bounce" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;">🍦 Glossary: Module 6</h1>
+
+<p class="text-base sm:text-lg mt-2">Hocco&rsquo;s Virtual Internship &ndash; Key Terms</p>
+</div>
+</div>
+</div>
+</header>
+
+<main class="flex-grow px-4 sm:px-6 py-8">
+<section class="section-bg rounded-lg p-4 sm:p-6 mb-8 shadow-lg" id="about-glossary" style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+<h2 class="text-xl sm:text-3xl font-semibold hocco-red mb-4 flex items-center">About This Glossary</h2>
+
+<div class="flex flex-col md:flex-row items-center md:items-start gap-6"><!-- Text -->
+<div class="md:w-1/2">
+<p class="text-sm sm:text-base text-gray-600"><strong>This glossary covers key terms for Module 6 of Hocco&rsquo;s Virtual Internship. Explore the meanings and click &quot;Play Video&quot; to watch videos above the table to deepen your understanding of concepts shaping Hocco&rsquo;s supply chain, corporate strategy, and ethical practices.</strong></p>
+</div>
+<!-- Image -->
+
+<div class="md:w-1/2 flex justify-center"><img decoding="async" loading="lazy" alt="Refrigerated truck" class="trust max-w-full h-auto object-contain" src="/s/articles/68c94cc3ba17f03d6a661fb9/images/glossary.png" /></div>
+</div>
+</section>
+<!-- Video Player -->
+
+<div id="video-player" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 11.9197px, 0px); opacity: 0.404;"><button aria-label="Close video player" class="close-video" onclick="closeVideo()">&times;</button><iframe loading="lazy" allowfullscreen="" id="video-iframe" src=""></iframe></div>
+<!-- Glossary Table -->
+
+<section class="section-bg rounded-lg p-4 sm:p-6 mb-8 shadow-lg" style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+<h2 class="text-xl sm:text-3xl font-semibold hocco-red mb-4 flex items-center"><img decoding="async" loading="lazy" alt="Glossary Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /> Module 6 Glossary</h2>
+
+<table style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+	<thead>
+		<tr>
+			<th><span style="color:#ffffff;"><span style="font-size:22px;"><strong>Key Word</strong></span></span></th>
+			<th><span style="color:#ffffff;"><span style="font-size:22px;"><strong>Meaning</strong></span></span></th>
+			<th><span style="color:#ffffff;"><span style="font-size: 22px;"><b>pLAY vIDEO</b></span></span></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>Value Chain</strong></td>
+			<td>The full range of activities and people involved in bringing a product from creation to customer</td>
+			<td><a aria-label="Play video for Value Chain" onclick="playVideo('https://www.youtube.com/embed/f_JSPbSZU64?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Distributor</strong></td>
+			<td>A company or person that supplies goods to stores or businesses selling to consumers</td>
+			<td><a aria-label="Play video for Distributor" onclick="playVideo('https://www.youtube.com/embed/pkCUWTmU5hI?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Demographics</strong></td>
+			<td>Statistical data about groups of people (age, income, etc.), used in marketing and planning</td>
+			<td><a aria-label="Play video for Demographics" onclick="playVideo('https://www.youtube.com/embed/JartMI4blV8?start=13&amp;end=35&amp;rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Conglomerate</strong></td>
+			<td>A large corporation made up of several different companies in various business sectors</td>
+			<td><a aria-label="Play video for Conglomerate" onclick="playVideo('https://www.youtube.com/embed/X9OvY47qky4?start=5&amp;rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Divestiture</strong></td>
+			<td>The act of a company selling off part of its business</td>
+			<td><a aria-label="Play video for Divestiture" onclick="playVideo('https://www.youtube.com/embed/WUAWKIj-xI8?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Cold Chain</strong></td>
+			<td>A temperature-controlled supply chain for perishable products like ice cream</td>
+			<td><a aria-label="Play video for Cold Chain" onclick="playVideo('https://www.youtube.com/embed/kda0YruJdF4?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Diaspora</strong></td>
+			<td>People from the same origin who live outside their home country, such as Indian immigrants abroad</td>
+			<td><a aria-label="Play video for Diaspora" onclick="playVideo('https://www.youtube.com/embed/jvQmQutCjIk?start=0&amp;end=33&amp;rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Compliance</strong></td>
+			<td>Conforming to local laws and regulations, important for international expansion</td>
+			<td><a aria-label="Play video for Compliance" onclick="playVideo('https://www.youtube.com/embed/TE4UW7MXBGc?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Private Equity</strong></td>
+			<td>Investments made by private investors or funds directly into companies, often for growth</td>
+			<td><a aria-label="Play video for Private Equity" onclick="playVideo('https://www.youtube.com/embed/tbRkdm80cFs?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Lean Approach</strong></td>
+			<td>Business strategy focused on reducing waste and maximizing efficiency and profitability</td>
+			<td><a aria-label="Play video for Lean Approach" onclick="playVideo('https://www.youtube.com/embed/Z3yG0jMdiL0?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>B2B (Business to Business)</strong></td>
+			<td>Describes companies that sell products or services to other businesses</td>
+			<td><a aria-label="Play video for B2B (Business to Business)" onclick="playVideo('https://www.youtube.com/embed/3Xy4Yjcg2LU?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Corporate Social Responsibility</strong></td>
+			<td>A company&rsquo;s ethical responsibility to make a positive social or environmental impact</td>
+			<td><a aria-label="Play video for Corporate Social Responsibility" onclick="playVideo('https://www.youtube.com/embed/YkKCd9wB8Jw?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Fiscal Year (FY)</strong></td>
+			<td>A one-year accounting period used for financial planning and reporting, not always the calendar year</td>
+			<td><a aria-label="Play video for Fiscal Year (FY)" onclick="playVideo('https://www.youtube.com/embed/V74rFOhtR68?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Strategic Partnership</strong></td>
+			<td>Collaboration between organizations to advance mutual interests and strengths</td>
+			<td><a aria-label="Play video for Strategic Partnership" onclick="playVideo('https://www.youtube.com/embed/_VE1th8dLIA?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Margin</strong></td>
+			<td>The percentage difference between selling price and cost, indicating profitability</td>
+			<td><a aria-label="Play video for Margin" onclick="playVideo('https://www.youtube.com/embed/XmSXilR1s8w?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Ethical Practices</strong></td>
+			<td>Actions that are morally right and fair, such as honesty, cleanliness, and sustainability</td>
+			<td><a aria-label="Play video for Ethical Practices" onclick="playVideo('https://www.youtube.com/embed/xJkJOj-PdBE?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+		<tr>
+			<td><strong>Hurdles</strong></td>
+			<td>Challenges or obstacles in running business processes, such as logistics or compliance</td>
+			<td><a aria-label="Play video for Hurdles" onclick="playVideo('https://www.youtube.com/embed/e22fDDrz12Y?rel=0')" style="cursor: pointer;">Play Video</a></td>
+		</tr>
+	</tbody>
+</table>
+</section>
+<!-- Featured Terms -->
+
+<section class="section-bg rounded-lg p-4 sm:p-6 mb-8 shadow-lg" style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+<h2 class="text-xl sm:text-3xl font-semibold hocco-red mb-4 flex items-center"><img decoding="async" loading="lazy" alt="Featured Terms Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /> Featured Terms</h2>
+
+<div class="flex flex-wrap justify-center gap-4">
+<div class="flip-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3 class="text-lg font-semibold">Value Chain</h3>
+</div>
+
+<div class="flip-card-back">
+<p>The full range of activities and people involved in bringing a product from creation to customer.</p>
+</div>
+</div>
+</div>
+
+<div class="flip-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3 class="text-lg font-semibold">Distributor</h3>
+</div>
+
+<div class="flip-card-back">
+<p>A company or person that supplies goods to stores or businesses selling to consumers.</p>
+</div>
+</div>
+</div>
+
+<div class="flip-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3 class="text-lg font-semibold">Cold Chain</h3>
+</div>
+
+<div class="flip-card-back">
+<p>A temperature-controlled supply chain for perishable products like ice cream.</p>
+</div>
+</div>
+</div>
+
+<div class="flip-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3 class="text-lg font-semibold">Corporate Social Responsibility</h3>
+</div>
+
+<div class="flip-card-back">
+<p>A company&rsquo;s ethical responsibility to make a positive social or environmental impact.</p>
+</div>
+</div>
+</div>
+
+<div class="flip-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3 class="text-lg font-semibold">Strategic Partnership</h3>
+</div>
+
+<div class="flip-card-back">
+<p>Collaboration between organizations to advance mutual interests and strengths.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+
+<footer class="hocco-navy text-white py-4">
+<div class="container mx-auto px-4 text-center">
+<p class="text-sm sm:text-base">&copy; 2025 Hocco&rsquo;s Virtual Internship &ndash; Glossary Module 6</p>
+</div>
+</footer>
+</div>
+<script>
+    // GSAP Animations
+    gsap.fromTo("header", { y: -100, opacity: 0 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out" });
+    gsap.fromTo(".section-bg", { opacity: 0, y: 50 }, { duration: 1, opacity: 1, y: 0, stagger: 0.2, delay: 0.5 });
+    gsap.fromTo(".scoop-bounce", { opacity: 0, scale: 0.8 }, { duration: 1, opacity: 1, scale: 1, stagger: 0.2, delay: 1 });
+    gsap.fromTo(".flip-card", { opacity: 0, y: 50 }, { duration: 1, opacity: 1, y: 0, stagger: 0.2, delay: 1 });
+    gsap.fromTo("table", { opacity: 0, y: 50 }, { duration: 1, opacity: 1, y: 0, delay: 1.2 });
+    gsap.fromTo(".audio-container", { opacity: 0, y: 20 }, { duration: 1, opacity: 1, y: 0, delay: 1.3 });
+    gsap.fromTo("#video-player", { opacity: 0, y: 20 }, { duration: 0.5, opacity: 1, y: 0, onStart: () => {} });
+
+    // Flip Card Interaction
+    document.querySelectorAll('.flip-card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.classList.toggle('flipped');
+        }
+      });
+    });
+
+        // Video Player Logic
+        function playVideo(url) {
+            const videoPlayer = document.getElementById('video-player');
+            const videoIframe = document.getElementById('video-iframe');
+            const closeButton = document.querySelector('.close-video');
+            
+            // Scroll to video player
+            const headerHeight = window.innerWidth <= 600 ? 80 : 100; // Adjust for header height
+            const offsetTop = videoPlayer.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+            window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+
+            // Load and display video
+            videoIframe.src = url;
+            videoPlayer.style.display = 'block';
+            closeButton.style.display = 'block';
+            gsap.fromTo("#video-player", { opacity: 0, y: 20 }, { duration: 0.5, opacity: 1, y: 0 });
+        }
+
+    function closeVideo() {
+      const videoPlayer = document.getElementById('video-player');
+      const videoIframe = document.getElementById('video-iframe');
+      const closeButton = document.querySelector('.close-video');
+      
+      gsap.to("#video-player", {
+        duration: 0.5,
+        opacity: 0,
+        y: 20,
+        onComplete: () => {
+          videoPlayer.style.display = 'none';
+          videoIframe.src = '';
+          closeButton.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

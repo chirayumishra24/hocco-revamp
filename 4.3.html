@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>🍦Chapter 3: Hocco's Supply Chain Adventure</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="styles/4.3.css">
+  <link rel="stylesheet" href="styles/app-responsive.css">
+</head>
+<body class="course-page page-4-3">
+<!-- Background Emojis -->
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+<!-- Sidebar -->
+
+<div class="sidebar">
+<div class="progress-bar">
+<div class="progress-fill" id="progress-fill" style="height: 54.4089%;">&nbsp;</div>
+</div>
+</div>
+<!-- GUSTORA THEMED FULLSCREEN BUTTON -->
+
+<div id="gustoraFullscreenBtn"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" viewbox="0 0 24 24"> <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path> </svg></div>
+
+<script>
+// Gustora-themed Fullscreen Toggle (works on all modern browsers + mobile)
+document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen?.() || 
+    document.documentElement.webkitRequestFullscreen?.() || 
+    document.documentElement.msRequestFullscreen?.();
+  } else {
+    document.exitFullscreen?.() || 
+    document.webkitExitFullscreen?.() || 
+    document.msExitFullscreen?.();
+  }
+});
+</script>
+<div class="min-h-screen flex flex-col"><!-- Header -->
+<header style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+<div class="flex items-center justify-between px-4">
+<div>
+<h1 class="scoop-bounce" style="text-align: center; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><strong>🍦Chapter 3: Hocco&rsquo;s Supply Chain Adventure</strong></h1>
+
+<p>Hocco&rsquo;s Virtual Internship &ndash; Supply Chain Management</p>
+</div>
+<span class="premium-badge">Virtual Internship</span></div>
+</header>
+<!-- Audio Player -->
+
+<div class="audio-container" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<audio controls="" controlslist="nodownload" oncontextmenu="return false;"><source src="https://hocco-creativity.vercel.app/Chapter%204.3.mp3" type="audio/mp3" /> Your browser does not support the audio element.</audio>
+</div>
+<!-- Main Content -->
+
+<main><!-- Introduction -->
+<section class="assignment-step" id="assignment-introduction" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Story Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;" /> The Adventure Begins</h2>
+</div>
+
+<div class="assignment-content">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="md:w-1/2">
+<p class="italic mb-4">Every scoop of Hocco ice cream travels a long, chilly adventure before it reaches your hand. In this chapter, we step into the shoes of Hocco&rsquo;s supply chain team and follow their story. Hocco Ice Cream uses a variety of ingredients depending on the flavor, but common sourced components include milk solids, sugar, water, and emulsifiers/stabilizers (such as INS 322, 471, 407). Specific flavors incorporate ingredients like cocoa solids/dark chocolate, nuts (cashews, almonds), fruit extracts (mango, lychee), and brownie/biscotti pieces. Artificial and nature-identical flavorings and colors are also used in various products.</p>
+</div>
+
+<div class="md:w-1/2 flex justify-center"><img decoding="async" loading="lazy" alt="Ice cream scoop" class="trust scoop-bounce" src="/s/articles/68a3f8b9b9492d20e671b84d/images/oar2.jpg" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;" /></div>
+</div>
+
+<div style="position: relative; display: inline-block; width: 100%; max-width: 100%;">
+<div class="video-container"><iframe loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/2wNdckVSno4?rel=0" title="What is Supply Chain Management"></iframe></div>
+<button class="fullscreen-button" onclick="goFullscreen(this.previousElementSibling.firstElementChild)">▶</button></div>
+</div>
+</section>
+<!-- The Factory Awakens -->
+
+<section class="assignment-step" id="assignment-factory" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Factory Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;" /> The Factory Awakens</h2>
+</div>
+
+<div class="assignment-content">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="md:w-1/2">
+<p>Our journey begins at the buzzing factory floor, where machines hum and tubs, cones, and novelties roll out. The first challenge: ensuring capacity keeps pace with growing demand. The Head of Manufacturing checks if production lines are balanced, while the COO scouts new regions for plants closer to customers.</p>
+</div>
+
+<div class="md:w-1/2 flex justify-center"><img decoding="async" loading="lazy" alt="Factory production line" class="trust scoop-bounce" src="/s/articles/68a3f8b9b9492d20e671b84d/images/Media Player 9_8_2025 3_23_55 AM.png" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;" /></div>
+</div>
+</div>
+</section>
+<!-- The Cold Caravan -->
+
+<section class="assignment-step" id="assignment-logistics" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Logistics Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h5.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;" /> The Cold Caravan</h2>
+</div>
+
+<div class="assignment-content">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="md:w-1/2">
+<p>Freshly made ice creams must travel in a frozen caravan. Refrigerated trucks, smart freezers, and 3PL partners guard the products against heat. The Logistics Head watches temperature logs like a hawk, ensuring no scoop ever melts on the road.</p>
+</div>
+
+<div class="md:w-1/2 flex justify-center"><img decoding="async" loading="lazy" alt="Refrigerated truck" class="trust scoop-bounce" src="/s/articles/68a3f8b9b9492d20e671b84d/images/Media Player 9_8_2025 3_35_17 AM.png" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.9988, 0.9988); opacity: 0.9942;" /></div>
+</div>
+</div>
+</section>
+<!-- Many Roads to Delight -->
+
+<section class="assignment-step" id="assignment-distribution" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Routes Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.9848, 0.9848); opacity: 0.9238;" /> Many Roads to Delight</h2>
+</div>
+
+<div class="assignment-content">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="md:w-1/2">
+<p>From here, ice creams take three exciting routes: to parlours where families gather, to retail freezers in bustling shops, and to quick-commerce hubs where someone&rsquo;s midnight craving is just 15 minutes away. Each route has its own hero &mdash; Franchise Ops, Trade Marketing, and the E-Commerce Lead &mdash; keeping things smooth.</p>
+</div>
+
+<div class="md:w-1/2 flex justify-center"><img decoding="async" loading="lazy" alt="Ice cream parlour" class="trust scoop-bounce" src="/s/articles/68a3f8b9b9492d20e671b84d/images/charcoal lychee.png" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.9547, 0.9547); opacity: 0.7734;" /></div>
+</div>
+</div>
+</section>
+<!-- Guardians of Quality -->
+
+<section class="assignment-step" id="assignment-quality" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Quality Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-1.svg" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.9086, 0.9086); opacity: 0.543;" /> Guardians of Quality</h2>
+</div>
+
+<div class="assignment-content">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="md:w-1/2">
+<p>The QA team acts as guardians. They log spoilage, trace every batch, and prepare backup plans in case of power cuts or logistic hiccups. Their mantra: zero waste, zero compromise.</p>
+</div>
+
+<div class="md:w-1/2 flex justify-center"><img decoding="async" loading="lazy" alt="Quality assurance process" class="trust scoop-bounce" src="/s/articles/68a3f8b9b9492d20e671b84d/images/efe.png" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.8465, 0.8465); opacity: 0.2326;" /></div>
+</div>
+</div>
+</section>
+<!-- The KPI Treasure Map -->
+
+<section class="assignment-step" id="assignment-kpi" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="KPI Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h3.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /> The KPI Treasure Map</h2>
+</div>
+
+<div class="assignment-content">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="md:w-1/2">
+<p class="mb-4">To guide the adventure, the team follows a treasure map of KPIs. Each number tells a story &mdash; whether ice creams stayed frozen, whether parlours were stocked on time, or how quickly products reached shelves.</p>
+
+<table aria-label="Hocco KPI Table" class="kpi-table" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+	<thead>
+		<tr>
+			<th>KPI</th>
+			<th>Goal</th>
+			<th>Owner</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Temperature Excursions</td>
+			<td>&lt; 0.5%</td>
+			<td>Logistics Head</td>
+		</tr>
+		<tr>
+			<td>On-Time In-Full (OTIF)</td>
+			<td>&ge; 95%</td>
+			<td>Franchise Ops / Supply Chain</td>
+		</tr>
+		<tr>
+			<td>Inventory Days on Hand</td>
+			<td>&le; 14 days</td>
+			<td>Inventory Manager</td>
+		</tr>
+		<tr>
+			<td>Spoilage Rate</td>
+			<td>&lt; 2%</td>
+			<td>QA Manager</td>
+		</tr>
+		<tr>
+			<td>Time-to-Shelf</td>
+			<td>&le; 48 hrs</td>
+			<td>Supply Chain Analytics</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<div class="md:w-1/2 flex flex-col justify-center gap-4"><img decoding="async" loading="lazy" alt="KPI dashboard" class="trust scoop-bounce" src="/s/articles/68a3f8b9b9492d20e671b84d/images/Media Player 9_8_2025 3_33_56 AM.png" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /> <img decoding="async" loading="lazy" alt="KPI dashboard" class="trust scoop-bounce" src="/s/org/images/wow.png" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /></div>
+</div>
+</div>
+</section>
+<!-- Drag-and-Drop KPI Matching Game -->
+
+<section class="assignment-step drag-drop-game" id="assignment-kpi-game" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Game Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /> KPI Matching Game</h2>
+</div>
+
+<div class="assignment-content">
+<p class="mb-4">Drag each KPI to its correct owner to test your supply chain knowledge!</p>
+
+<div class="flex flex-col md:flex-row gap-6">
+<div class="md:w-1/2">
+<div class="space-y-2">
+<div aria-label="Drag Temperature Excursions" class="drag-item" data-owner="Logistics Head" draggable="true" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Temperature Excursions</div>
+
+<div aria-label="Drag On-Time In-Full (OTIF)" class="drag-item" data-owner="Franchise Ops / Supply Chain" draggable="true" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">On-Time In-Full (OTIF)</div>
+
+<div aria-label="Drag Inventory Days on Hand" class="drag-item" data-owner="Inventory Manager" draggable="true" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Inventory Days on Hand</div>
+
+<div aria-label="Drag Spoilage Rate" class="drag-item" data-owner="QA Manager" draggable="true" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Spoilage Rate</div>
+
+<div aria-label="Drag Time-to-Shelf" class="drag-item" data-owner="Supply Chain Analytics" draggable="true" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 1.5488px, 0px); opacity: 0.969;">Time-to-Shelf</div>
+</div>
+</div>
+
+<div class="md:w-1/2">
+<div class="space-y-2">
+<div aria-label="Drop zone for Logistics Head" class="drop-zone" data-owner="Logistics Head" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Logistics Head</div>
+
+<div aria-label="Drop zone for Franchise Ops / Supply Chain" class="drop-zone" data-owner="Franchise Ops / Supply Chain" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Franchise Ops / Supply Chain</div>
+
+<div aria-label="Drop zone for Inventory Manager" class="drop-zone" data-owner="Inventory Manager" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Inventory Manager</div>
+
+<div aria-label="Drop zone for QA Manager" class="drop-zone" data-owner="QA Manager" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">QA Manager</div>
+
+<div aria-label="Drop zone for Supply Chain Analytics" class="drop-zone" data-owner="Supply Chain Analytics" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 1.5488px, 0px); opacity: 0.969;">Supply Chain Analytics</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Flippable Cards for Hard Vocabulary Terms -->
+
+<section class="assignment-step" id="assignment-glossary" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Vocabulary Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /> Glossary</h2>
+</div>
+
+<div class="assignment-content">
+<div class="flex flex-wrap justify-center gap-4">
+<div class="flip-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3 class="text-lg font-semibold">3PL</h3>
+</div>
+
+<div class="flip-card-back">
+<p>Third-Party Logistics: Outsourcing logistics and transportation services to specialized providers.</p>
+</div>
+</div>
+</div>
+
+<div class="flip-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3 class="text-lg font-semibold">OTIF</h3>
+</div>
+
+<div class="flip-card-back">
+<p>On-Time In-Full: A KPI measuring the percentage of orders delivered on time and complete.</p>
+</div>
+</div>
+</div>
+
+<div class="flip-card" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+<h3 class="text-lg font-semibold">Spoilage Rate</h3>
+</div>
+
+<div class="flip-card-back">
+<p>The percentage of products that become unusable due to damage or expiration.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Adventure Continues -->
+
+<section class="assignment-step" id="assignment-continues" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Adventure Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /> The Adventure Continues</h2>
+</div>
+
+<div class="assignment-content">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="md:w-1/2">
+<p class="mb-4">Every month, the team revisits the checklist and updates the map. For interns like you, this is where learning becomes real: observing the flow, spotting bottlenecks, and suggesting improvements. Because in supply chain management, every small step keeps the adventure alive &mdash; and every adventure ends with a smile and a scoop.</p>
+</div>
+
+<div class="md:w-1/2 flex justify-center"><img decoding="async" loading="lazy" alt="Team collaboration" class="trust scoop-bounce" src="/s/org/images/Hocco_Apron1_Blue-1.jpg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /></div>
+</div>
+</div>
+</section>
+<!-- Supply Chain Game -->
+
+<section class="assignment-step drag-drop-game" id="assignment-stage-game" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 1.5488px, 0px); opacity: 0.969;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Game Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /> Supply Chain Stage Matching Game</h2>
+</div>
+
+<div class="assignment-content">
+<p class="mb-4">Drag each supply chain stage to its correct description to master Hocco&rsquo;s process!</p>
+
+<div class="flex flex-col md:flex-row gap-6">
+<div class="md:w-1/2">
+<div class="space-y-2">
+<div aria-label="Drag Production" class="drag-item" data-stage="Production" draggable="true" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 7.0688px, 0px); opacity: 0.8586;">Production</div>
+
+<div aria-label="Drag Logistics" class="drag-item" data-stage="Logistics" draggable="true" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 16.5888px, 0px); opacity: 0.6682;">Logistics</div>
+
+<div aria-label="Drag Distribution" class="drag-item" data-stage="Distribution" draggable="true" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 30.1088px, 0px); opacity: 0.3978;">Distribution</div>
+
+<div aria-label="Drag Quality Assurance" class="drag-item" data-stage="Quality Assurance" draggable="true" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 47.6288px, 0px); opacity: 0.0474;">Quality Assurance</div>
+</div>
+</div>
+
+<div class="md:w-1/2">
+<div class="space-y-2">
+<div aria-label="Drop zone for Production" class="drop-zone" data-stage="Production" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 7.0688px, 0px); opacity: 0.8586;">Making ice cream in the factory</div>
+
+<div aria-label="Drop zone for Logistics" class="drop-zone" data-stage="Logistics" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 16.5888px, 0px); opacity: 0.6682;">Transporting ice cream in refrigerated trucks</div>
+
+<div aria-label="Drop zone for Distribution" class="drop-zone" data-stage="Distribution" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 30.1088px, 0px); opacity: 0.3978;">Delivering to parlours, shops, and e-commerce</div>
+
+<div aria-label="Drop zone for Quality Assurance" class="drop-zone" data-stage="Quality Assurance" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 47.6288px, 0px); opacity: 0.0474;">Ensuring zero waste and product safety</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Progress Tracker -->
+
+<section class="assignment-step progress-tracker" id="assignment-progress" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 7.0688px, 0px); opacity: 0.8586;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Progress Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h5.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /> Your Progress</h2>
+</div>
+
+<div class="assignment-content">
+<p id="progressTracker">54% Complete (Keep going!)</p>
+
+<div class="progress-bar" id="progressBar" style="width: 54.4089%;">&nbsp;</div>
+</div>
+</section>
+</main>
+<!-- Back to Top Button -->
+
+<button aria-label="Scroll to top" id="back-to-top" onclick="scrollToTop()">&uarr;</button>
+<!-- Footer -->
+<!-- Notes Button -->
+
+<button class="fixed bottom-6 left-6 w-14 h-14 rounded-full bg-white
+         flex items-center justify-center
+         shadow-[0_0_20px_rgba(250,204,21,0.65)]
+         hover:shadow-[0_0_30px_rgba(250,204,21,0.9)]" id="notesBtn">📝</button>
+<!-- Notes Panel -->
+
+<div class="hidden fixed bottom-24 left-6 w-80 bg-slate-800 text-black
+         rounded-xl shadow-xl p-4" id="notesPanel"><textarea class="w-full h-32 p-2 bg-slate-700 rounded resize-none" id="notesArea" placeholder="Write your notes here..."></textarea>
+
+<div class="flex gap-2 mt-3"><button class="flex-1 bg-green-600 rounded p-2" id="downloadNotes">Download</button><button class="flex-1 bg-red-600 rounded p-2" id="clearNotes">Clear</button></div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const notesBtn = document.getElementById("notesBtn");
+  const notesPanel = document.getElementById("notesPanel");
+  const notesArea = document.getElementById("notesArea");
+  const clearBtn = document.getElementById("clearNotes");
+  const downloadBtn = document.getElementById("downloadNotes");
+
+  if (!notesBtn || !notesPanel || !notesArea) return;
+
+  // 🚀 Escape all stacking contexts
+  document.body.appendChild(notesBtn);
+  document.body.appendChild(notesPanel);
+
+  notesBtn.style.position = "fixed";
+  notesPanel.style.position = "fixed";
+
+  notesBtn.style.zIndex = "2147483647";
+  notesPanel.style.zIndex = "2147483647";
+
+  const STORAGE_KEY = "page_notes";
+  notesArea.value = localStorage.getItem(STORAGE_KEY) || "";
+
+  // Toggle panel
+  notesBtn.addEventListener("click", () => {
+    notesPanel.classList.toggle("hidden");
+  });
+
+  // Persist notes
+  notesArea.addEventListener("input", () => {
+    localStorage.setItem(STORAGE_KEY, notesArea.value);
+  });
+
+  // Clear notes
+  clearBtn.addEventListener("click", () => {
+    if (confirm("Clear all notes?")) {
+      notesArea.value = "";
+      localStorage.removeItem(STORAGE_KEY);
+    }
+  });
+
+  // Download notes
+  downloadBtn.addEventListener("click", () => {
+    const blob = new Blob([notesArea.value], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "my-notes.txt";
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+});
+</script>
+
+<footer>
+<p>&copy; 2025 Hocco&rsquo;s Virtual Internship &ndash; Supply Chain Management</p>
+</footer>
+<script>
+        // Progress Bar Logic
+        let progress = 20;
+        function updateProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 80 : 0;
+            const totalProgress = Math.min(100, 20 + scrollPercent);
+            const progressFill = document.getElementById("progress-fill");
+            const progressTracker = document.getElementById("progressTracker");
+            const progressBar = document.getElementById("progressBar");
+            if (window.innerWidth <= 600) {
+                progressFill.style.width = totalProgress + "%";
+                progressBar.style.width = totalProgress + "%";
+            } else {
+                progressFill.style.height = totalProgress + "%";
+                progressBar.style.width = totalProgress + "%";
+            }
+            progressTracker.textContent = `${Math.round(totalProgress)}% Complete (Keep going!)`;
+            progress = totalProgress;
+        }
+
+        // Fullscreen Functionality
+        function goFullscreen(element) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            } else if (element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+            }
+        }
+
+        // GSAP Animations
+        window.onload = () => {
+            gsap.fromTo("header", { y: -100, opacity: 0 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out" });
+            gsap.fromTo(".assignment-step", { opacity: 0, y: 50 }, { duration: 1, opacity: 1, y: 0, stagger: 0.2, delay: 0.5 });
+            gsap.fromTo(".scoop-bounce", { opacity: 0, scale: 0.8 }, { duration: 1, opacity: 1, scale: 1, stagger: 0.2, delay: 1 });
+            gsap.fromTo(".kpi-table", { opacity: 0, scale: 0.8 }, { duration: 1, opacity: 1, scale: 1, delay: 1.5 });
+            gsap.fromTo(".flip-card", { opacity: 0, y: 50 }, { duration: 1, opacity: 1, y: 0, stagger: 0.2, delay: 1 });
+            gsap.fromTo(".drag-item", { opacity: 0, y: 50 }, { duration: 1, opacity: 1, y: 0, stagger: 0.2, delay: 1.5 });
+            gsap.fromTo(".drop-zone", { opacity: 0, y: 50 }, { duration: 1, opacity: 1, y: 0, stagger: 0.2, delay: 1.5 });
+            gsap.fromTo(".audio-container", { opacity: 0, y: 20 }, { duration: 1, opacity: 1, y: 0, delay: 1.3 });
+            updateProgress();
+
+            // Flip Card Interaction
+            document.querySelectorAll('.flip-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    card.classList.toggle('flipped');
+                });
+                card.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        card.classList.toggle('flipped');
+                    }
+                });
+            });
+
+            // Drag-and-Drop Interaction for Both Games
+            document.querySelectorAll('.drag-item').forEach(item => {
+                item.draggable = true;
+                item.addEventListener('dragstart', (e) => {
+                    const data = item.dataset.owner || item.dataset.stage;
+                    e.dataTransfer.setData('text/plain', data);
+                    item.classList.add('dragging');
+                });
+                item.addEventListener('dragend', () => {
+                    item.classList.remove('dragging');
+                });
+                item.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        item.focus();
+                    }
+                });
+            });
+
+            document.querySelectorAll('.drop-zone').forEach(zone => {
+                zone.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    zone.classList.add('drag-over');
+                });
+                zone.addEventListener('dragleave', () => {
+                    zone.classList.remove('drag-over');
+                });
+                zone.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    zone.classList.remove('drag-over');
+                    const draggedData = e.dataTransfer.getData('text/plain');
+                    const zoneData = zone.dataset.owner || zone.dataset.stage;
+                    if (draggedData === zoneData) {
+                        zone.classList.add('correct');
+                        zone.textContent = `Correct! ${draggedData}`;
+                        const draggedItem = document.querySelector(`.drag-item[data-owner="${draggedData}"], .drag-item[data-stage="${draggedData}"]`);
+                        if (draggedItem) draggedItem.style.display = 'none';
+                    } else {
+                        zone.classList.add('incorrect');
+                        setTimeout(() => zone.classList.remove('incorrect'), 1000);
+                    }
+                });
+            });
+        };
+
+        // Scroll-based Progress
+        window.addEventListener("scroll", updateProgress);
+
+        // Scroll-based Visibility
+        const assignments = document.querySelectorAll(".assignment-step");
+        window.addEventListener("scroll", () => {
+            assignments.forEach(assignment => {
+                const rect = assignment.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50) {
+                    assignment.classList.add("visible");
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById("back-to-top");
+        window.addEventListener("scroll", () => {
+            backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+        });
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        // Print Functionality
+        window.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script></div>
+</body>
+</html>

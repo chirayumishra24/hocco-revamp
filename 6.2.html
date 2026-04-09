@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>🍦 Chapter 6.2: International Landscape | Hocco Course</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'hocco-navy': '#2D2B7E',
+                        'hocco-red': '#C71545',
+                        'hocco-white': '#FFFFFF',
+                    }
+                }
+            }
+        }
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles/6.2.css">
+  <link rel="stylesheet" href="styles/app-responsive.css">
+</head>
+<body class="course-page page-6-2">
+<!-- Background Emojis -->
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+
+<div class="emoji-bg">🍧</div>
+
+<div class="emoji-bg">🍦</div>
+
+<div class="emoji-bg">🍨</div>
+<!-- Sidebar -->
+
+<div class="sidebar">
+<div class="progress-bar">
+<div class="progress-fill" id="progress-fill" style="height: 51.0427%;">&nbsp;</div>
+</div>
+</div>
+<!-- GUSTORA THEMED FULLSCREEN BUTTON -->
+
+<div id="gustoraFullscreenBtn"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" viewbox="0 0 24 24"> <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path> </svg></div>
+
+<script>
+// Gustora-themed Fullscreen Toggle (works on all modern browsers + mobile)
+document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen?.() || 
+    document.documentElement.webkitRequestFullscreen?.() || 
+    document.documentElement.msRequestFullscreen?.();
+  } else {
+    document.exitFullscreen?.() || 
+    document.webkitExitFullscreen?.() || 
+    document.msExitFullscreen?.();
+  }
+});
+</script>
+<div class="min-h-screen flex flex-col"><!-- Header -->
+<header style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+<div class="flex items-center justify-between px-4">
+<div>
+<h1 class="scoop-bounce" style="text-align: center; translate: none; rotate: none; scale: none; transform: translate3d(0px, -2.59899px, 0px) scale(0.9871, 0.9871); opacity: 0.9355;"><strong>🍦 Chapter 6.2: International Landscape</strong></h1>
+
+<p>Navigating the Global Ice Cream Market</p>
+</div>
+<span class="premium-badge">Hocco Internship</span></div>
+</header>
+<!-- Audio Player -->
+
+<div class="audio-container" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 6.1383px, 0px); opacity: 0.6931;">
+<audio controls="" controlslist="nodownload" oncontextmenu="return false;"><source src="https://hocco-creativity.vercel.app/chapter%206.2.mp3" type="audio/mp3" /> Your browser does not support the audio element.</audio>
+</div>
+<!-- Main Content -->
+
+<main><!-- Global Ice Cream Market Overview -->
+<section class="assignment-step" id="assignment-global-market" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Global Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -2.59899px, 0px) scale(0.9588, 0.9588); opacity: 0.7939;" /> Global Ice Cream Market</h2>
+</div>
+
+<div class="assignment-content">
+<p class="mb-4">Ice cream is a universally loved product, with infinite flavor possibilities and form factors, making it a dynamic global industry. The international market, valued at billions, is led by major players like Ben &amp; Jerry&#39;s, H&auml;agen-Dazs, and Unilever&rsquo;s Magnum, but consumer curiosity drives demand for innovative brands.</p>
+
+<div class="chart-container"><canvas height="375" id="salesChart" style="display: block; box-sizing: border-box; height: 300px; width: 663.8px;" width="829"></canvas></div>
+
+<p class="text-sm text-gray-500 mt-2">Bar chart: Sales of top ice cream brands in the US (2023), reflecting global influence.</p>
+</div>
+</section>
+<!-- Major International Players -->
+
+<section class="assignment-step" id="assignment-major-players" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Brands Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h5.svg" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -2.59899px, 0px) scale(0.9145, 0.9145); opacity: 0.5723;" /> Major International Players</h2>
+</div>
+
+<div class="assignment-content">
+<p class="mb-4">The global ice cream market is dominated by legacy brands, primarily under conglomerates like Unilever and Nestl&eacute;, which have shaped the industry for decades.</p>
+
+<p class="mb-4"><strong>Top Global Brands (US Sales, 2023):</strong></p>
+
+<ul class="list-disc pl-6 mb-4">
+	<li><strong>Ben &amp; Jerry&#39;s (Unilever):</strong> $951M</li>
+	<li><strong>H&auml;agen-Dazs (Nestl&eacute;/Froneri):</strong> $802M</li>
+	<li><strong>Blue Bell:</strong> $719M</li>
+	<li><strong>Breyers (Unilever):</strong> $546M</li>
+	<li><strong>Dreyer&#39;s (Nestl&eacute;/Froneri):</strong> $546M</li>
+	<li><strong>Tillamook:</strong> $324M</li>
+	<li><strong>Turkey Hill:</strong> $248M</li>
+	<li><strong>Talenti (Unilever):</strong> $209M</li>
+</ul>
+
+<p class="mb-4">These brands leverage global distribution networks, but low switching costs allow consumers to explore newer entrants, driving competition.</p>
+</div>
+</section>
+<!-- Private Equity in Global Markets -->
+
+<section class="assignment-step" id="assignment-private-equity" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 1.1858px, 0px); opacity: 0.9763;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Investment Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h3.svg" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -2.59899px, 0px) scale(0.8541, 0.8541); opacity: 0.2707;" /> Private Equity in Global Markets</h2>
+</div>
+
+<div class="assignment-content">
+<p class="mb-4">The global appeal of ice cream has attracted significant private equity and venture capital, transforming small scoop shops into premium brands with international ambitions.</p>
+
+<p class="mb-4"><strong>Notable Investments in Emerging Brands:</strong></p>
+
+<ul class="list-disc pl-6 mb-4">
+	<li><strong>Van Leeuwen:</strong> $25M</li>
+	<li><strong>Salt &amp; Straw:</strong> $4M</li>
+	<li><strong>Jeni&#39;s:</strong> $15M</li>
+	<li><strong>Oberweis:</strong> $20M</li>
+	<li><strong>Ample Hills Creamery:</strong> $19M</li>
+</ul>
+
+<p class="mb-4">Investors bet on these brands to capture the next generation of consumers, but thin margins and high operational costs pose challenges.</p>
+</div>
+</section>
+<!-- Challenges of Global Expansion -->
+
+<section class="assignment-step" id="assignment-challenges" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 6.2658px, 0px); opacity: 0.8747;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Challenges Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-1.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, -2.59899px) scale(0.8, 0.8); opacity: 0;" /> Challenges of Global Expansion</h2>
+</div>
+
+<div class="assignment-content">
+<p class="mb-4">Despite its universal appeal, the ice cream business faces significant hurdles in international markets. Conglomerates like Unilever and Nestl&eacute; have struggled with low margins, leading to divestitures.</p>
+
+<ul class="list-disc pl-6 mb-4">
+	<li><strong>Unilever:</strong> Scaled to the world&rsquo;s largest ice cream company by 2001, but its ice cream division grew only 4% from 2001 to 2023 (&euro;7.6B to &euro;7.9B). It plans to sell the division by 2025 due to low margins.</li>
+	<li><strong>Nestl&eacute;:</strong> Peaked in 2007 with \$8.27B in ice cream sales but sold its division to Froneri in 2019 for \$4B, citing focus on high-growth verticals.</li>
+	<li><strong>Froneri:</strong> Increased revenue but maintains a low 10% margin, with operating income offset by debt interest.</li>
+	<li><strong>Kroger:</strong> Sold Turkey Hill in 2019 at a 50% discount, reflecting market stagnation.</li>
+</ul>
+
+<p class="mb-4">Retail chains like Baskin-Robbins and Cold Stone also face stagnation, with Baskin-Robbins&rsquo; international sales growing only 14% per store over 12 years.</p>
+</div>
+</section>
+<!-- Case Studies -->
+
+<section class="assignment-step" id="assignment-case-studies" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 15.3458px, 0px); opacity: 0.6931;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Case Study Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, -2.59899px) scale(0.8, 0.8); opacity: 0;" /> Case Studies in International Markets</h2>
+</div>
+
+<div class="assignment-content">
+<div class="flex flex-col md:flex-row items-center gap-4 mb-4">
+<div class="md:w-2/3">
+<h3 class="text-2xl font-semibold mb-2">Sam&#39;s Fried Ice Cream (USA)</h3>
+
+<p class="mb-4">Located in New York&rsquo;s Lower East Side, Sam&rsquo;s Fried Ice Cream capitalizes on the novelty of fried ice cream, sourcing bulk ice cream from Hershey&rsquo;s and selling at $8 per portion. Its small 200-square-foot shop and street fair presence demonstrate a lean, opportunistic approach.</p>
+
+<p class="mb-4"><strong>Business Breakdown:</strong></p>
+
+<ul class="list-disc pl-6 mb-4">
+	<li><strong>Shop Revenue:</strong> \$81,000 annually (\$15,000/month in summer, $4,000/month otherwise).</li>
+	<li><strong>Street Fair Revenue:</strong> $120,000 annually.</li>
+	<li><strong>Total Revenue:</strong> $201,000.</li>
+</ul>
+</div>
+
+<div class="md:w-1/3"><img decoding="async" loading="lazy" alt="SAM'S FRIED ICE CREAM - Updated September 2025 - 1263 Photos &amp; 485 Reviews - 37 Orchard St, New York, New York - Ice Cream &amp; Frozen Yogurt - Phone Number - Menu - Yelp" src="https://s3-media0.fl.yelpcdn.com/bphoto/sdwIg_q2AfwJqa1IbOeapQ/348s.jpg" style="width: 200px; height: 200px;" /></div>
+</div>
+
+<div class="flex flex-col md:flex-row items-center gap-4 mb-4">
+<div class="md:w-2/3">
+<h3 class="text-2xl font-semibold mb-2">Smoove Ice Cream (USA)</h3>
+
+<p class="mb-4">Smoove, based in Manhattan with a new California location, targets young consumers with Asian-inspired flavors (Ube, Matcha). It diversifies with croffles and boba floats to combat seasonality, leveraging social media and events like Anime Con.</p>
+
+<p class="mb-4"><strong>Business Breakdown:</strong></p>
+
+<ul class="list-disc pl-6 mb-4">
+	<li><strong>Shop Revenue:</strong> \$462,121 annually (\$65,000/month in summer, $30,000/month in winter).</li>
+	<li><strong>Total Revenue (Shop &amp; Events):</strong> $531,000.</li>
+	<li><strong>Profit Margins:</strong> 13% average (10% winter, 15% summer).</li>
+</ul>
+</div>
+
+<div class="md:w-1/3"><img decoding="async" loading="lazy" alt="ICE CREAM — SMOOVE ICE CREAM" src="https://images.squarespace-cdn.com/content/v1/5d37aad84b9d1f000100f413/1609726737748-81NHHAARCHK8ZVT2DY84/Oreo.jpg" style="width: 200px; height: 200px;" /></div>
+</div>
+
+<div class="flex flex-col md:flex-row items-center gap-4">
+<div class="md:w-2/3">
+<h3 class="text-2xl font-semibold mb-2">il laboratorio del gelato (USA)</h3>
+
+<p class="mb-4">This B2B-focused gelato supplier in Manhattan serves 400 restaurants with 250+ flavors, maintaining quality without compromising on ingredients. Its retail storefront sells unique flavors, mitigating seasonality through consistent restaurant demand.</p>
+
+<p class="mb-4"><strong>Business Breakdown:</strong></p>
+
+<ul class="list-disc pl-6 mb-4">
+	<li><strong>Wholesale Revenue:</strong> $2,300,000 annually.</li>
+	<li><strong>Retail Shop Revenue:</strong> $480,000 annually.</li>
+	<li><strong>Total Revenue:</strong> $2,780,000.</li>
+	<li><strong>Profit Margins:</strong> 10% wholesale, 9% retail.</li>
+</ul>
+</div>
+
+<div class="md:w-1/3"><img decoding="async" loading="lazy" alt="il laboratorio del gelato" src="https://images.squarespace-cdn.com/content/v1/5bd77110e666693ac464e4b9/1540846526764-E8TXUZ4QS7L44R291SUB/ILDG_LES_1117_LizClayman_135.jpg?format=1500w" style="width: 200px; height: 267px;" /></div>
+</div>
+</div>
+</section>
+<!-- Conclusion -->
+
+<section class="assignment-step" id="assignment-conclusion" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 28.4258px, 0px); opacity: 0.4315;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Conclusion Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h3.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, -2.59899px) scale(0.8, 0.8); opacity: 0;" /> Conclusion</h2>
+</div>
+
+<div class="assignment-content">
+<p>The global ice cream market is both promising and challenging. While consumer demand remains strong, low margins and operational complexities have driven major conglomerates to exit, creating opportunities for innovative brands like Hocco. Passion, differentiation, and strategic partnerships are key to thriving in this competitive landscape.</p>
+</div>
+</section>
+<!-- Progress Tracker -->
+
+<section class="assignment-step progress-tracker" id="assignment-progress" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 45.5058px, 0px); opacity: 0.0899;">
+<div class="assignment-heading">
+<h2><img decoding="async" loading="lazy" alt="Progress Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h5.svg" style="translate: none; rotate: none; scale: none; transform: translate(0px, -2.59899px) scale(0.8, 0.8); opacity: 0;" /> Your Progress</h2>
+</div>
+
+<div class="assignment-content">
+<p id="progressTracker">51% Complete (Keep going!)</p>
+
+<div class="progress-bar" id="progressBar" style="width: 51.0427%;">&nbsp;</div>
+</div>
+</section>
+</main>
+<!-- Back to Top Button -->
+
+<button aria-label="Scroll to top" id="back-to-top" onclick="scrollToTop()">&uarr;</button>
+<!-- Footer -->
+<!-- Notes Button -->
+
+<button class="fixed bottom-6 left-6 w-14 h-14 rounded-full bg-white
+         flex items-center justify-center
+         shadow-[0_0_20px_rgba(250,204,21,0.65)]
+         hover:shadow-[0_0_30px_rgba(250,204,21,0.9)]" id="notesBtn">📝</button>
+<!-- Notes Panel -->
+
+<div class="hidden fixed bottom-24 left-6 w-80 bg-slate-800 text-white
+         rounded-xl shadow-xl p-4" id="notesPanel"><textarea class="w-full h-32 p-2 bg-slate-700 rounded resize-none" id="notesArea" placeholder="Write your notes here..."></textarea>
+
+<div class="flex gap-2 mt-3"><button class="flex-1 bg-green-600 rounded p-2" id="downloadNotes">Download</button><button class="flex-1 bg-red-600 rounded p-2" id="clearNotes">Clear</button></div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const notesBtn = document.getElementById("notesBtn");
+  const notesPanel = document.getElementById("notesPanel");
+  const notesArea = document.getElementById("notesArea");
+  const clearBtn = document.getElementById("clearNotes");
+  const downloadBtn = document.getElementById("downloadNotes");
+
+  if (!notesBtn || !notesPanel || !notesArea) return;
+
+  // 🚀 Escape all stacking contexts
+  document.body.appendChild(notesBtn);
+  document.body.appendChild(notesPanel);
+
+  notesBtn.style.position = "fixed";
+  notesPanel.style.position = "fixed";
+
+  notesBtn.style.zIndex = "2147483647";
+  notesPanel.style.zIndex = "2147483647";
+
+  const STORAGE_KEY = "page_notes";
+  notesArea.value = localStorage.getItem(STORAGE_KEY) || "";
+
+  // Toggle panel
+  notesBtn.addEventListener("click", () => {
+    notesPanel.classList.toggle("hidden");
+  });
+
+  // Persist notes
+  notesArea.addEventListener("input", () => {
+    localStorage.setItem(STORAGE_KEY, notesArea.value);
+  });
+
+  // Clear notes
+  clearBtn.addEventListener("click", () => {
+    if (confirm("Clear all notes?")) {
+      notesArea.value = "";
+      localStorage.removeItem(STORAGE_KEY);
+    }
+  });
+
+  // Download notes
+  downloadBtn.addEventListener("click", () => {
+    const blob = new Blob([notesArea.value], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "my-notes.txt";
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+});
+</script>
+
+<footer>
+<p>&copy; 2025 Hocco&rsquo;s Virtual Internship &ndash; Navigating the Global Ice Cream Market</p>
+</footer>
+<script>
+        // Progress Bar Logic
+        let progress = 20;
+        function updateProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 80 : 0;
+            const totalProgress = Math.min(100, 20 + scrollPercent);
+            const progressFill = document.getElementById("progress-fill");
+            const progressTracker = document.getElementById("progressTracker");
+            const progressBar = document.getElementById("progressBar");
+            if (window.innerWidth <= 600) {
+                progressFill.style.width = totalProgress + "%";
+                progressBar.style.width = totalProgress + "%";
+            } else {
+                progressFill.style.height = totalProgress + "%";
+                progressBar.style.width = totalProgress + "%";
+            }
+            progressTracker.textContent = `${Math.round(totalProgress)}% Complete (Keep going!)`;
+            progress = totalProgress;
+        }
+
+        // GSAP Animations
+        window.onload = () => {
+            gsap.fromTo("header", { y: -100, opacity: 0 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out" });
+            gsap.fromTo(".assignment-step", { opacity: 0, y: 50 }, { duration: 1, opacity: 1, y: 0, stagger: 0.2, delay: 0.5 });
+            gsap.fromTo(".scoop-bounce", { opacity: 0, scale: 0.8 }, { duration: 1, opacity: 1, scale: 1, stagger: 0.2, delay: 1 });
+            gsap.fromTo(".audio-container", { opacity: 0, y: 20 }, { duration: 1, opacity: 1, y: 0, delay: 1.3 });
+            updateProgress();
+
+            // Sales Bar Chart
+            new Chart(document.getElementById("salesChart"), {
+                type: "bar",
+                data: {
+                    labels: ["Ben & Jerry's", "Häagen-Dazs", "Blue Bell", "Breyers", "Dreyer's", "Tillamook", "Turkey Hill", "Talenti"],
+                    datasets: [{
+                        label: "Sales (USD Million, 2023)",
+                        data: [951, 802, 719, 546, 546, 324, 248, 209],
+                        backgroundColor: ["#4CAF50", "#FF9800", "#2196F3", "#F44336", "#9C27B0", "#FFEB3B", "#3F51B5", "#FFC107"],
+                        borderColor: "#2D2B7E",
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { beginAtZero: true, title: { display: true, text: "Sales (USD Million)" } },
+                        x: { title: { display: true, text: "Brand" } }
+                    }
+                }
+            });
+        };
+
+        // Scroll-based Progress
+        window.addEventListener("scroll", updateProgress);
+
+        // Scroll-based Visibility
+        const assignments = document.querySelectorAll(".assignment-step");
+        window.addEventListener("scroll", () => {
+            assignments.forEach(assignment => {
+                const rect = assignment.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50) {
+                    assignment.classList.add("visible");
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById("back-to-top");
+        window.addEventListener("scroll", () => {
+            backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+        });
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        // Print Functionality
+        window.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script></div>
+</body>
+</html>
