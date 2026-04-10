@@ -230,7 +230,7 @@ body.course-page .audio-container {
   margin: 1rem auto;
   background:
     linear-gradient(160deg, rgba(45, 43, 126, 0.8), rgba(199, 21, 69, 0.6)),
-    url("https://hocco-creativity.vercel.app/Subtitle%20(4).png") center/cover no-repeat;
+    url("https://hocco-creativity.vercel.app/Subtitle%20(4).png") center/contain no-repeat;
   border-radius: var(--radius-lg);
 }
 
@@ -911,9 +911,10 @@ body.course-page #team-iframe {
 }
 
 body.course-page .audio-container {
-  width: min(100%, 600px) !important;
-  min-height: 170px !important;
-  padding: clamp(1rem, 4vw, 2rem) !important;
+  width: min(100%, 700px) !important;
+  min-height: 220px !important;
+  padding: clamp(1.5rem, 4vw, 2.5rem) !important;
+  padding-top: clamp(3rem, 6vw, 4rem) !important;
 }
 
 body.course-page .trust:not(.section-icon),
