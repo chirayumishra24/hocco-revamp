@@ -177,6 +177,17 @@ body.course-page .flip-card:focus-visible {
 }
   
   
+  
+  /* Refined Card Text Colors: Dark on Front, Light on Back */
+  body.course-page .flip-card-front *, 
+  body.course-page .card-front * {
+    color: #1f2937 !important; /* Dark Navy for White Fronts */
+  }
+  body.course-page .flip-card-back *, 
+  body.course-page .card-back * {
+    /* color: whitesmoke managed by refined rules below */ /* Light for Dark Gradient Backs */
+  }
+
   /* Fix: Remove extra space below cards and force height to fit content */
   body.course-page .flip-card,
   body.course-page .card,
