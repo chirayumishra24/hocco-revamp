@@ -8,6 +8,178 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+  <script id="hocco-runtime-helpers">
+    (function () {
+      const shouldReduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches || window.innerWidth <= 768;
+      window.__hoccoShouldReduceMotion = shouldReduceMotion;
+
+      if (window.gsap) {
+        if (shouldReduceMotion) {
+          const originalSet = typeof gsap.set === "function" ? gsap.set.bind(gsap) : null;
+          const stripGsapTiming = (vars = {}) => {
+            const next = { ...vars };
+            ["duration", "delay", "stagger", "ease", "overwrite", "repeat", "repeatDelay", "yoyo", "lazy", "scrollTrigger"].forEach((key) => {
+              delete next[key];
+            });
+            return next;
+          };
+          const applyImmediateState = (targets, vars = {}) => {
+            if (typeof vars.onStart === "function") {
+              vars.onStart();
+            }
+            const finalVars = stripGsapTiming(vars);
+            delete finalVars.onStart;
+            delete finalVars.onComplete;
+            if (originalSet) {
+              originalSet(targets, finalVars);
+            }
+            if (typeof vars.onComplete === "function") {
+              vars.onComplete();
+            }
+            return null;
+          };
+
+          gsap.from = (targets, vars = {}) => applyImmediateState(targets, {
+            clearProps: "transform,opacity",
+            opacity: 1,
+            x: 0,
+            y: 0,
+            scale: 1,
+            rotate: 0,
+            ...vars,
+          });
+          gsap.fromTo = (targets, _fromVars, toVars = {}) => applyImmediateState(targets, toVars);
+          gsap.to = (targets, vars = {}) => applyImmediateState(targets, vars);
+        } else {
+          document.documentElement.classList.add("motion-ready");
+          if (gsap.globalTimeline && gsap.globalTimeline.timeScale() < 2.5) {
+            gsap.globalTimeline.timeScale(2.5);
+          }
+        }
+      }
+
+      const syncFlipState = (card, forcedState) => {
+        const inner = card.querySelector(".flip-card-inner");
+        if (!inner) {
+          return false;
+        }
+
+        const isFlipped = typeof forcedState === "boolean"
+          ? forcedState
+          : card.classList.contains("flipped") || inner.classList.contains("flipped");
+
+        card.classList.toggle("flipped", isFlipped);
+        inner.classList.toggle("flipped", isFlipped);
+        card.setAttribute("aria-pressed", String(isFlipped));
+        return isFlipped;
+      };
+
+      const toggleFlipCard = (card) => {
+        const nextState = !syncFlipState(card);
+        syncFlipState(card, nextState);
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".flip-card").forEach((card) => {
+          if (!card.hasAttribute("role")) {
+            card.setAttribute("role", "button");
+          }
+          if (!card.hasAttribute("tabindex")) {
+            card.setAttribute("tabindex", "0");
+          }
+          syncFlipState(card);
+        });
+      });
+
+      document.addEventListener("click", (event) => {
+        const card = event.target.closest(".flip-card");
+        if (!card || event.target.closest("a, button, input, textarea, select, label")) {
+          return;
+        }
+
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        toggleFlipCard(card);
+      }, true);
+
+      document.addEventListener("keydown", (event) => {
+        const card = event.target.closest(".flip-card");
+        if (!card || (event.key !== "Enter" && event.key !== " ")) {
+          return;
+        }
+
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        toggleFlipCard(card);
+      }, true);
+    })();
+  </script>
+  <style id="hocco-runtime-overrides">
+html:not(.motion-ready) body.course-page header,
+html:not(.motion-ready) body.course-page h1,
+html:not(.motion-ready) body.course-page .topic,
+html:not(.motion-ready) body.course-page .assignment-step,
+html:not(.motion-ready) body.course-page .section-bg,
+html:not(.motion-ready) body.course-page .scoop-bounce,
+html:not(.motion-ready) body.course-page .flip-card,
+html:not(.motion-ready) body.course-page .card,
+html:not(.motion-ready) body.course-page .card-container,
+html:not(.motion-ready) body.course-page .video-container,
+html:not(.motion-ready) body.course-page .video-placeholder,
+html:not(.motion-ready) body.course-page .video-reel,
+html:not(.motion-ready) body.course-page .interactive-container,
+html:not(.motion-ready) body.course-page .iframe-container,
+html:not(.motion-ready) body.course-page .iframe-wrap,
+html:not(.motion-ready) body.course-page .audio-container,
+html:not(.motion-ready) body.course-page .hoccoverse-iframe,
+html:not(.motion-ready) body.course-page .hocco-iframe,
+html:not(.motion-ready) body.course-page .flavor-forge-iframe,
+html:not(.motion-ready) body.course-page .step-card,
+html:not(.motion-ready) body.course-page .chart-container,
+html:not(.motion-ready) body.course-page .drag-item,
+html:not(.motion-ready) body.course-page .drop-zone,
+html:not(.motion-ready) body.course-page .dropzone,
+html:not(.motion-ready) body.course-page .draggable,
+html:not(.motion-ready) body.course-page table,
+html:not(.motion-ready) body.course-page #video-player,
+html:not(.motion-ready) body.course-page .timeline-item,
+html:not(.motion-ready) body.course-page .quiz-container,
+html:not(.motion-ready) body.course-page .kpi-table,
+html:not(.motion-ready) body.course-page .info-card,
+html:not(.motion-ready) body.course-page .topic-content button,
+html:not(.motion-ready) body.course-page .assignment-content button {
+  opacity: 1 !important;
+  transform: none !important;
+  translate: none !important;
+  rotate: none !important;
+  scale: none !important;
+}
+
+body.course-page .flip-card {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+body.course-page .flip-card:focus-visible {
+  outline: 3px solid rgba(199, 21, 69, 0.35);
+  outline-offset: 4px;
+}
+
+body.course-page .flip-card.flipped .flip-card-inner,
+body.course-page .flip-card .flip-card-inner.flipped,
+body.course-page .card.flipped .card-content {
+  transform: rotateY(180deg) !important;
+}
+
+@media (hover: none), (pointer: coarse) {
+  body.course-page .flip-card:hover .flip-card-inner,
+  body.course-page .card:hover .card-content {
+    transform: none !important;
+  }
+}
+  </style>
+
+
   <style id="embedded-page-styles" type="text/css">
 :root {
   --hocco-navy: #2d2b7e;
@@ -1660,7 +1832,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // GSAP Animations
-        window.onload = () => {
+        document.addEventListener("DOMContentLoaded", () => {
             gsap.fromTo("header", { y: -100, opacity: 0 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out" });
             gsap.fromTo(".assignment-step", { opacity: 0, y: 50 }, { duration: 1, opacity: 1, y: 0, stagger: 0.2, delay: 0.5 });
             gsap.fromTo(".scoop-bounce", { opacity: 0, scale: 0.8 }, { duration: 1, opacity: 1, scale: 1, stagger: 0.2, delay: 1 });
