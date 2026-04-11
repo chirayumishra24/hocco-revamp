@@ -174,7 +174,58 @@ body.course-page .flip-card:focus-visible {
   }
 }
   
-  /* Premium Card Visibility Fix */
+  
+  /* Fix: Remove extra space below cards and force height to fit content */
+  body.course-page .flip-card,
+  body.course-page .card,
+  body.course-page .flip-card-inner,
+  body.course-page .card-content,
+  body.course-page .flip-card-front,
+  body.course-page .flip-card-back,
+  body.course-page .card-front,
+  body.course-page .card-back {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    position: relative !important;
+    inset: auto !important;
+  }
+
+  body.course-page .flip-card-inner,
+  body.course-page .card-content {
+    display: block !important;
+    transform: none !important;
+    perspective: none !important;
+  }
+
+  body.course-page .flip-card-front,
+  body.course-page .flip-card-back,
+  body.course-page .card-front,
+  body.course-page .card-back {
+    padding: 2rem !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    backface-visibility: visible !important;
+  }
+
+  /* Handle Flipped State with Relative Positioning */
+  body.course-page .flip-card .flip-card-back,
+  body.course-page .card .card-back {
+    display: none !important;
+  }
+  body.course-page .flip-card.flipped .flip-card-front,
+  body.course-page .card.flipped .card-front {
+    display: none !important;
+  }
+  body.course-page .flip-card.flipped .flip-card-back,
+  body.course-page .card.flipped .card-back {
+    display: flex !important;
+  }
+
   body.course-page .flip-card, 
   body.course-page .card,
   body.course-page .section-bg.learning-insights .flip-card {
