@@ -188,16 +188,55 @@ body.course-page .flip-card:focus-visible {
   
   
   /* Refined Card Text Colors: Dark on Front, Light on Back */
-  body.course-page .flip-card-front *, 
-  body.course-page .card-front * {
-    color: #1f2937 !important; /* Dark Navy for White Fronts */
-  }
-  body.course-page .flip-card-back *, 
-  body.course-page .card-back * {
-    /* color: whitesmoke managed by refined rules below */ /* Light for Dark Gradient Backs */
-  }
+    body.course-page .flip-card-front *,
+    body.course-page .card-front * {
+      color: #2d2b7e !important; /* Hocco Navy */
+    }
 
-  /* Fix: Remove extra space below cards and force height to fit content */
+    body.course-page .flip-card-back *,
+    body.course-page .card-back * {
+      /* Light for Dark Gradient Backs */
+      color: whitesmoke !important;
+    }
+
+    /* Beautiful Card Enhancements */
+    body.course-page .flip-card-front,
+    body.course-page .card-front {
+      background: linear-gradient(180deg, #ffffff, #fdf4f7) !important;
+      border: 2px solid rgba(199, 21, 69, 0.2) !important;
+      box-shadow: 0 10px 25px rgba(45, 43, 126, 0.08), inset 0 2px 4px rgba(255,255,255,1) !important;
+      position: relative !important;
+    }
+    
+    body.course-page .flip-card-back,
+    body.course-page .card-back {
+      box-shadow: 0 10px 25px rgba(199, 21, 69, 0.15), inset 0 2px 4px rgba(255,255,255,0.1) !important;
+    }
+
+    /* Tap to flip hint */
+    body.course-page .flip-card-front::after {
+      content: "👆 Tap to flip";
+      display: block;
+      margin-top: 1.2rem;
+      font-size: 0.9rem;
+      color: #c71545 !important;
+      font-weight: 700;
+      opacity: 0.85;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: all 0.3s ease;
+      background: rgba(199, 21, 69, 0.08);
+      padding: 6px 14px;
+      border-radius: 999px;
+    }
+    
+    body.course-page .flip-card:hover .flip-card-front::after {
+      transform: translateY(-2px);
+      background: rgba(199, 21, 69, 0.15);
+      opacity: 1;
+    }
+
+    /* Fix: Remove extra space below cards and force height to fit content */
   body.course-page .flip-card,
   body.course-page .card,
   body.course-page .flip-card-inner,
