@@ -293,7 +293,22 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 </div>
 
 <div class="assignment-content">
-<div class="video-container"><iframe height="600" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/lOkRmLd6meo?rel=0&fs=0" title="Hocco 1 Year"></iframe></div>
+        <div class="video-16-9">
+          <iframe 
+            loading="lazy" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            frameborder="0" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            src="https://www.youtube.com/embed/lOkRmLd6meo?rel=0&fs=0" 
+            title="Hocco 1 Year"
+            id="strategy-video">
+          </iframe>
+        </div>
+        <div class="flex justify-center mt-2">
+          <button onclick="goFullscreen(document.getElementById('strategy-video'))" class="bg-hocco-navy text-white px-4 py-2 rounded-lg hover:bg-hocco-red transition-colors">
+            Fullscreen Strategy Video
+          </button>
+        </div>
 </div>
 </section>
 <!-- Hocco Business Marketing Strategy -->

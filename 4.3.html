@@ -219,7 +219,22 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 </div>
 
 <div style="position: relative; display: inline-block; width: 100%; max-width: 100%;">
-<div class="video-container"><iframe height="600" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/2wNdckVSno4?rel=0&fs=0" title="What is Supply Chain Management"></iframe></div>
+        <div class="video-16-9">
+          <iframe 
+            loading="lazy" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            frameborder="0" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            src="https://www.youtube.com/embed/2wNdckVSno4?rel=0&fs=0" 
+            title="What is Supply Chain Management"
+            id="supply-chain-video">
+          </iframe>
+        </div>
+        <div class="flex justify-center mt-2">
+          <button onclick="goFullscreen(document.getElementById('supply-chain-video'))" class="bg-hocco-navy text-white px-4 py-2 rounded-lg hover:bg-hocco-red transition-colors">
+            Fullscreen Video
+          </button>
+        </div>
 </div>
 </div>
 </section>

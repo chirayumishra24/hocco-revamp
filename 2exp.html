@@ -305,24 +305,23 @@
 <div class="assignment-content">
 <p>Use the embedded Hocco Land Ice Cream Innovation Lab to design your Hocco Land Theme Park and download your picture and metrics.</p>
 
-<div style="position: relative; display: inline-block; width: 100%; max-width: 100%;"><iframe loading="lazy" allow="clipboard-write" allowfullscreen="" class="flavor-forge-iframe w-full h-[850px] rounded-lg shadow-md" src="https://hocco-land-theme-park.vercel.app/" title="Hocco Flavor Forge"></iframe><button onclick="goFullscreen(this.previousElementSibling)" style="
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        background: rgba(0,0,0,0.6);
-                        color: white;
-                        border: none;
-                        border-radius: 50%;
-                        width: 70px;
-                        height: 70px;
-                        font-size: 28px;
-                        cursor: pointer;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        transition: background 0.3s;
-                    ">▶</button></div>
+        <div class="relative w-full">
+          <iframe 
+            loading="lazy" 
+            allow="clipboard-write" 
+            allowfullscreen="" 
+            class="flavor-forge-iframe w-full h-[850px] rounded-lg shadow-md" 
+            src="https://hocco-land-theme-park.vercel.app/" 
+            title="Hocco Flavor Forge"
+            id="flavor-forge-frame">
+          </iframe>
+        </div>
+        <div class="flex justify-center mt-4">
+          <button onclick="goFullscreen(document.getElementById('flavor-forge-frame'))" class="bg-hocco-navy text-white px-6 py-3 rounded-xl hover:bg-hocco-red transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+            Fullscreen Lab
+          </button>
+        </div>
 </div>
 </section>
 <!-- Benefits of the Hocco Theme Park Design -->
@@ -396,5 +395,69 @@
 
 <div class="hidden fixed bottom-24 left-6 w-80 bg-slate-800 text-white
          rounded-xl shadow-xl p-4" id="notesPanel"><textarea class="w-full h-32 p-2 bg-slate-700 rounded resize-none" id="notesArea" style="color: white !important;" placeholder="Write your notes here..."></textarea></div>
+    <script>
+        // Progress Bar Logic
+        let progress = 20;
+        function updateProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 80 : 0;
+            const totalProgress = Math.min(100, 20 + scrollPercent);
+            const progressFill = document.getElementById("progress-fill");
+            const progressTracker = document.getElementById("progressTracker");
+            const progressBar = document.getElementById("progressBar");
+            if(progressFill) {
+                progressFill.style.width = "100%";
+                progressFill.style.height = totalProgress + "%";
+            }
+            if(progressBar) progressBar.style.width = totalProgress + "%";
+            if(progressTracker) progressTracker.textContent = `${Math.round(totalProgress)}% Complete (Keep going!)`;
+            progress = totalProgress;
+        }
+
+        // Fullscreen Functionality
+        function goFullscreen(element) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            } else if (element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+            }
+        }
+
+        // GSAP Animations
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.fromTo("header", { y: -100, opacity: 0 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out" });
+            gsap.fromTo(".assignment-step", { opacity: 0, y: 50 }, { duration: 1, opacity: 1, y: 0, stagger: 0.2, delay: 0.5 });
+            gsap.fromTo(".scoop-bounce", { opacity: 0, scale: 0.8 }, { duration: 1, opacity: 1, scale: 1, stagger: 0.2, delay: 1 });
+            updateProgress();
+        });
+
+        // Scroll-based Progress
+        window.addEventListener("scroll", updateProgress);
+
+        // Scroll-based Visibility
+        const assignments = document.querySelectorAll(".assignment-step");
+        window.addEventListener("scroll", () => {
+            assignments.forEach(assignment => {
+                const rect = assignment.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50) {
+                    assignment.classList.add("visible");
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById("back-to-top");
+        window.addEventListener("scroll", () => {
+            if(backToTop) backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+        });
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
 </body>
 </html>

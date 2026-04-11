@@ -765,7 +765,41 @@
       box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
     }
 
-    body.course-page .quiz-option,
+    body.course-page .quiz-option {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.75rem !important;
+      width: 100% !important;
+      padding: 1rem !important;
+      cursor: pointer !important;
+      transition: all 0.2s ease !important;
+      border: 1px solid rgba(45, 43, 126, 0.12) !important;
+      border-radius: var(--radius-md) !important;
+      background: linear-gradient(180deg, #ffffff, #f8fafc) !important;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08) !important;
+    }
+
+    body.course-page .quiz-option:hover {
+      border-color: var(--hocco-red) !important;
+      background: #fffafa !important;
+      transform: translateY(-1px);
+    }
+
+    body.course-page .quiz-option input[type="radio"] {
+      flex-shrink: 0 !important;
+      width: 1.2rem !important;
+      height: 1.2rem !important;
+      accent-color: var(--hocco-red) !important;
+    }
+
+    body.course-page .quiz-option label {
+      cursor: pointer !important;
+      flex-grow: 1 !important;
+      color: var(--text-muted) !important;
+      font-size: 0.95rem !important;
+      line-height: 1.4 !important;
+    }
+
     body.course-page .drag-item,
     body.course-page .drop-zone {
       padding: 0.9rem 1rem;
@@ -1639,4 +1673,63 @@ body.course-page .quiz-container input[type='checkbox'] {
   height: 20px !important;
   flex-shrink: 0 !important;
   accent-color: var(--hocco-red) !important;
+}
+
+/* --- Responsive Video Aspect Ratios --- */
+.video-16-9 {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin: 1.5rem 0;
+}
+
+.video-16-9 iframe,
+.video-16-9 video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-9-16 {
+  position: relative;
+  width: 100%;
+  max-width: 350px; /* Cap width for desktop */
+  padding-bottom: 177.77%; /* 9:16 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin: 1.5rem auto;
+}
+
+.video-9-16 iframe,
+.video-9-16 video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* --- Activity Card Responsiveness --- */
+@media (max-width: 768px) {
+  .flex-col-mobile {
+    flex-direction: column !important;
+  }
+  
+  .grid-cols-1-mobile {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+  
+  .gap-4-mobile {
+    gap: 1rem !important;
+  }
 }

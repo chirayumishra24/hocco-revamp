@@ -255,7 +255,23 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 <p>Hocco&#39;s Comeback Canvas<br />
 Drag business elements to build Hocco&#39;s strategic business model</p>
 
-<div style="position: relative; display: inline-block; width: 100%; max-width: 100%;"><iframe loading="lazy" class="hoccoverse-iframe w-full rounded-lg shadow-md mt-4" frameborder="0" scrolling="yes" src="https://hocco-canvas-play.lovable.app/" title="Hocco Canvas Play"></iframe></div>
+        <div class="relative w-full">
+          <iframe 
+            loading="lazy" 
+            class="hoccoverse-iframe w-full rounded-lg shadow-md mt-4" 
+            frameborder="0" 
+            scrolling="yes" 
+            src="https://hocco-canvas-play.lovable.app/" 
+            title="Hocco Canvas Play"
+            id="bmc-activity-frame"
+            style="height: 800px;">
+          </iframe>
+        </div>
+        <div class="flex justify-center mt-2">
+          <button onclick="goFullscreen(document.getElementById('bmc-activity-frame'))" class="bg-hocco-navy text-white px-4 py-2 rounded-lg hover:bg-hocco-red transition-colors">
+            Fullscreen Activity
+          </button>
+        </div>
 </div>
 </div>
 </div>

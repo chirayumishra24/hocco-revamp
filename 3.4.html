@@ -254,7 +254,21 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 
 <p class="mt-4"><strong>Sweet Fun Fact:</strong> Our magical machines craft ice cream so pure, it&rsquo;s like a hug from grandma &ndash; but colder and creamier!</p>
 
-<div class="iframe-container mt-2"><iframe loading="lazy" align="middle" frameborder="0" height="700" id="factory-video" scrolling="no" src="https://www.youtube.com/embed/2rITdfzTNLE?start=58&fs=0" title="Hocco Factory Tour" width="100%"></iframe></div>
+        <div class="video-16-9">
+          <iframe 
+            loading="lazy"
+            align="middle"
+            frameborder="0"
+            id="factory-video"
+            src="https://www.youtube.com/embed/2rITdfzTNLE?start=58&fs=0"
+            title="Hocco Factory Tour">
+          </iframe>
+        </div>
+        <div class="flex justify-center mt-2">
+          <button onclick="goFullscreen(document.getElementById('factory-video'))" class="bg-hocco-navy text-white px-4 py-2 rounded-lg hover:bg-hocco-red transition-colors">
+            Fullscreen Factory Tour
+          </button>
+        </div>
 </div>
 </section>
 <!-- Quiz Section -->

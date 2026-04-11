@@ -365,20 +365,28 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 
 <div class="draggable" draggable="true" id="draggable5" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;">Acchai &amp; Sacchai</div>
 </div>
-<!-- Two-column dropzones -->
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<div class="dropzone" id="blank1" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;">Hocco is strategically expanding its presence in key ____ markets.</div>
-
-<div class="dropzone" id="blank2" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;">The brand launched its first store in the ____, targeting the Indian diaspora.</div>
-
-<div class="dropzone" id="blank3" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;">Establishing a reliable ____ and supply logistics internationally is complex.</div>
-
-<div class="dropzone" id="blank4" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;">Notably, ____ of US customers are non-Indians.</div>
-
-<div class="dropzone" id="blank5" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;">Hocco is committed to ethical values through its ____ principles.</div>
+        <div class="bg-white p-6 rounded-xl shadow-inner border border-gray-100">
+          <p class="text-lg leading-relaxed mb-6 bg-hocco-white/50 p-4 rounded-lg">
+            Hocco is strategically expanding its presence in key 
+            <span class="drop-zone inline-block border-b-2 border-dashed border-hocco-navy min-w-[100px] text-center px-2 mx-1 rounded-t-lg bg-gray-50/50" data-answer="draggable1" id="blank1">____</span> 
+            markets. The brand launched its first store in the 
+            <span class="drop-zone inline-block border-b-2 border-dashed border-hocco-navy min-w-[120px] text-center px-2 mx-1 rounded-t-lg bg-gray-50/50" data-answer="draggable2" id="blank2">____</span>, 
+            targeting the Indian diaspora. Establishing a reliable 
+            <span class="drop-zone inline-block border-b-2 border-dashed border-hocco-navy min-w-[100px] text-center px-2 mx-1 rounded-t-lg bg-gray-50/50" data-answer="draggable3" id="blank3">____</span> 
+            and supply logistics internationally is complex. Notably, 
+            <span class="drop-zone inline-block border-b-2 border-dashed border-hocco-navy min-w-[60px] text-center px-2 mx-1 rounded-t-lg bg-gray-50/50" data-answer="draggable4" id="blank4">____</span> 
+            of US customers are non-Indians. Hocco is committed to ethical values through its 
+            <span class="drop-zone inline-block border-b-2 border-dashed border-hocco-navy min-w-[140px] text-center px-2 mx-1 rounded-t-lg bg-gray-50/50" data-answer="draggable5" id="blank5">____</span> 
+            principles.
+          </p>
+          <div class="flex justify-center">
+            <button class="px-6 py-2 bg-hocco-navy text-white rounded-full hover:bg-hocco-red transition-all shadow-md transform hover:scale-105 flex items-center gap-2" onclick="resetActivity()">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+              Reset Activity
+            </button>
+          </div>
+        </div>
 </div>
-<button class="mt-4 px-4 py-2 bg-hocco-red text-white rounded-lg hover:bg-red-700" onclick="resetActivity()">Reset</button></div>
 </section>
 <!-- Conclusion -->
 
@@ -488,50 +496,80 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 
         // Drag and Drop Activity for Fill in the Blanks
         const draggables = document.querySelectorAll('.draggable');
-        const dropzones = document.querySelectorAll('.dropzone');
+        const dropzones = document.querySelectorAll('.drop-zone');
         
         draggables.forEach(draggable => {
             draggable.addEventListener('dragstart', e => {
                 e.dataTransfer.setData('text', e.target.id);
+                e.target.classList.add('dragging');
+            });
+            draggable.addEventListener('dragend', e => {
+                e.target.classList.remove('dragging');
             });
         });
         
         dropzones.forEach(dropzone => {
             dropzone.addEventListener('dragover', e => {
                 e.preventDefault();
+                dropzone.classList.add('drag-over');
+            });
+
+            dropzone.addEventListener('dragleave', () => {
+                dropzone.classList.remove('drag-over');
             });
             
             dropzone.addEventListener('drop', e => {
                 e.preventDefault();
+                dropzone.classList.remove('drag-over');
                 const id = e.dataTransfer.getData('text');
                 const draggable = document.getElementById(id);
-                const correctMatches = {
-                    'draggable1': 'blank1',
-                    'draggable2': 'blank2',
-                    'draggable3': 'blank3',
-                    'draggable4': 'blank4',
-                    'draggable5': 'blank5'
-                };
-                if (e.target.id === correctMatches[id]) {
-                    e.target.appendChild(draggable);
-                    e.target.classList.add('correct');
-                    e.target.classList.remove('incorrect');
+                
+                if (draggable && dropzone.getAttribute('data-answer') === id) {
+                    dropzone.innerHTML = '';
+                    dropzone.appendChild(draggable);
+                    dropzone.classList.add('correct');
+                    dropzone.classList.remove('incorrect');
+                    draggable.setAttribute('draggable', 'false');
+                    draggable.style.cursor = 'default';
                 } else {
-                    e.target.classList.add('incorrect');
-                    e.target.classList.remove('correct');
-                    setTimeout(() => e.target.classList.remove('incorrect'), 1000);
+                    dropzone.classList.add('incorrect');
+                    setTimeout(() => dropzone.classList.remove('incorrect'), 1000);
                 }
             });
         });
         
         function resetActivity() {
-            const container = document.querySelector('.drag-container');
-            draggables.forEach(draggable => {
-                container.appendChild(draggable);
+            const dragContainer = document.querySelector('.drag-container');
+            const dropZones = document.querySelectorAll('.drop-zone');
+            
+            const initialDraggables = [
+                {id: 'draggable1', text: 'Indian'},
+                {id: 'draggable2', text: 'United States'},
+                {id: 'draggable3', text: 'cold chain'},
+                {id: 'draggable4', text: '70%'},
+                {id: 'draggable5', text: 'Acchai & Sacchai'}
+            ];
+
+            dragContainer.innerHTML = '';
+            initialDraggables.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'draggable';
+                div.draggable = true;
+                div.id = item.id;
+                div.textContent = item.text;
+                div.addEventListener('dragstart', e => {
+                    e.dataTransfer.setData('text', e.target.id);
+                    e.target.classList.add('dragging');
+                });
+                div.addEventListener('dragend', e => {
+                    e.target.classList.remove('dragging');
+                });
+                dragContainer.appendChild(div);
             });
-            dropzones.forEach(dropzone => {
-                dropzone.classList.remove('correct', 'incorrect');
-                dropzone.innerHTML = dropzone.id.replace('blank', 'Blank ');
+
+            dropZones.forEach(zone => {
+                zone.innerHTML = '____';
+                zone.classList.remove('correct', 'incorrect');
             });
         }
 

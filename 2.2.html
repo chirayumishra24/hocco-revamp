@@ -229,7 +229,22 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 <div class="assignment-content">
 <p>Explore the &lsquo;Hooked on Hocco&rsquo; campaign through the interactive Hoccoverse tool below. Dive into the vibrant visuals, mascot-driven animations, and summer-inspired storytelling that made this campaign a success, all within the LMS.</p>
 
-<div style="position: relative; display: inline-block; width: 100%; max-width: 100%;"><iframe loading="lazy" allow="clipboard-write" class="hoccoverse-iframe" src="https://hocco-creativity.vercel.app/Summer%20campaign/index.html" title="Hoccoverse Summer Campaign"></iframe></div>
+        <div style="position: relative; display: inline-block; width: 100%; max-width: 100%;">
+          <iframe 
+            loading="lazy" 
+            allow="clipboard-write" 
+            class="hoccoverse-iframe w-full" 
+            src="https://hocco-creativity.vercel.app/Summer%20campaign/index.html" 
+            title="Hoccoverse Summer Campaign"
+            id="hoccoverse-frame"
+            style="height: 500px; border: none;">
+          </iframe>
+        </div>
+        <div class="flex justify-center mt-2">
+          <button onclick="goFullscreen(document.getElementById('hoccoverse-frame'))" class="bg-hocco-navy text-white px-4 py-2 rounded-lg hover:bg-hocco-red transition-colors">
+            Fullscreen Interaction
+          </button>
+        </div>
 </div>
 </section>
 <!-- Campaign Strategy -->

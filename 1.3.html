@@ -202,7 +202,16 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 <h2><img decoding="async" loading="lazy" alt="Video Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h1.svg" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.8157, 0.8157); opacity: 0.0784;" /> Hocco Press Conference</h2>
 </div>
 
-<div class="topic-content"><iframe loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" height="650" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/wFO3kQutl8M?rel=0&fs=0" title="Hocco Press Conference" width="100%"></iframe></div>
+<div class="topic-content">
+  <div class="video-16-9">
+    <iframe loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/wFO3kQutl8M?rel=0&fs=0" title="Hocco Press Conference" id="press-video"></iframe>
+  </div>
+  <div class="flex justify-center mt-2">
+    <button onclick="goFullscreen(document.getElementById('press-video'))" class="bg-hocco-navy text-white px-4 py-2 rounded-lg hover:bg-hocco-red transition-colors">
+      Fullscreen Press Conference
+    </button>
+  </div>
+</div>
 </div>
 <!-- Assignment Overview -->
 
@@ -283,7 +292,15 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 </div>
 
 <div class="topic-content">
-<div class="video-placeholder"><iframe loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" height="100%" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/s9DwJb30Swo?rel=0&fs=0" title="The Hocco Story! 🍦 Ankit Chona on building an Ice Cream brand in India! 👀" width="100%"></iframe></div>
+  <div class="video-9-16 max-w-[400px] mx-auto">
+    <iframe loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/s9DwJb30Swo?rel=0&fs=0" title="The Hocco Story! 🍦 Ankit Chona on building an Ice Cream brand in India! 👀" id="legacy-story-video"></iframe>
+  </div>
+  <div class="flex justify-center mt-2">
+    <button onclick="goFullscreen(document.getElementById('legacy-story-video'))" class="bg-hocco-navy text-white px-4 py-2 rounded-lg hover:bg-hocco-red transition-colors">
+      Fullscreen Story
+    </button>
+  </div>
+</div>
 
 <p class="mt-4"><i>Hocco&#39;s Founder Ankit Chona in conversation with Shantanu Deshpande, the founder of Bombay Shaving Company</i></p>
 </div>

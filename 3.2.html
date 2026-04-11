@@ -361,7 +361,24 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 <p class="text-gray-700 mb-4">Which brand uses a playful mascot to evoke ice cream that freezes time, giving nostalgia and trust?</p>
 
 <form id="branding-quiz">
-<div class="space-y-3 mb-6"><label class="block text-gray-700 text-sm mb-2 cursor-pointer flex items-center"><input class="mr-3 accent-[#C71545]" name="brand" type="radio" value="Amul" /> Amul </label> <label class="block text-gray-700 text-sm mb-2 cursor-pointer flex items-center"> <input class="mr-3 accent-[#C71545]" name="brand" type="radio" value="Coca-Cola" /> Coca-Cola </label> <label class="block text-gray-700 text-sm mb-2 cursor-pointer flex items-center"> <input class="mr-3 accent-[#C71545]" name="brand" type="radio" value="Hocco" /> Hocco </label> <label class="block text-gray-700 text-sm mb-2 cursor-pointer flex items-center"> <input class="mr-3 accent-[#C71545]" name="brand" type="radio" value="Nike" /> Nike </label></div>
+<div class="space-y-3 mb-6">
+  <div class="quiz-option">
+    <input name="brand" type="radio" value="Amul" id="brand-amul" />
+    <label for="brand-amul">Amul</label>
+  </div>
+  <div class="quiz-option">
+    <input name="brand" type="radio" value="Coca-Cola" id="brand-coca" />
+    <label for="brand-coca">Coca-Cola</label>
+  </div>
+  <div class="quiz-option">
+    <input name="brand" type="radio" value="Hocco" id="brand-hocco" />
+    <label for="brand-hocco">Hocco</label>
+  </div>
+  <div class="quiz-option">
+    <input name="brand" type="radio" value="Nike" id="brand-nike" />
+    <label for="brand-nike">Nike</label>
+  </div>
+</div>
 <button class="mt-4 bg-[#C71545] hover:bg-[#2D2B7E] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 block mx-auto shadow-lg hover:shadow-xl w-full sm:w-auto hocco-submit-btn" id="quiz-submit-btn" type="button">Submit</button></form>
 
 <div class="quiz-feedback" id="quiz-feedback" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 8px;">&nbsp;</div>

@@ -235,10 +235,22 @@
       </div>
 
       <div class="topic-content">
-        <div class="iframe-wrap rounded-lg overflow-hidden mb-4"><iframe height="600" loading="lazy"
+        <div class="video-16-9">
+          <iframe 
+            loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
-            src="https://www.youtube.com/embed/PFxoov7mhrE?rel=0&fs=0" title="Hocco Ice Cream Scoop"></iframe></div>
+            frameborder="0" 
+            referrerpolicy="strict-origin-when-cross-origin"
+            src="https://www.youtube.com/embed/PFxoov7mhrE?rel=0&fs=0" 
+            title="Hocco Ice Cream Scoop"
+            id="scoop-story-video">
+          </iframe>
+        </div>
+        <div class="flex justify-center mt-2">
+          <button onclick="goFullscreen(document.getElementById('scoop-story-video'))" class="bg-hocco-navy text-white px-4 py-2 rounded-lg hover:bg-hocco-red transition-colors">
+            Fullscreen Story
+          </button>
+        </div>
 
         <div><iframe loading="lazy" align="middle" allowfullscreen="" class="hocco-iframe" frameborder="0" height="1128"
             id="hoccoFrame" scrolling="no" src="https://hocco-creativity.vercel.app/" title="Hocco Creativity"
