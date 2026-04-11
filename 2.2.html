@@ -165,11 +165,7 @@ body.course-page .flip-card:focus-visible {
   outline-offset: 4px;
 }
 
-body.course-page .flip-card.flipped .flip-card-inner,
-body.course-page .flip-card .flip-card-inner.flipped,
-body.course-page .card.flipped .card-content {
-  transform: rotateY(180deg) !important;
-}
+
 
 @media (hover: none), (pointer: coarse) {
   body.course-page .flip-card:hover .flip-card-inner,
@@ -1073,7 +1069,9 @@ body.course-page #team-iframe {
 
 body.course-page .audio-container {
   width: min(100%, 700px) !important;
-  min-height: 420px !important;
+  aspect-ratio: 16 / 9 !important;
+  min-height: auto !important;
+  height: auto !important;
   padding: clamp(1.5rem, 4vw, 2.5rem) !important;
   padding-top: clamp(3rem, 6vw, 4rem) !important;
 }
@@ -1238,8 +1236,8 @@ body.course-page #notesPanel {
   body.course-page .assignment-content,
   body.course-page .topic-content,
   body.course-page .section-bg {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 
   body.course-page .flip-card {
@@ -1363,6 +1361,44 @@ body.course-page #notesPanel {
     padding: 1rem;
   }
 }
+  </style>
+<style>
+
+  
+  /* Overrides to make flip cards purely tap-and-view without 3D flip animation */
+  body.course-page .flip-card *, body.course-page .card * {
+    transition: none !important; /* Ensure no 3d transition */
+    transform: none !important;
+    backface-visibility: visible !important;
+  }
+  body.course-page .flip-card-front,
+  body.course-page .card-front {
+    position: relative !important;
+    display: flex !important;
+    height: auto !important;
+  }
+  body.course-page .flip-card-back,
+  body.course-page .card-back {
+    position: relative !important;
+    display: none !important;
+    height: auto !important;
+  }
+
+  /* Make audio container 16:9 */
+  body.course-page .audio-container { aspect-ratio: 16 / 9 !important; min-height: auto !important; height: auto !important; max-height: max-content; }
+
+  /* Handle Flipped State */
+  body.course-page .flip-card.flipped .flip-card-front,
+  body.course-page .card.flipped .card-front,
+  body.course-page .flip-card-inner.flipped .flip-card-front {
+    display: none !important;
+  }
+  body.course-page .flip-card.flipped .flip-card-back,
+  body.course-page .card.flipped .card-back,
+  body.course-page .flip-card-inner.flipped .flip-card-back {
+    display: flex !important;
+  }
+  
   </style>
 </head>
 <body class="course-page page-2-2">
@@ -1723,7 +1759,7 @@ document.addEventListener("DOMContentLoaded", () => {
             gsap.fromTo(".card-container", { opacity: 0, scale: 0.9 }, { duration: 1, opacity: 1, scale: 1, stagger: 0.2, delay: 1.5 });
             gsap.fromTo(".video-reel", { opacity: 0, scale: 0.9 }, { duration: 1, opacity: 1, scale: 1, delay: 1.5 });
             updateProgress();
-        };
+        });
 
         // Scroll-based Progress
         window.addEventListener("scroll", updateProgress);
