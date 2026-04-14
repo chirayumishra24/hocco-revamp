@@ -194,7 +194,7 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 <div>
 <h1 class="flex items-center" style="text-align: center;"><strong>🍦 Chapter 4: Hocco and the Ice Cream Factory</strong></h1>
 
-<h1 style="text-align: center;"><span>Crafting Sweet Moments, One Scoop at a Time &ndash; Dive into an Interactive Adventure!</span></h1>
+<p class="mt-2 text-sm sm:text-base md:text-lg" style="text-align: center;">Crafting Sweet Moments, One Scoop at a Time &ndash; Dive into an Interactive Adventure!</p>
 </div>
 <span class="premium-badge">Virtual Internship</span></div>
 </header>
@@ -264,11 +264,7 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
             title="Hocco Factory Tour">
           </iframe>
         </div>
-        <div class="flex justify-center mt-2">
-          <button onclick="goFullscreen(document.getElementById('factory-video'))" class="bg-hocco-navy text-white px-4 py-2 rounded-lg hover:bg-hocco-red transition-colors">
-            Fullscreen Factory Tour
-          </button>
-        </div>
+
 </div>
 </section>
 <!-- Quiz Section -->
@@ -470,7 +466,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Quiz Functionality
             $('.quiz-option').click(function() {
-                $(this).siblings('.quiz-option').removeClass('selected');
+                $(this).closest('.quiz-question').find('.quiz-option').removeClass('selected');
                 $(this).addClass('selected');
             });
 
@@ -523,5 +519,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     </script></div>
+<script src="zoom-script.js"></script>
 </body>
 </html>
