@@ -116,6 +116,42 @@
   </script>
   <link rel="stylesheet" href="hocco-global.css">
 
+  <style>
+    body.course-page.page-4-2 #assignment-challenges .challenge-video-wrap {
+      display: flex !important;
+      justify-content: center !important;
+      margin-top: 1.5rem !important;
+    }
+
+    body.course-page.page-4-2 #assignment-challenges .challenge-video-container {
+      position: relative !important;
+      width: 100% !important;
+      max-width: 420px !important;
+      aspect-ratio: 9 / 16 !important;
+      margin-inline: auto !important;
+      border-radius: 1.25rem !important;
+      overflow: hidden !important;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.16) !important;
+    }
+
+    body.course-page.page-4-2 #assignment-challenges .challenge-video-container iframe {
+      position: absolute;
+      inset: 0;
+      width: 100% !important;
+      height: 100% !important;
+      min-height: 0 !important;
+      aspect-ratio: auto !important;
+      border: 0 !important;
+      border-radius: inherit !important;
+    }
+
+    @media (max-width: 640px) {
+      body.course-page.page-4-2 #assignment-challenges .challenge-video-container {
+        max-width: min(100%, 340px) !important;
+      }
+    }
+  </style>
+
 
   
 
@@ -255,7 +291,9 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 <div class="assignment-content">
 <p>Hocco faces supply chain logistics and quality maintenance during expansion. Founder insights highlight innovation to counter competition.</p>
 
-<div class="video-container mt-4" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.9148, 0.9148); opacity: 0.1481;"><iframe height="600" loading="lazy" frameborder="0" src="https://www.youtube.com/embed/H8RQ9H1u0tU?fs=0" title="“What are the STRUGGLES of Ice Cream Business?” Revealed by Hocco Ice Cream Founder!🍨"></iframe></div>
+<div class="challenge-video-wrap">
+<div class="video-container challenge-video-container" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.9148, 0.9148); opacity: 0.1481;"><iframe loading="lazy" frameborder="0" src="https://www.youtube.com/embed/H8RQ9H1u0tU?fs=0" title="“What are the STRUGGLES of Ice Cream Business?” Revealed by Hocco Ice Cream Founder!🍨"></iframe></div>
+</div>
 </div>
 </section>
 <!-- Revenue Channels -->

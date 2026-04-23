@@ -139,6 +139,47 @@
       background: rgba(45, 43, 126, 0.03) !important;
       box-sizing: border-box;
     }
+
+    body.course-page.page-3-2 #assignment-experience .experience-media-row {
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 1.5rem !important;
+    }
+
+    body.course-page.page-3-2 #assignment-experience .experience-media-image,
+    body.course-page.page-3-2 #assignment-experience .experience-media-video {
+      width: 100% !important;
+      max-width: 320px !important;
+      margin-inline: auto !important;
+      flex: 0 1 320px !important;
+    }
+
+    body.course-page.page-3-2 #assignment-experience .experience-media-image {
+      height: auto !important;
+      max-height: 360px !important;
+      object-fit: contain !important;
+    }
+
+    body.course-page.page-3-2 #assignment-experience .experience-media-video {
+      position: relative !important;
+      display: block !important;
+      aspect-ratio: 9 / 16;
+    }
+
+    body.course-page.page-3-2 #assignment-experience .experience-media-video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100% !important;
+      height: 100% !important;
+      border-radius: 1rem;
+    }
+
+    @media (max-width: 639px) {
+      body.course-page.page-3-2 #assignment-experience .experience-media-image,
+      body.course-page.page-3-2 #assignment-experience .experience-media-video {
+        max-width: min(100%, 340px) !important;
+      }
+    }
   </style>
 
 
@@ -255,8 +296,8 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 
 <p class="mt-4">Explore the Scooperheroes below:</p>
 <img decoding="async" loading="lazy" alt="Hocco Manifesto" class="w-full max-w-[1020px] scoop-bounce mt-4" src="https://login.skillizee.io/s/articles/68a3f74874f5f72a20c53ec4/images/Hocco-Desktop-Manifesto-1-1.png" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, -7.95252px, 0px) scale(0.818, 0.818); opacity: 0.0899;" />
-<div class="flex flex-col sm:flex-row gap-4 mt-4"><img decoding="async" loading="lazy" alt="Hocco H" class="w-full max-w-[500px] scoop-bounce" src="https://login.skillizee.io/s/articles/68a3f74874f5f72a20c53ec4/images/Hocco_H.png" style="width: 350px; height: 401px; translate: none; rotate: none; scale: none; transform: translate(0px, -7.95252px) scale(0.8, 0.8); opacity: 0;" />
-<div style="position: relative; display: inline-block; width: 100%; max-width: 350px;"><iframe loading="lazy" aria-label="Hocco Cloud Nine Video" frameborder="0" height="800" scrolling="no" src="https://www.youtube.com/embed/kWqCCpQEEq0?fs=0" title="Your Shortcut to Cloud Nine | HOCCO Ice cream #hoccoverse" width="350"></iframe></div>
+<div class="experience-media-row flex flex-col sm:flex-row gap-4 mt-4"><img decoding="async" loading="lazy" alt="Hocco H" class="experience-media-image w-full max-w-[500px] scoop-bounce" src="https://login.skillizee.io/s/articles/68a3f74874f5f72a20c53ec4/images/Hocco_H.png" style="translate: none; rotate: none; scale: none; transform: translate(0px, -7.95252px) scale(0.8, 0.8); opacity: 0;" />
+<div class="experience-media-video"><iframe loading="lazy" aria-label="Hocco Cloud Nine Video" frameborder="0" scrolling="no" src="https://www.youtube.com/embed/kWqCCpQEEq0?fs=0" title="Your Shortcut to Cloud Nine | HOCCO Ice cream #hoccoverse"></iframe></div>
 </div>
 </div>
 </section>

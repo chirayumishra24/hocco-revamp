@@ -116,6 +116,62 @@
   </script>
   <link rel="stylesheet" href="hocco-global.css">
 
+  <style>
+    body.course-page.page-4exp1 #assignment-simulator .tool-placeholder {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      padding: 1rem !important;
+      margin-bottom: 1rem !important;
+      background: transparent !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+
+    body.course-page.page-4exp1 #assignment-simulator .play-button {
+      width: auto !important;
+      min-width: 220px !important;
+      height: auto !important;
+      padding: 0.9rem 1.5rem !important;
+      font-size: 1rem !important;
+      white-space: nowrap !important;
+    }
+
+    body.course-page.page-4exp1 #assignment-simulator .simulator-frame {
+      position: relative !important;
+      width: 100% !important;
+      min-height: 820px !important;
+      margin: 0 auto !important;
+      border-radius: 1.5rem !important;
+      overflow: hidden !important;
+      background: linear-gradient(180deg, #ffffff, #f8fafc) !important;
+      border: 1px solid rgba(45, 43, 126, 0.12) !important;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12) !important;
+    }
+
+    body.course-page.page-4exp1 #assignment-simulator .calculator-iframe {
+      display: block !important;
+      width: 100% !important;
+      min-height: 820px !important;
+      height: 820px !important;
+      border: 0 !important;
+      background: #ffffff !important;
+    }
+
+    @media (max-width: 768px) {
+      body.course-page.page-4exp1 #assignment-simulator .simulator-frame,
+      body.course-page.page-4exp1 #assignment-simulator .calculator-iframe {
+        min-height: 680px !important;
+        height: 680px !important;
+      }
+
+      body.course-page.page-4exp1 #assignment-simulator .play-button {
+        min-width: 0 !important;
+        width: 100% !important;
+      }
+    }
+  </style>
+
 
   
 
@@ -307,7 +363,7 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 
 <div class="tool-placeholder"><button class="play-button" onclick="goFullscreen(document.getElementById('supplySimulator'))">▶ Play Supply Simulator</button></div>
 
-<div style="position: relative; display: inline-block; width: 100%; max-width: 100%;"><iframe loading="lazy" class="calculator-iframe" frameborder="0" id="supplySimulator" scrolling="yes" src="https://scoop-supply-chain.lovable.app/" title="Supply Chain Simulator"></iframe></div>
+<div class="simulator-frame"><iframe loading="lazy" class="calculator-iframe" frameborder="0" id="supplySimulator" scrolling="yes" src="https://scoop-supply-chain.lovable.app/" title="Supply Chain Simulator"></iframe></div>
 </div>
 </section>
 <!-- Progress Tracker -->
@@ -339,6 +395,23 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 <div class="hidden fixed bottom-24 left-6 w-80 bg-slate-800 text-white
          rounded-xl shadow-xl p-4" id="notesPanel"><textarea class="w-full h-32 p-2 bg-slate-700 rounded resize-none" id="notesArea" style="color: white !important;" placeholder="Write your notes here..."></textarea></div>
 </div>
+<script>
+function goFullscreen(element) {
+  if (!element) {
+    return;
+  }
+
+  if (element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if (element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();
+  } else if (element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();
+  } else if (element.msRequestFullscreen) {
+    element.msRequestFullscreen();
+  }
+}
+</script>
 <script src="zoom-script.js"></script>
 </body>
 </html>
