@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -71,6 +72,7 @@
       position: relative;
       overflow: hidden;
     }
+
     .capstone-hero::before {
       content: '🍦';
       position: absolute;
@@ -80,6 +82,7 @@
       right: -20px;
       transform: rotate(15deg);
     }
+
     .tip-card {
       background: white;
       border-radius: 1rem;
@@ -88,9 +91,11 @@
       transition: transform 0.3s ease;
       border-left: 4px solid #2D2B7E;
     }
+
     .tip-card:hover {
       transform: translateY(-5px);
     }
+
     .reward-badge {
       background: #FFF9E6;
       border: 2px solid #FFD700;
@@ -101,6 +106,7 @@
       align-items: center;
       gap: 1rem;
     }
+
     .cta-container {
       background: #f8fafc;
       border: 2px dashed #2D2B7E;
@@ -112,44 +118,50 @@
 
     /* Scoped Light Shade Text Colors */
     .capstone-hero h2 {
-        color: #D1E8FF !important; /* Light Ice Blue */
+      color: #D1E8FF !important;
+      /* Light Ice Blue */
     }
 
     .capstone-hero p {
-        color: #F8FAFC !important; /* Light Ghost White */
+      color: #F8FAFC !important;
+      /* Light Ghost White */
     }
 
-    header h1, header p {
-        color: white !important;
+    header h1,
+    header p {
+      color: white !important;
     }
 
     .cta-container h3 {
-        color: #2D2B7E !important; /* Hocco Navy */
+      color: #2D2B7E !important;
+      /* Hocco Navy */
     }
 
     .cta-container p {
-        color: #333333 !important;
+      color: #333333 !important;
     }
 
     /* Video Container Aspect Ratio */
     .aspect-ratio-16-9 {
-        position: relative;
-        padding-bottom: 62%; /* Increased from 56.25% for more height */
-        height: 0;
-        overflow: hidden;
-        border-radius: 1.5rem;
+      position: relative;
+      padding-bottom: 62%;
+      /* Increased from 56.25% for more height */
+      height: 0;
+      overflow: hidden;
+      border-radius: 1.5rem;
     }
 
     .aspect-ratio-16-9 iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
+
 <body class="course-page bg-gray-50 min-h-screen">
   <!-- Interactive Floating Elements -->
   <div class="emoji-bg" style="top: 10%; left: 5%;">🍦</div>
@@ -166,14 +178,18 @@
 
   <!-- Gustora Fullscreen Toggle -->
   <button id="gustoraFullscreenBtn" aria-label="Toggle Fullscreen">
-    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"
+      viewBox="0 0 24 24">
+      <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+    </svg>
   </button>
 
   <div class="min-h-screen flex flex-col relative z-10">
     <header>
       <div class="flex items-center justify-between px-6">
         <div class="flex items-center gap-4">
-          <img src="https://www.hocco.in/wp-content/themes/hocco/assets/images/logo.svg" class="h-12 scoop-bounce" alt="Hocco Logo">
+          <img src="https://www.hocco.in/wp-content/themes/hocco/assets/images/logos/logo.svg" class="h-12 scoop-bounce"
+            alt="Hocco Logo">
           <div>
             <h1 class="text-4xl md:text-6xl font-black mb-4 tracking-tight">Final Capstone Project</h1>
             <p class="text-xl md:text-2xl font-bold">SkilliZee X Hocco Ice Cream Internship</p>
@@ -183,265 +199,319 @@
       </div>
     </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="assignment-step" id="capstone-hero">
-      <div class="capstone-hero">
-        <h2 class="text-5xl font-extrabold mb-4">Beyond the Scoop</h2>
-        <p class="text-2xl max-w-2xl mx-auto opacity-90 leading-relaxed">
-          The ultimate finale! Experience the magic of Hocco, share your joy, and join the mission of <strong>Acchai & Sacchai</strong>.
-        </p>
-        <div class="mt-10 flex justify-center gap-6">
-           <span class="bg-white/30 px-6 py-2 rounded-full text-sm font-bold backdrop-blur-lg border border-white/20">Mandatory Task</span>
-           <span class="bg-white/30 px-6 py-2 rounded-full text-sm font-bold backdrop-blur-lg border border-white/20">Certficate & Badge</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Project Overview -->
-    <section class="assignment-step" id="project-overview">
-      <div class="assignment-heading">
-        <h2>
-          <img decoding="async" loading="lazy" alt="Overview Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h5.svg" />
-          Project Overview
-        </h2>
-      </div>
-      <div class="assignment-content">
-        <p class="text-xl mb-6 leading-relaxed">
-          Welcome to the final capstone project of the SkilliZee EcoPreneurship Internship with Hocco Ice Cream! Themed <em>Beyond the Scoop</em>, this project challenges you to step into the shoes of a product innovator. 
-        </p>
-        <p class="text-lg mb-8 bg-hocco-navy/5 p-6 rounded-xl border-l-4 border-hocco-navy">
-          Your task is to <strong>conceptualize a brand-new, unique ice cream product</strong> and pitch it to the Hocco team through a 2–3 minute video. The best pitches will be recognized by Hocco and SkilliZee, supporting Hocco’s mission of <strong>“Acchai & Sacchai”</strong> (Goodness & Truth). This task is mandatory to earn your Internship Certificate and Badge.
-        </p>
-        <div class="relative group">
-          <img alt="Project Preview" class="scoop-bounce rounded-2xl shadow-2xl mx-auto transform transition-transform group-hover:scale-[1.02]" src="https://login.skillizee.io/s/articles/68f1e111cbf0423e5c4f6bce/images/hocco.jpeg" />
-          <div class="absolute inset-0 rounded-2xl ring-1 ring-black/10 pointer-events-none"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Project Task -->
-    <section class="assignment-step" id="project-task">
-      <div class="assignment-heading">
-        <h2>
-          <img decoding="async" loading="lazy" alt="Task Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" />
-          Project Task: Record a Product Pitch Video
-        </h2>
-      </div>
-      <div class="assignment-content">
-        <p class="text-xl mb-8">
-          Design an innovative Hocco Ice Cream product and create a 2–3 minute video pitching your concept to the executive team. Upload the video directly to the LMS.
-        </p>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
-          <div class="tip-card group">
-            <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">Be Genuine</h4>
-            <p class="text-gray-600">Share your passion for your new product idea and explain how it perfectly aligns with Hocco's core values.</p>
-          </div>
-          <div class="tip-card group">
-            <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">Introduce the Product</h4>
-            <p class="text-gray-600">Give your new ice cream a catchy name and clearly explain the concept (e.g., flavor profile or unique format).</p>
-          </div>
-          <div class="tip-card group">
-            <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">Highlight the Appeal</h4>
-            <p class="text-gray-600">Mention what makes it stand out—healthy alternative, nostalgic local flavor, or eco-friendly packaging?</p>
-          </div>
-          <div class="tip-card group">
-            <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">Target Audience</h4>
-            <p class="text-gray-600">Define exactly who will love this product and why it fills an exciting gap in the current market.</p>
-          </div>
-          <div class="tip-card group">
-            <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">Descriptive Language</h4>
-            <p class="text-gray-600">Use vivid, sensory words so the judges can practically taste your "refreshingly natural" creation.</p>
-          </div>
-          <div class="tip-card group">
-            <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">Keep it Concise</h4>
-            <p class="text-gray-600">Aim for 2–3 minutes of clear, focused, and compelling content.</p>
-          </div>
-          <div class="tip-card group">
-            <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">Speak Clearly</h4>
-            <p class="text-gray-600">Maintain eye contact, speak confidently, and smile naturally.</p>
-          </div>
-          <div class="tip-card group">
-            <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">Good Production</h4>
-            <p class="text-gray-600">Ensure your face is well-lit and record in a quiet environment so your pitch is easy to hear.</p>
-          </div>
-          <div class="tip-card group">
-            <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">Call to Action</h4>
-            <p class="text-gray-600">Conclude with a strong, convincing statement on why Hocco must add this to their lineup.</p>
+    <main>
+      <!-- Hero Section -->
+      <section class="assignment-step" id="capstone-hero">
+        <div class="capstone-hero">
+          <h2 class="text-5xl font-extrabold mb-4">Beyond the Scoop</h2>
+          <p class="text-2xl max-w-2xl mx-auto opacity-90 leading-relaxed">
+            The ultimate finale! Experience the magic of Hocco, share your joy, and join the mission of <strong>Acchai &
+              Sacchai</strong>.
+          </p>
+          <div class="mt-10 flex justify-center gap-6">
+            <span
+              class="bg-white/30 px-6 py-2 rounded-full text-sm font-bold backdrop-blur-lg border border-white/20">Mandatory
+              Task</span>
+            <span
+              class="bg-white/30 px-6 py-2 rounded-full text-sm font-bold backdrop-blur-lg border border-white/20">Certficate
+              & Badge</span>
           </div>
         </div>
+      </section>
 
-        <div class="mt-12 flex justify-center">
-          <div class="w-full max-w-6xl rounded-[2.5rem] overflow-hidden shadow-[0_30px_70px_rgba(45,43,126,0.35)] border-[12px] border-white bg-black">
-            <div class="aspect-ratio-16-9">
-              <iframe src="https://www.youtube.com/embed/nLkdRxD8I2I?rel=0" title="Reference Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <!-- Project Overview -->
+      <section class="assignment-step" id="project-overview">
+        <div class="assignment-heading">
+          <h2>
+            <img decoding="async" loading="lazy" alt="Overview Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon"
+              src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h5.svg" />
+            Project Overview
+          </h2>
+        </div>
+        <div class="assignment-content">
+          <p class="text-xl mb-6 leading-relaxed">
+            Welcome to the final capstone project of the SkilliZee EcoPreneurship Internship with Hocco Ice Cream!
+            Themed <em>Beyond the Scoop</em>, this project challenges you to step into the shoes of a product innovator.
+          </p>
+          <p class="text-lg mb-8 bg-hocco-navy/5 p-6 rounded-xl border-l-4 border-hocco-navy">
+            Your task is to <strong>conceptualize a brand-new, unique ice cream product</strong> and pitch it to the
+            Hocco team through a 2–3 minute video. The best pitches will be recognized by Hocco and SkilliZee,
+            supporting Hocco’s mission of <strong>“Acchai & Sacchai”</strong> (Goodness & Truth). This task is mandatory
+            to earn your Internship Certificate and Badge.
+          </p>
+          <div class="relative group">
+            <img alt="Project Preview"
+              class="scoop-bounce rounded-2xl shadow-2xl mx-auto transform transition-transform group-hover:scale-[1.02]"
+              src="https://login.skillizee.io/s/articles/68f1e111cbf0423e5c4f6bce/images/hocco.jpeg" />
+            <div class="absolute inset-0 rounded-2xl ring-1 ring-black/10 pointer-events-none"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Task -->
+      <section class="assignment-step" id="project-task">
+        <div class="assignment-heading">
+          <h2>
+            <img decoding="async" loading="lazy" alt="Task Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon"
+              src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" />
+            Project Task: Record a Product Pitch Video
+          </h2>
+        </div>
+        <div class="assignment-content">
+          <p class="text-xl mb-8">
+            Design an innovative Hocco Ice Cream product and create a 2–3 minute video pitching your concept to the
+            executive team. Upload the video directly to the LMS.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+            <div class="tip-card group">
+              <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">Be Genuine
+              </h4>
+              <p class="text-gray-600">Share your passion for your new product idea and explain how it perfectly aligns
+                with Hocco's core values.</p>
+            </div>
+            <div class="tip-card group">
+              <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">Introduce
+                the Product</h4>
+              <p class="text-gray-600">Give your new ice cream a catchy name and clearly explain the concept (e.g.,
+                flavor profile or unique format).</p>
+            </div>
+            <div class="tip-card group">
+              <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">Highlight
+                the Appeal</h4>
+              <p class="text-gray-600">Mention what makes it stand out—healthy alternative, nostalgic local flavor, or
+                eco-friendly packaging?</p>
+            </div>
+            <div class="tip-card group">
+              <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">Target
+                Audience</h4>
+              <p class="text-gray-600">Define exactly who will love this product and why it fills an exciting gap in the
+                current market.</p>
+            </div>
+            <div class="tip-card group">
+              <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">
+                Descriptive Language</h4>
+              <p class="text-gray-600">Use vivid, sensory words so the judges can practically taste your "refreshingly
+                natural" creation.</p>
+            </div>
+            <div class="tip-card group">
+              <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">Keep it
+                Concise</h4>
+              <p class="text-gray-600">Aim for 2–3 minutes of clear, focused, and compelling content.</p>
+            </div>
+            <div class="tip-card group">
+              <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">Speak
+                Clearly</h4>
+              <p class="text-gray-600">Maintain eye contact, speak confidently, and smile naturally.</p>
+            </div>
+            <div class="tip-card group">
+              <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">Good
+                Production</h4>
+              <p class="text-gray-600">Ensure your face is well-lit and record in a quiet environment so your pitch is
+                easy to hear.</p>
+            </div>
+            <div class="tip-card group">
+              <h4 class="font-bold text-hocco-navy mb-2 text-lg group-hover:text-hocco-red transition-colors">Call to
+                Action</h4>
+              <p class="text-gray-600">Conclude with a strong, convincing statement on why Hocco must add this to their
+                lineup.</p>
+            </div>
+          </div>
+
+          <div class="mt-12 flex justify-center">
+            <div
+              class="w-full max-w-6xl rounded-[2.5rem] overflow-hidden shadow-[0_30px_70px_rgba(45,43,126,0.35)] border-[12px] border-white bg-black">
+              <div class="aspect-ratio-16-9">
+                <iframe src="https://www.youtube.com/embed/nLkdRxD8I2I?rel=0" title="Reference Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Submission & Rewards -->
-    <section class="assignment-step" id="submission-rewards">
-      <div class="assignment-heading">
-        <h2>
-          <img decoding="async" loading="lazy" alt="Submission Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-1.svg" />
-          Submission & Rewards
-        </h2>
-      </div>
-      <div class="assignment-content">
-        <p class="text-lg mb-8 leading-relaxed">Submit your capstone project by uploading your video file directly to the SkilliZee LMS in the submission portal. Top submissions earn exclusive recognition and rewards.</p>
-        <div class="mb-10 rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5">
-          <img src="https://login.skillizee.io/s/articles/68a3fc95c8de232093f62c04/images/Hicco-lop.png" class="w-full object-cover" alt="Rewards Preview" />
+      <!-- Submission & Rewards -->
+      <section class="assignment-step" id="submission-rewards">
+        <div class="assignment-heading">
+          <h2>
+            <img decoding="async" loading="lazy" alt="Submission Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon"
+              src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-1.svg" />
+            Submission & Rewards
+          </h2>
         </div>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div class="reward-badge hover:bg-hocco-navy/5 transition-colors cursor-default">
-            <div class="text-4xl">📜</div>
-            <div>
-              <h3 class="font-bold text-lg">Certificate & Badge</h3>
-              <p class="text-gray-600">Successfully complete the project to receive your official Internship Certificate and Badge.</p>
+        <div class="assignment-content">
+          <p class="text-lg mb-8 leading-relaxed">Submit your capstone project by uploading your video file directly to
+            the SkilliZee LMS in the submission portal. Top submissions earn exclusive recognition and rewards.</p>
+          <div class="mb-10 rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5">
+            <img src="https://login.skillizee.io/s/articles/68a3fc95c8de232093f62c04/images/Hicco-lop.png"
+              class="w-full object-cover" alt="Rewards Preview" />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="reward-badge hover:bg-hocco-navy/5 transition-colors cursor-default">
+              <div class="text-4xl">📜</div>
+              <div>
+                <h3 class="font-bold text-lg">Certificate & Badge</h3>
+                <p class="text-gray-600">Successfully complete the project to receive your official Internship
+                  Certificate and Badge.</p>
+              </div>
+            </div>
+            <div class="reward-badge hover:bg-hocco-navy/5 transition-colors cursor-default">
+              <div class="text-4xl">📢</div>
+              <div>
+                <h3 class="font-bold text-lg">Feature Recognition</h3>
+                <p class="text-gray-600">The most innovative pitch videos will be featured on Hocco’s and SkilliZee’s
+                  official platforms.</p>
+              </div>
             </div>
           </div>
-          <div class="reward-badge hover:bg-hocco-navy/5 transition-colors cursor-default">
-            <div class="text-4xl">📢</div>
-            <div>
-              <h3 class="font-bold text-lg">Feature Recognition</h3>
-              <p class="text-gray-600">The most innovative pitch videos will be featured on Hocco’s and SkilliZee’s official platforms.</p>
-            </div>
+        </div>
+      </section>
+
+      <!-- Conclusion -->
+      <section class="assignment-step" id="conclusion">
+        <div class="assignment-heading">
+          <h2>
+            <img decoding="async" loading="lazy" alt="Conclusion Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon"
+              src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg" />
+            Conclusion
+          </h2>
+        </div>
+        <div class="assignment-content">
+          <div
+            class="bg-white p-8 rounded-2xl shadow-inner border border-gray-100 italic text-xl text-gray-700 leading-relaxed mb-10">
+            "The <strong>Craft the Next Big Scoop</strong> capstone project invites participants to think like true
+            EcoPreneurs. By conceptualizing and pitching your own original ice cream product, you actively contribute to
+            Hocco’s mission of <strong>Acchai & Sacchai</strong> and demonstrate your understanding of
+            consumer-conscious business."
+          </div>
+
+          <div class="cta-container">
+            <h3 class="text-3xl font-extrabold mb-4">Ready to pitch your idea?</h3>
+            <p class="text-lg opacity-90 mb-8">Record your pitch, showcase your creativity, and submit your video to the
+              LMS!</p>
+            <button
+              class="px-12 py-4 bg-hocco-red text-white rounded-full font-bold text-xl hover:bg-white hover:text-hocco-red transition-all shadow-xl transform hover:scale-110 active:scale-95"
+              onclick="alert('Proceed to LMS for submission!')">
+              Go to Submission Portal 🚀
+            </button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Conclusion -->
-    <section class="assignment-step" id="conclusion">
-      <div class="assignment-heading">
-        <h2>
-          <img decoding="async" loading="lazy" alt="Conclusion Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg" />
-          Conclusion
-        </h2>
-      </div>
-      <div class="assignment-content">
-        <div class="bg-white p-8 rounded-2xl shadow-inner border border-gray-100 italic text-xl text-gray-700 leading-relaxed mb-10">
-          "The <strong>Craft the Next Big Scoop</strong> capstone project invites participants to think like true EcoPreneurs. By conceptualizing and pitching your own original ice cream product, you actively contribute to Hocco’s mission of <strong>Acchai & Sacchai</strong> and demonstrate your understanding of consumer-conscious business."
+      <!-- Progress Tracker -->
+      <section class="assignment-step progress-tracker" id="assignment-progress">
+        <div class="assignment-heading">
+          <h2>
+            <img decoding="async" loading="lazy" alt="Progress Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon"
+              src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h5.svg" />
+            Your Progress
+          </h2>
         </div>
-        
-        <div class="cta-container">
-          <h3 class="text-3xl font-extrabold mb-4">Ready to pitch your idea?</h3>
-          <p class="text-lg opacity-90 mb-8">Record your pitch, showcase your creativity, and submit your video to the LMS!</p>
-          <button class="px-12 py-4 bg-hocco-red text-white rounded-full font-bold text-xl hover:bg-white hover:text-hocco-red transition-all shadow-xl transform hover:scale-110 active:scale-95" onclick="alert('Proceed to LMS for submission!')">
-            Go to Submission Portal 🚀
-          </button>
+        <div class="assignment-content">
+          <p id="progressTracker" class="font-bold text-hocco-navy mb-2">95% Complete (Final Step!)</p>
+          <div class="w-full bg-gray-200 h-4 rounded-full overflow-hidden">
+            <div id="progressBar"
+              class="bg-gradient-to-r from-hocco-navy to-hocco-red h-full transition-all duration-1000"
+              style="width: 95%;"></div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Progress Tracker -->
-    <section class="assignment-step progress-tracker" id="assignment-progress">
-      <div class="assignment-heading">
-        <h2>
-          <img decoding="async" loading="lazy" alt="Progress Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h5.svg" />
-          Your Progress
-        </h2>
-      </div>
-      <div class="assignment-content">
-        <p id="progressTracker" class="font-bold text-hocco-navy mb-2">95% Complete (Final Step!)</p>
-        <div class="w-full bg-gray-200 h-4 rounded-full overflow-hidden">
-          <div id="progressBar" class="bg-gradient-to-r from-hocco-navy to-hocco-red h-full transition-all duration-1000" style="width: 95%;"></div>
-        </div>
-      </div>
-    </section>
+      <!-- Navigation Button -->
+      <section class="assignment-step flex justify-center py-12">
+        <a href="6.3.html"
+          class="px-10 py-4 border-2 border-hocco-navy text-hocco-navy rounded-full font-bold text-xl hover:bg-hocco-navy hover:text-white transition-all shadow-xl transform hover:scale-105 flex items-center gap-3">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12">
+            </path>
+          </svg>
+          Previous: International Challenges
+        </a>
+      </section>
+    </main>
 
-    <!-- Navigation Button -->
-    <section class="assignment-step flex justify-center py-12">
-      <a href="6.3.html" class="px-10 py-4 border-2 border-hocco-navy text-hocco-navy rounded-full font-bold text-xl hover:bg-hocco-navy hover:text-white transition-all shadow-xl transform hover:scale-105 flex items-center gap-3">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"></path></svg>
-        Previous: International Challenges
-      </a>
-    </section>
-  </main>
+    <!-- Back to Top Button -->
+    <button aria-label="Scroll to top" id="back-to-top" onclick="scrollToTop()">&uarr;</button>
 
-  <!-- Back to Top Button -->
-  <button aria-label="Scroll to top" id="back-to-top" onclick="scrollToTop()">&uarr;</button>
+    <!-- Footer -->
+    <footer class="mt-20">
+      <p>&copy; 2025 SkilliZee X Hocco Virtual Internship – Building Ice Creams that Freeze Time</p>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="mt-20">
-    <p>&copy; 2025 SkilliZee X Hocco Virtual Internship – Building Ice Creams that Freeze Time</p>
-  </footer>
-
-  <script>
-    // Gustora-themed Fullscreen Toggle
-    document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => {
-      if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen?.() || 
-        document.documentElement.webkitRequestFullscreen?.() || 
-        document.documentElement.msRequestFullscreen?.();
-      } else {
-        document.exitFullscreen?.() || 
-        document.webkitExitFullscreen?.() || 
-        document.msExitFullscreen?.();
-      }
-    });
-
-    // Progress Bar Logic
-    function updateProgress() {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 20 : 0;
-      const totalProgress = Math.min(100, 80 + scrollPercent);
-      const progressFill = document.getElementById("progress-fill");
-      const progressTracker = document.getElementById("progressTracker");
-      const progressBar = document.getElementById("progressBar");
-      
-      if(progressFill) progressFill.style.height = totalProgress + "%";
-      if(progressBar) progressBar.style.width = totalProgress + "%";
-      if(progressTracker) progressTracker.textContent = `${Math.round(totalProgress)}% Complete (${totalProgress === 100 ? 'Finished!' : 'Final Step!'})`;
-    }
-
-    // Scroll Visibility Handler
-    const observerOptions = {
-      threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          gsap.to(entry.target, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" });
+    <script>
+      // Gustora-themed Fullscreen Toggle
+      document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen?.() ||
+            document.documentElement.webkitRequestFullscreen?.() ||
+            document.documentElement.msRequestFullscreen?.();
+        } else {
+          document.exitFullscreen?.() ||
+            document.webkitExitFullscreen?.() ||
+            document.msExitFullscreen?.();
         }
       });
-    }, observerOptions);
 
-    // GSAP Animations
-    document.addEventListener("DOMContentLoaded", () => {
-      // Header Animation
-      gsap.fromTo("header", { y: -100, opacity: 0 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out" });
-      
-      // Observe all steps for entrance animation
-      document.querySelectorAll('.assignment-step').forEach(step => {
-        observer.observe(step);
+      // Progress Bar Logic
+      function updateProgress() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 20 : 0;
+        const totalProgress = Math.min(100, 80 + scrollPercent);
+        const progressFill = document.getElementById("progress-fill");
+        const progressTracker = document.getElementById("progressTracker");
+        const progressBar = document.getElementById("progressBar");
+
+        if (progressFill) progressFill.style.height = totalProgress + "%";
+        if (progressBar) progressBar.style.width = totalProgress + "%";
+        if (progressTracker) progressTracker.textContent = `${Math.round(totalProgress)}% Complete (${totalProgress === 100 ? 'Finished!' : 'Final Step!'})`;
+      }
+
+      // Scroll Visibility Handler
+      const observerOptions = {
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            gsap.to(entry.target, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" });
+          }
+        });
+      }, observerOptions);
+
+      // GSAP Animations
+      document.addEventListener("DOMContentLoaded", () => {
+        // Header Animation
+        gsap.fromTo("header", { y: -100, opacity: 0 }, { duration: 1, y: 0, opacity: 1, ease: "power2.out" });
+
+        // Observe all steps for entrance animation
+        document.querySelectorAll('.assignment-step').forEach(step => {
+          observer.observe(step);
+        });
+
+        // Special bounce for icons
+        gsap.fromTo(".scoop-bounce", { opacity: 0, scale: 0.8 }, { duration: 1, opacity: 1, scale: 1, stagger: 0.2, delay: 1 });
+
+        updateProgress();
       });
 
-      // Special bounce for icons
-      gsap.fromTo(".scoop-bounce", { opacity: 0, scale: 0.8 }, { duration: 1, opacity: 1, scale: 1, stagger: 0.2, delay: 1 });
-      
-      updateProgress();
-    });
+      window.addEventListener("scroll", updateProgress);
 
-    window.addEventListener("scroll", updateProgress);
-
-    // Back to Top Button
-    const backToTop = document.getElementById("back-to-top");
-    window.addEventListener("scroll", () => {
-      if(backToTop) backToTop.style.display = window.scrollY > 300 ? "block" : "none";
-    });
-    function scrollToTop() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  </script>
-</div>
-<script src="zoom-script.js"></script>
+      // Back to Top Button
+      const backToTop = document.getElementById("back-to-top");
+      window.addEventListener("scroll", () => {
+        if (backToTop) backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+      });
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+  </div>
+  <script src="zoom-script.js"></script>
 </body>
+
 </html>
