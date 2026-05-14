@@ -171,6 +171,46 @@
       border: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
 
+    /* Glossary Grid and Card Standardization */
+    body.course-page[class*="glossary"] .glossary-grid {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+      gap: 1.5rem !important;
+      margin-top: 2rem !important;
+    }
+
+    @media (max-width: 640px) {
+      body.course-page[class*="glossary"] .glossary-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    body.course-page[class*="glossary"] .flip-card {
+      height: 240px !important;
+      min-height: 240px !important;
+    }
+
+    body.course-page[class*="glossary"] .flip-card-inner {
+      height: 100% !important;
+      min-height: 100% !important;
+    }
+
+    body.course-page[class*="glossary"] .flip-card-front,
+    body.course-page[class*="glossary"] .flip-card-back {
+      padding: 1.25rem !important;
+      height: 100% !important;
+    }
+
+    body.course-page[class*="glossary"] .flip-card-front h3 {
+      font-size: 1.25rem !important;
+      margin-bottom: 0.5rem !important;
+    }
+
+    body.course-page[class*="glossary"] .flip-card-back p {
+      font-size: 1rem !important;
+      line-height: 1.5 !important;
+    }
+
     
 
     /* Back to Top Responsiveness */
