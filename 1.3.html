@@ -206,11 +206,7 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
   <div class="video-16-9">
     <iframe loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/wFO3kQutl8M?rel=0&fs=0" title="Hocco Press Conference" id="press-video"></iframe>
   </div>
-  <div class="flex justify-center mt-2">
-    <button onclick="goFullscreen(document.getElementById('press-video'))" class="bg-hocco-navy text-white px-4 py-2 rounded-lg hover:bg-hocco-red transition-colors">
-      Fullscreen Press Conference
-    </button>
-  </div>
+
 </div>
 </div>
 <!-- Assignment Overview -->
@@ -232,42 +228,45 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 </div>
 
 <div class="topic-content">
-<div class="flex flex-col sm:flex-row gap-4 mt-4 justify-between">
-<div class="flip-card scoop-bounce" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.8845, 0.8845); opacity: 0.4224;">
-<div class="flip-card-inner">
-<div class="flip-card-front">
-<p class="font-bold text-lg">Storytelling</p>
-<img decoding="async" loading="lazy" alt="Storytelling Icon" class="w-8 h-8 mt-2 scoop-bounce" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /></div>
+<div class="flex flex-col sm:flex-row gap-6 mt-4 justify-center">
+  <!-- Storytelling Card -->
+  <div class="flip-card scoop-bounce">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img decoding="async" loading="lazy" alt="Storytelling Icon" class="w-12 h-12 mb-2" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg" />
+        <h3 class="text-xl font-bold">Storytelling</h3>
+      </div>
+      <div class="flip-card-back">
+        <p><strong>&ldquo;House of Chona Collaboratives&rdquo;</strong> links to legacy, signaling honesty and heritage.</p>
+      </div>
+    </div>
+  </div>
 
-<div class="flip-card-back">
-<p style="text-align: center;"><strong>&ldquo;House of Chona Collaboratives&rdquo; links to Chona Family&rsquo;s legacy, signaling honesty and heritage.</strong></p>
-</div>
-</div>
-</div>
+  <!-- Trusted Taste Card -->
+  <div class="flip-card scoop-bounce">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img decoding="async" loading="lazy" alt="Taste Icon" class="w-12 h-12 mb-2" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h5.svg" />
+        <h3 class="text-xl font-bold">Trusted Taste</h3>
+      </div>
+      <div class="flip-card-back">
+        <p>Retained creamy quality with bold flavors like <strong>black sesame</strong> and <strong>nutty chocolate</strong>.</p>
+      </div>
+    </div>
+  </div>
 
-<div class="flip-card scoop-bounce" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.8157, 0.8157); opacity: 0.0784;">
-<div class="flip-card-inner">
-<div class="flip-card-front">
-<p class="font-bold text-lg">Trusted Taste</p>
-<img decoding="async" loading="lazy" alt="Taste Icon" class="w-8 h-8 mt-2 scoop-bounce" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h5.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /></div>
-
-<div class="flip-card-back">
-<p style="text-align: center;"><strong>Retained Ice Cream&rsquo;s creamy quality with bold flavors like black sesame.</strong></p>
-</div>
-</div>
-</div>
-
-<div class="flip-card scoop-bounce" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;">
-<div class="flip-card-inner">
-<div class="flip-card-front">
-<p class="font-bold text-lg">Modern Appeal</p>
-<img decoding="async" loading="lazy" alt="Appeal Icon" class="w-8 h-8 mt-2 scoop-bounce" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /></div>
-
-<div class="flip-card-back">
-<p style="text-align: center;"><strong>Vibrant packaging and quick commerce (Zepto, Blinkit) made Hocco trendy.</strong></p>
-</div>
-</div>
-</div>
+  <!-- Modern Appeal Card -->
+  <div class="flip-card scoop-bounce">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img decoding="async" loading="lazy" alt="Appeal Icon" class="w-12 h-12 mb-2" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/group.svg" />
+        <h3 class="text-xl font-bold">Modern Appeal</h3>
+      </div>
+      <div class="flip-card-back">
+        <p>Vibrant packaging and <strong>Quick Commerce</strong> (Zepto, Blinkit) made Hocco trendy.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 <p class="text-gray-700 text-lg mt-4">This blend of nostalgia and innovation built trust through word-of-mouth and reviews.</p>
@@ -295,11 +294,7 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
   <div class="video-16-9 mx-auto">
     <iframe loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/s9DwJb30Swo?rel=0&fs=0" title="The Hocco Story! 🍦 Ankit Chona on building an Ice Cream brand in India! 👀" id="legacy-story-video"></iframe>
   </div>
-  <div class="flex justify-center mt-2">
-    <button onclick="goFullscreen(document.getElementById('legacy-story-video'))" class="bg-hocco-navy text-white px-4 py-2 rounded-lg hover:bg-hocco-red transition-colors">
-      Fullscreen Story
-    </button>
-  </div>
+
 </div>
 
 <p class="mt-4"><i>Hocco&#39;s Founder Ankit Chona in conversation with Shantanu Deshpande, the founder of Bombay Shaving Company</i></p>

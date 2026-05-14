@@ -209,9 +209,9 @@
     <div class="container mx-auto px-4">
       <div class="flex items-center justify-between">
         <div>
-          <h1 class="text-3xl md:text-4xl font-bold scoop-bounce"
-            style="translate: none; rotate: none; scale: none; transform: translate(0px, -7.99931px); opacity: 1;"><span
-              style="font-size:26px;">🍦<strong>Chapter 4: Hocco Ice-Cream </strong>- A Sweet Scoop Story</span></h1>
+          <h1 class="text-3xl md:text-4xl font-bold scoop-bounce">
+            <span style="font-size:26px;">🍦<strong>Chapter 1.4: Hocco Ice-Cream </strong>- A Sweet Scoop Story</span>
+          </h1>
 
           <p class="mt-2 text-lg md:text-xl"><span style="font-size:20px;">Reconnecting with Customers Defining Brand
               Identity</span></p>
@@ -367,26 +367,46 @@
       <div class="topic-content">
         <p class="text-gray-700 text-lg mb-4">HOCCO fostered loyalty through:</p>
 
-        <div class="flex flex-col gap-4 mt-4">
-          <div class="assignment-step"
-            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
-            <p class="text-lg font-bold">Quick Commerce</p>
+        <div class="carousel-container relative w-full max-w-4xl mx-auto mt-8">
+          <div class="carousel-track" id="loyaltyCarouselTrack">
+            <div class="carousel-slide">
+              <div class="bg-white p-12 rounded-3xl shadow-xl border-2 border-gray-100 flex flex-col items-center text-center mx-4">
+                <div class="w-16 h-16 bg-[#c71545]/10 rounded-2xl flex items-center justify-center mb-6">
+                  <span class="text-3xl">🛒</span>
+                </div>
+                <h3 class="text-2xl font-bold text-[#2d2b7e] mb-4">Quick Commerce</h3>
+                <p class="text-lg text-gray-600 leading-relaxed">7&ndash;10% of revenue, expected to hit 20% by FY26, making HOCCO accessible anytime.</p>
+              </div>
+            </div>
 
-            <p class="text-lg">7&ndash;10% of revenue, expected to hit 20% by FY26, making HOCCO accessible anytime.</p>
+            <div class="carousel-slide">
+              <div class="bg-white p-12 rounded-3xl shadow-xl border-2 border-gray-100 flex flex-col items-center text-center mx-4">
+                <div class="w-16 h-16 bg-[#c71545]/10 rounded-2xl flex items-center justify-center mb-6">
+                  <span class="text-3xl">🏠</span>
+                </div>
+                <h3 class="text-2xl font-bold text-[#2d2b7e] mb-4">Premium Parlors</h3>
+                <p class="text-lg text-gray-600 leading-relaxed">150 outlets, growing to 250 by 2025, offering Insta-worthy experiences.</p>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <div class="bg-white p-12 rounded-3xl shadow-xl border-2 border-gray-100 flex flex-col items-center text-center mx-4">
+                <div class="w-16 h-16 bg-[#c71545]/10 rounded-2xl flex items-center justify-center mb-6">
+                  <span class="text-3xl">📱</span>
+                </div>
+                <h3 class="text-2xl font-bold text-[#2d2b7e] mb-4">Social Engagement</h3>
+                <p class="text-lg text-gray-600 leading-relaxed">Campaigns like &ldquo;spot our billboards&rdquo; on Instagram boosted Gen Z loyalty.</p>
+              </div>
+            </div>
           </div>
-
-          <div class="assignment-step"
-            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
-            <p class="text-lg font-bold">Premium Parlors</p>
-
-            <p class="text-lg">150 outlets, growing to 250 by 2025, offering Insta-worthy experiences.</p>
-          </div>
-
-          <div class="assignment-step"
-            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
-            <p class="text-lg font-bold">Social Engagement</p>
-
-            <p class="text-lg">Campaigns like &ldquo;spot our billboards&rdquo; on Instagram boosted Gen Z loyalty.</p>
+          <button class="carousel-btn left !-left-4 sm:!-left-12" id="loyaltyPrev">◀</button>
+          <button class="carousel-btn right !-right-4 sm:!-right-12" id="loyaltyNext">▶</button>
+          
+          <!-- Dots Indicator -->
+          <div class="flex justify-center gap-2 mt-6" id="loyaltyDots">
+            <div class="w-3 h-3 rounded-full bg-[#c71545] cursor-pointer opacity-100 transition-all duration-300" data-index="0"></div>
+            <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer opacity-50 transition-all duration-300" data-index="1"></div>
+            <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer opacity-50 transition-all duration-300" data-index="2"></div>
           </div>
         </div>
 
@@ -433,33 +453,61 @@
         <p class="text-gray-700 text-lg mb-4">Imagine a brand as a person. Its name, style, voice, and values make up
           its identity. For HOCCO:</p>
 
-        <div class="flex flex-col gap-4 mt-4">
-          <div class="assignment-step"
-            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
-            <p class="text-lg font-bold">Name</p>
+        <div class="carousel-container relative w-full max-w-4xl mx-auto mt-8">
+          <div class="carousel-track" id="identityCarouselTrack">
+            <!-- Name -->
+            <div class="carousel-slide">
+              <div class="bg-white p-10 rounded-3xl shadow-xl border-2 border-gray-100 flex flex-col items-center text-center mx-4 min-h-[250px] justify-center">
+                <div class="w-14 h-14 bg-[#2d2b7e]/10 rounded-2xl flex items-center justify-center mb-4">
+                  <span class="text-2xl text-[#2d2b7e] font-bold">N</span>
+                </div>
+                <h3 class="text-2xl font-bold text-[#2d2b7e] mb-2">Name</h3>
+                <p class="text-lg text-gray-600">&ldquo;House of Chona&rdquo; reflects family legacy.</p>
+              </div>
+            </div>
 
-            <p class="text-lg">&ldquo;House of Chona&rdquo; reflects family legacy.</p>
+            <!-- Design -->
+            <div class="carousel-slide">
+              <div class="bg-white p-10 rounded-3xl shadow-xl border-2 border-gray-100 flex flex-col items-center text-center mx-4 min-h-[250px] justify-center">
+                <div class="w-14 h-14 bg-[#2d2b7e]/10 rounded-2xl flex items-center justify-center mb-4">
+                  <span class="text-2xl text-[#2d2b7e] font-bold">D</span>
+                </div>
+                <h3 class="text-2xl font-bold text-[#2d2b7e] mb-2">Design</h3>
+                <p class="text-lg text-gray-600">Clean, modern, yet rooted in tradition.</p>
+              </div>
+            </div>
+
+            <!-- Promise -->
+            <div class="carousel-slide">
+              <div class="bg-white p-10 rounded-3xl shadow-xl border-2 border-gray-100 flex flex-col items-center text-center mx-4 min-h-[250px] justify-center">
+                <div class="w-14 h-14 bg-[#2d2b7e]/10 rounded-2xl flex items-center justify-center mb-4">
+                  <span class="text-2xl text-[#2d2b7e] font-bold">P</span>
+                </div>
+                <h3 class="text-2xl font-bold text-[#2d2b7e] mb-2">Promise</h3>
+                <p class="text-lg text-gray-600">Old taste, new vibe.</p>
+              </div>
+            </div>
+
+            <!-- Feel -->
+            <div class="carousel-slide">
+              <div class="bg-white p-10 rounded-3xl shadow-xl border-2 border-gray-100 flex flex-col items-center text-center mx-4 min-h-[250px] justify-center">
+                <div class="w-14 h-14 bg-[#2d2b7e]/10 rounded-2xl flex items-center justify-center mb-4">
+                  <span class="text-2xl text-[#2d2b7e] font-bold">F</span>
+                </div>
+                <h3 class="text-2xl font-bold text-[#2d2b7e] mb-2">Feel</h3>
+                <p class="text-lg text-gray-600">Familiar, premium, warm.</p>
+              </div>
+            </div>
           </div>
-
-          <div class="assignment-step"
-            style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.9987, 0.9987); opacity: 0.9933;">
-            <p class="text-lg font-bold">Design</p>
-
-            <p class="text-lg">Clean, modern, yet rooted in tradition.</p>
-          </div>
-
-          <div class="assignment-step"
-            style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.9841, 0.9841); opacity: 0.9205;">
-            <p class="text-lg font-bold">Promise</p>
-
-            <p class="text-lg">Old taste, new vibe.</p>
-          </div>
-
-          <div class="assignment-step"
-            style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 0px, 0px) scale(0.9535, 0.9535); opacity: 0.7677;">
-            <p class="text-lg font-bold">Feel</p>
-
-            <p class="text-lg">Familiar, premium, warm.</p>
+          <button class="carousel-btn left !-left-4 sm:!-left-12" id="identityPrev">◀</button>
+          <button class="carousel-btn right !-right-4 sm:!-right-12" id="identityNext">▶</button>
+          
+          <!-- Dots Indicator -->
+          <div class="flex justify-center gap-2 mt-6" id="identityDots">
+            <div class="w-3 h-3 rounded-full bg-[#2d2b7e] cursor-pointer opacity-100 transition-all duration-300" data-index="0"></div>
+            <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer opacity-50 transition-all duration-300" data-index="1"></div>
+            <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer opacity-50 transition-all duration-300" data-index="2"></div>
+            <div class="w-3 h-3 rounded-full bg-gray-300 cursor-pointer opacity-50 transition-all duration-300" data-index="3"></div>
           </div>
         </div>
 
@@ -503,10 +551,8 @@
 
       <div class="topic-content">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-          <div aria-label="Engaging Gen Z Insight" class="flip-card" role="button"
-            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"
-            tabindex="0">
-            <div class="flip-card-inner flipped">
+          <div aria-label="Engaging Gen Z Insight" class="flip-card" role="button" tabindex="0">
+            <div class="flip-card-inner">
               <div class="flip-card-front">
                 <p class="text-lg font-bold"><span style="color:#ffffff;">Engaging Gen Z</span></p>
               </div>
@@ -518,9 +564,7 @@
             </div>
           </div>
 
-          <div aria-label="Quick Commerce Insight" class="flip-card" role="button"
-            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"
-            tabindex="0">
+          <div aria-label="Quick Commerce Insight" class="flip-card" role="button" tabindex="0">
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <p class="text-lg font-bold"><span style="color:#ffffff;">Quick Commerce</span></p>
@@ -533,9 +577,7 @@
             </div>
           </div>
 
-          <div aria-label="Memorable Identity Insight" class="flip-card" role="button"
-            style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 1.6562px, 0px); opacity: 0.9669;"
-            tabindex="0">
+          <div aria-label="Memorable Identity Insight" class="flip-card" role="button" tabindex="0">
             <div class="flip-card-inner">
               <div class="flip-card-front">
                 <p class="text-lg font-bold"><span style="color:#ffffff;">Memorable Identity</span></p>
@@ -548,10 +590,8 @@
             </div>
           </div>
 
-          <div aria-label="Nostalgia Insight" class="flip-card" role="button"
-            style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 7.2962px, 0px); opacity: 0.8541;"
-            tabindex="0">
-            <div class="flip-card-inner flipped">
+          <div aria-label="Nostalgia Insight" class="flip-card" role="button" tabindex="0">
+            <div class="flip-card-inner">
               <div class="flip-card-front">
                 <p class="text-lg font-bold"><span style="color:#ffffff;">Nostalgia</span></p>
               </div>
@@ -731,31 +771,65 @@
       });
       setInterval(() => { trySetHeightSameOrigin(); }, 1500);
 
-      // CAROUSEL LOGIC
-      const track = document.getElementById('carouselTrack');
-      const slides = Array.from(track.children);
-      let current = 0;
-      const prevBtn = document.getElementById('carouselPrev');
-      const nextBtn = document.getElementById('carouselNext');
-      function goTo(index) {
-        current = (index + slides.length) % slides.length;
-        track.style.transform = `translateX(-${current * 100}%)`;
+      // GENERIC CAROUSEL FUNCTION
+      function initCarousel(trackId, prevId, nextId, dotsId) {
+        const track = document.getElementById(trackId);
+        const prevBtn = document.getElementById(prevId);
+        const nextBtn = document.getElementById(nextId);
+        const dotsContainer = dotsId ? document.getElementById(dotsId) : null;
+        
+        if (!track || !prevBtn || !nextBtn) return;
+        
+        const slides = Array.from(track.children);
+        let current = 0;
+
+        function updateDots() {
+          if (!dotsContainer) return;
+          const dots = Array.from(dotsContainer.children);
+          dots.forEach((dot, i) => {
+            dot.style.opacity = i === current ? '1' : '0.5';
+            dot.classList.toggle('bg-[#c71545]', i === current);
+            dot.classList.toggle('bg-gray-300', i !== current);
+          });
+        }
+
+        function goTo(index) {
+          current = (index + slides.length) % slides.length;
+          track.style.transform = `translateX(-${current * 100}%)`;
+          updateDots();
+        }
+
+        function next() { goTo(current + 1); }
+        function prev() { goTo(current - 1); }
+
+        nextBtn.addEventListener('click', next);
+        prevBtn.addEventListener('click', prev);
+
+        if (dotsContainer) {
+          dotsContainer.addEventListener('click', (e) => {
+            const dot = e.target.closest('[data-index]');
+            if (dot) goTo(parseInt(dot.dataset.index));
+          });
+        }
+
+        let startX = 0, moveX = 0, isDown = false;
+        track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; isDown = true; }, { passive: true });
+        track.addEventListener('touchmove', (e) => { if (!isDown) return; moveX = e.touches[0].clientX; }, { passive: true });
+        track.addEventListener('touchend', () => {
+          if (!isDown) return;
+          isDown = false;
+          const dx = startX - moveX;
+          if (Math.abs(dx) > 40) { if (dx > 0) next(); else prev(); }
+        });
+
+        goTo(0);
+        window.addEventListener('resize', () => { goTo(current); });
       }
-      function next() { goTo(current + 1); }
-      function prev() { goTo(current - 1); }
-      nextBtn.addEventListener('click', next);
-      prevBtn.addEventListener('click', prev);
-      let startX = 0, moveX = 0, isDown = false;
-      track.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; isDown = true; }, { passive: true });
-      track.addEventListener('touchmove', (e) => { if (!isDown) return; moveX = e.touches[0].clientX; }, { passive: true });
-      track.addEventListener('touchend', () => {
-        if (!isDown) return;
-        isDown = false;
-        const dx = startX - moveX;
-        if (Math.abs(dx) > 40) { if (dx > 0) next(); else prev(); }
-      });
-      goTo(0);
-      window.addEventListener('resize', () => { goTo(current); });
+
+      // Initialize all carousels
+      initCarousel('carouselTrack', 'carouselPrev', 'carouselNext');
+      initCarousel('loyaltyCarouselTrack', 'loyaltyPrev', 'loyaltyNext', 'loyaltyDots');
+      initCarousel('identityCarouselTrack', 'identityPrev', 'identityNext', 'identityDots');
     });
 
     // Scroll-based Progress

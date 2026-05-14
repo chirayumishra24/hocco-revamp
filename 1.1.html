@@ -492,20 +492,15 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 </div>
 <!-- Brand Feelings Journal -->
 
-<div class="topic" id="topic-journal" style="translate: none; rotate: none; scale: none; transform: translate3d(0px, 4.8361px, 0px); opacity: 0.9033;">
+<div class="topic" id="topic-journal">
 <div class="topic-heading">
-<h2><img decoding="async" loading="lazy" alt="Journal Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h1.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0;" /> Brand Feelings Journal</h2>
+<h2><img decoding="async" loading="lazy" alt="Journal Icon" class="w-8 h-8 mr-2 scoop-bounce section-icon" onerror="this.src='https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg'" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/h1.svg" /> Brand Feelings Journal</h2>
 </div>
 
 <div><iframe loading="lazy" align="middle" frameborder="0" height="837" marginheight="0" marginwidth="0" scrolling="no" src="https://docs.google.com/forms/d/e/1FAIpQLSdHPcrefMYo_7XXweQh_4fSJvA1PxHMbVv1wVqkGCz1ONZGfw/viewform?embedded=true" width="80%">Loading&amp;hellip;</iframe></div>
 
 <div class="topic-content">
-<p>How does Hocco&rsquo;s brand make you feel? Share your thoughts below.</p>
-<textarea aria-describedby="journal-feedback" id="journal" placeholder="Type your feelings about Hocco..." rows="5"></textarea><button aria-label="Submit Journal Entry" id="submitJournal" class="hocco-submit-btn">Submit</button>
-
-<div id="journalEntries">&nbsp;</div>
-
-<p class="confirmation-message" id="journal-feedback">&nbsp;</p>
+<p>How does Hocco&rsquo;s brand make you feel? Share your thoughts using the form above.</p>
 </div>
 </div>
 <!-- Visual Story Map -->
@@ -516,28 +511,45 @@ document.getElementById('gustoraFullscreenBtn').addEventListener('click', () => 
 </div>
 
 <div class="topic-content">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-<div class="bg-white p-6 rounded-lg shadow-md"><img decoding="async" loading="lazy" alt="Growth Icon" class="w-12 h-12 mx-auto mb-2 scoop-bounce" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-1.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0; width: 91px; height: 50px;" />
-<h3 class="text-lg font-bold text-[#c71545]" style="text-align: center;"><span style="color:#c0392b;">Hocco&rsquo;s Launch</span></h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <!-- Launch Card -->
+  <div class="flip-card scoop-bounce">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img decoding="async" loading="lazy" alt="Growth Icon" class="w-16 h-10 mb-2" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-1.svg" />
+        <h3 class="text-xl font-bold">Hocco's Launch</h3>
+      </div>
+      <div class="flip-card-back">
+        <p>Hocco introduced innovative ice cream flavors and a fresh brand experience to the Indian market in 2019.</p>
+      </div>
+    </div>
+  </div>
 
-<p>Hocco introduced innovative ice cream flavors.</p>
-</div>
+  <!-- Growth Card -->
+  <div class="flip-card scoop-bounce">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img decoding="async" loading="lazy" alt="Growth Icon" class="w-12 h-12 mb-2" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/ace-1.svg" />
+        <h3 class="text-xl font-bold">Rapid Growth</h3>
+      </div>
+      <div class="flip-card-back">
+        <p>Quickly expanded to over 60 stores, becoming a household name synonymous with quality and happiness.</p>
+      </div>
+    </div>
+  </div>
 
-<div class="bg-white p-6 rounded-lg shadow-md"><img decoding="async" loading="lazy" alt="Growth Icon" class="w-12 h-12 mx-auto mb-2 scoop-bounce" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/ace-1.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0; height: 50px; width: 50px;" />
-<h3 class="text-lg font-bold text-[#c71545]" style="text-align: center;"><span style="color:#c0392b;">Brand</span></h3>
-
-<h3 class="text-lg font-bold text-[#c71545]" style="text-align: center;"><span style="color:#c0392b;">Growth</span></h3>
-
-<p>Expanded to over 60 stores with a focus on quality.</p>
-</div>
-
-<div class="bg-white p-6 rounded-lg shadow-md"><img decoding="async" loading="lazy" alt="Growth Icon" class="w-12 h-12 mx-auto mb-2 scoop-bounce" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg" style="translate: none; rotate: none; scale: none; transform: scale(0.8, 0.8); opacity: 0; width: 91px; height: 50px;" />
-<h3 class="text-lg font-bold text-[#c71545]" style="text-align: center;"><span style="color:#c0392b;">Future</span></h3>
-
-<h3 class="text-lg font-bold text-[#c71545]" style="text-align: center;"><span style="color:#c0392b;">Goals</span></h3>
-
-<p>Aiming for pan-India and global presence with innovative offerings.</p>
-</div>
+  <!-- Future Card -->
+  <div class="flip-card scoop-bounce">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img decoding="async" loading="lazy" alt="Future Icon" class="w-16 h-10 mb-2" src="https://www.hocco.in/wp-content/themes/hocco/assets/images/illustration/about-3.svg" />
+        <h3 class="text-xl font-bold">Future Goals</h3>
+      </div>
+      <div class="flip-card-back">
+        <p>Aiming for pan-India and global presence with innovative frozen treats and playful brand storytelling.</p>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 </div>
@@ -768,50 +780,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Journal Logic
-    let journalEntries = [];
-    document.getElementById('submitJournal').addEventListener('click', () => {
-      const journalText = document.getElementById('journal').value.trim();
-      const journalFeedback = document.getElementById('journal-feedback');
-      if (journalText && journalEntries.length < 5) {
-        journalEntries.push(journalText);
-        const entryDiv = document.createElement('div');
-        entryDiv.className = 'bg-white p-4 rounded-lg shadow-md mt-2 text-sm sm:text-base';
-        entryDiv.textContent = journalText;
-        document.getElementById('journalEntries').appendChild(entryDiv);
-        document.getElementById('journal').value = '';
-        journalFeedback.textContent = 'Journal entry submitted!';
-        journalFeedback.classList.add('text-green-600');
-        gsap.from(entryDiv, { duration: 0.5, opacity: 0, y: 20 });
-        gsap.from(journalFeedback, { duration: 0.5, opacity: 0, y: 20 });
-        progress = Math.min(100, progress + 5);
-        updateProgress();
-        setTimeout(() => {
-          journalFeedback.textContent = '';
-          journalFeedback.classList.remove('text-green-600');
-        }, 2000);
-        if (journalEntries.length >= 5) {
-          document.getElementById('submitJournal').disabled = true;
-          document.getElementById('submitJournal').textContent = 'Journal Full';
-        }
-      } else if (journalEntries.length >= 5) {
-        journalFeedback.textContent = 'Journal is full!';
-        journalFeedback.classList.add('text-red-600');
-        gsap.from(journalFeedback, { duration: 0.5, opacity: 0, y: 20 });
-        setTimeout(() => {
-          journalFeedback.textContent = '';
-          journalFeedback.classList.remove('text-red-600');
-        }, 2000);
-      } else {
-        journalFeedback.textContent = 'Please enter your thoughts!';
-        journalFeedback.classList.add('text-red-600');
-        gsap.from(journalFeedback, { duration: 0.5, opacity: 0, y: 20 });
-        setTimeout(() => {
-          journalFeedback.textContent = '';
-          journalFeedback.classList.remove('text-red-600');
-        }, 2000);
-      }
-    });
+
   </script>
 <script src="zoom-script.js"></script>
 </body>
